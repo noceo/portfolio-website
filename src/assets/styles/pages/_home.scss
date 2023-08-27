@@ -1,0 +1,102 @@
+.page-home {
+  background-color: map-get($map: $colors, $key: bg);
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 250px;
+    margin-bottom: 200px;
+    z-index: 0;
+
+    @include media-breakpoint-up(md) {
+      &::after {
+        content: attr(data-title);
+        position: absolute;
+        top: -8px;
+        left: 8px;
+        // animation: heading 1s steps(1) infinite;
+        -webkit-text-stroke: 1px black;
+        -webkit-text-fill-color: transparent;
+        z-index: -1;
+        transition: top 0.05s ease-out, left 0.05s ease-out;
+        pointer-events: none;
+      }
+
+      &:hover::after {
+        // left: 0;
+        // top: 0;
+      }
+    }
+  }
+
+  &__description {
+    h4 {
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.8pt;
+    }
+  }
+
+  .circle-bg {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-image: linear-gradient(30deg, $orange 0%, rgba(0, 212, 255, 0) 100%);
+    filter: blur(24px);
+  }
+
+  .circle {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #262626;
+    mix-blend-mode: luminosity;
+    filter: blur(0.5px);
+
+    @include media-breakpoint-up(lg) {
+      left: 50%;
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 180px;
+
+    p {
+      font-weight: 400;
+      font-style: italic;
+      font-size: font-size(12px);
+    }
+  }
+}
+
+@keyframes heading {
+  0%,
+  100% {
+    top: -8px;
+    left: 8px;
+  }
+
+  30% {
+    top: -14px;
+    left: 14px;
+  }
+
+  50% {
+    top: -18px;
+    left: 18px;
+  }
+
+  70% {
+    top: -14px;
+    left: 14px;
+  }
+}
