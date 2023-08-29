@@ -1,0 +1,19 @@
+{
+  "title": "Digital Catalogue",
+  "slug": "digital_catalogue",
+  "description": "Berlin Art Exhibition",
+  "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
+  "accentColor": "#ff00a7",
+  "components": [
+    {
+      "type": "text",
+      "copy": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+      "classes": "col-md-6 offset-md-3"
+    },
+    {
+      "type": "text",
+      "copy": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+      "classes": "col-md-6 offset-md-3"
+    }
+  ]
+}

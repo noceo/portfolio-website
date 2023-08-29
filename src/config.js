@@ -1,5 +1,5 @@
-const PROJECT_DATA_DIR = process.env.REACT_APP_PROJECT_DATA_DIR || "";
+const PROJECT_DATA_DIR = process.env.PROJECT_DATA_DIR || "";
 
-const projects = require(`./project-data`);
+const projects = require(`./${PROJECT_DATA_DIR}/index`);
 
 export default projects;

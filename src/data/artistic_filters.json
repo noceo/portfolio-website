@@ -1,0 +1,15 @@
+{
+  "title": "Artistic Filters",
+  "slug": "artistic_filters",
+  "description": "Image Processing",
+  "components": [
+    {
+      "type": "text",
+      "copy": "Lorem ipsum dolor sit amet."
+    },
+    {
+      "type": "text",
+      "copy": "Lorem ipsum dolor sit amet."
+    }
+  ]
+}

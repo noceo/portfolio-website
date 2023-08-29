@@ -1,3 +1,6 @@
+import Link from "next/link";
+import projects from "@/config";
+
 export default function Works() {
   return (
     <div className="page-works">
@@ -5,22 +8,16 @@ export default function Works() {
         <div className="row">
           <div className="col-md-10 offset-md-1">
             <ul>
-              <li>
-                <span>Yayoi Kusama</span>
-                <span>– Berlin Art Exhibition</span>
-              </li>
-              <li>
-                <span>Artistic Filters</span>
-                <span>– Image Processing</span>
-              </li>
-              <li>
-                <span>Procedural Generation</span>
-                <span>– Bachelor Thesis</span>
-              </li>
-              <li>
-                <span>Code Judge</span>
-                <span>– Code Analysis Platform</span>
-              </li>
+              {projects.default.map((project) => {
+                return (
+                  <li key={project.title}>
+                    <Link href={`/works/${project.slug}`}>
+                      <span>{project.title}</span>
+                      <span>– {project.description}</span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

@@ -3,6 +3,19 @@
   background-color: #262626;
   z-index: 0;
 
+  &::before {
+    content: "";
+    position: fixed;
+    top: 20vh;
+    left: 10vw;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #ff00a7;
+    opacity: 0.6;
+    z-index: 2;
+  }
+
   &::after {
     content: "";
     position: fixed;
@@ -10,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(30deg, $orange 40%, rgba(0, 212, 255, 0) 100%);
+    background-image: linear-gradient(30deg, #481c00 40%, #262626 100%);
     mix-blend-mode: color;
     z-index: 1;
   }
@@ -23,7 +36,11 @@
 
   li {
     margin-bottom: 100px;
-    color: white;
+
+    a {
+      color: white;
+      text-transform: none;
+    }
 
     span:first-child {
       display: block;
@@ -33,17 +50,5 @@
       font-style: normal;
       font-size: font-size(80px);
     }
-  }
-
-  .circle {
-    position: fixed;
-    top: 20%;
-    left: 20%;
-    width: 700px;
-    height: 700px;
-    border-radius: 50%;
-    background-color: #ff00a7;
-    opacity: 0.6;
-    z-index: 2;
   }
 }

@@ -1,0 +1,51 @@
+.page-project {
+  position: relative;
+  background-color: map-get($map: $colors, $key: bg);
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 20vh;
+    left: 10vw;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #ef8d8d59;
+    opacity: 0.6;
+    z-index: 2;
+    filter: blur(2px);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 70vw;
+    height: 90vh;
+    margin-bottom: 15rem;
+    // background-image: linear-gradient(30deg, #481c00 40%, #262626 100%);
+    z-index: 1;
+  }
+
+  .title-wrapper {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  h2 {
+    font-size: font-size(120px);
+    // color: white;
+  }
+
+  p {
+    position: relative;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    letter-spacing: 1.3pt;
+    z-index: 3;
+  }
+}

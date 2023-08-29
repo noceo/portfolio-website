@@ -1,5 +1,5 @@
 function Text(props) {
-  return <p>{props.text}</p>;
+  return <p className={props.classes}>{props.copy}</p>;
 }
 
 export default Text;
