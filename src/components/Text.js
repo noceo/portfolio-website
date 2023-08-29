@@ -1,5 +1,11 @@
 function Text(props) {
-  return <p className={props.classes}>{props.copy}</p>;
+  return (
+    <div className="container">
+      <div className="row">
+        <p className={props.classes}>{props.copy}</p>
+      </div>
+    </div>
+  );
 }
 
 export default Text;

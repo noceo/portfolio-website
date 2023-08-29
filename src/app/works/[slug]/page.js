@@ -13,6 +13,11 @@ export default async function Project({ params }) {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="row">
+          <h3 className="col-md-6 offset-md-3">{data.description_long}</h3>
+        </div>
+      </div>
       {data.components.map((component, index) => (
         <DynamicComponentRenderer key={index} componentData={component} />
       ))}
