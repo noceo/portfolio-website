@@ -1,6 +1,6 @@
 function Text(props) {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <p className={props.classes}>{props.copy}</p>
       </div>

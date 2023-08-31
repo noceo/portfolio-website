@@ -6,10 +6,12 @@
   &::after {
     content: "";
     position: fixed;
-    top: 20vh;
+    top: 300px;
     left: 10vw;
-    width: 700px;
-    height: 700px;
+    width: 50vw;
+    height: 50vw;
+    max-width: 500px;
+    max-height: 500px;
     border-radius: 50%;
     background-color: #ef8d8d59;
     opacity: 0.6;
@@ -37,15 +39,26 @@
   }
 
   h2 {
-    font-size: font-size(120px);
+    font-size: clamp(26px, 15vw, 80px);
+
+    @include media-breakpoint-up(lg) {
+      font-size: font-size(120px);
+    }
     // color: white;
   }
 
-  p {
+  main {
     position: relative;
+    z-index: 3;
+  }
+
+  p {
     margin-bottom: 5rem;
     font-weight: 400;
-    letter-spacing: 1.3pt;
-    z-index: 3;
+    letter-spacing: 1pt;
+  }
+
+  img {
+    margin-bottom: 8rem;
   }
 }

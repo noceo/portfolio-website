@@ -7,20 +7,22 @@ export default async function Project({ params }) {
   return (
     <div className="page-project">
       <div className="title-wrapper">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
-            <h2 className="col-md-6 offset-md-3">{data.title}</h2>
+            <h2 className="col-10 offset-1 col-md-6 offset-md-3">{data.title}</h2>
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-          <h3 className="col-md-6 offset-md-3">{data.description_long}</h3>
+      <main>
+        <div className="container-fluid">
+          <div className="row">
+            <h3 className="col-10 offset-1 col-md-6 offset-md-3">{data.description_long}</h3>
+          </div>
         </div>
-      </div>
-      {data.components.map((component, index) => (
-        <DynamicComponentRenderer key={index} componentData={component} />
-      ))}
+        {data.components.map((component, index) => (
+          <DynamicComponentRenderer key={index} componentData={component} />
+        ))}
+      </main>
     </div>
   );
 }
