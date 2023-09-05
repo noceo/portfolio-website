@@ -16,7 +16,15 @@ h1 {
 }
 
 h2 {
-  font-size: font-size(150px);
+  font-size: font-size(80px);
+
+  @include media-breakpoint-up(md) {
+    font-size: font-size(130px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: font-size(150px);
+  }
 }
 
 h3 {
@@ -58,8 +66,12 @@ span {
 }
 
 a {
-  font-size: font-size(14px);
+  font-size: font-size(12px);
   color: black;
   text-transform: uppercase;
   text-decoration: none;
+
+  @include media-breakpoint-up(lg) {
+    font-size: font-size(14px);
+  }
 }

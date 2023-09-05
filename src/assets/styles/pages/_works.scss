@@ -7,13 +7,23 @@
     content: "";
     position: fixed;
     top: 20vh;
-    left: 10vw;
-    width: 700px;
-    height: 700px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     background-color: #ff00a7;
     opacity: 0.6;
     z-index: 2;
+
+    @include media-breakpoint-up(md) {
+      left: 5%;
+      right: unset;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 600px;
+      height: 600px;
+    }
   }
 
   &::after {
@@ -48,7 +58,15 @@
       font-family: "neue-haas-grotesk-display", sans-serif;
       font-weight: 700;
       font-style: normal;
-      font-size: font-size(80px);
+      font-size: font-size(45px);
+
+      @include media-breakpoint-up(md) {
+        font-size: font-size(60px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: font-size(80px);
+      }
     }
   }
 }

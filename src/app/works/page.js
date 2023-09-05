@@ -6,7 +6,7 @@ export default function Works() {
     <div className="page-works">
       <div className="container">
         <div className="row">
-          <div className="col-md-10 offset-md-1">
+          <div className="col-10 offset-1">
             <ul>
               {projects.default.map((project) => {
                 return (
