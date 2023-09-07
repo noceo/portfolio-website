@@ -15,6 +15,81 @@ body {
   min-height: 100%;
 }
 
+.page-project {
+  &::after {
+    content: "";
+    position: fixed;
+    // top: 300px;
+    // left: 10vw;
+    width: 60vw;
+    height: 60vw;
+    top: 40vh;
+    right: -20vw;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
+    background-color: #ef8d8d59;
+    opacity: 0.6;
+    z-index: 2;
+    filter: blur(2px);
+
+    @include media-breakpoint-up(sm) {
+      width: 500px;
+      height: 500px;
+      top: 20vh;
+      right: -200px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 5%;
+      right: unset;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 600px;
+      height: 600px;
+    }
+  }
+}
+
+.page-about,
+.page-contact {
+  &::after {
+    content: "";
+    position: fixed;
+    // top: 300px;
+    // left: 10vw;
+    width: 60vw;
+    height: 60vw;
+    top: 40vh;
+    right: -20vw;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
+    background-color: #ef8d8d59;
+    opacity: 0.6;
+    z-index: 2;
+    filter: blur(2px);
+
+    @include media-breakpoint-up(sm) {
+      width: 500px;
+      height: 500px;
+      top: 20vh;
+      right: -200px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 5%;
+      right: unset;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 600px;
+      height: 600px;
+    }
+  }
+}
+
 a,
 span {
   display: inline-block;
