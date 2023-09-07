@@ -10,7 +10,7 @@ export default function Contact() {
               <h2 data-title="nuntia.">nuntia.</h2>
               <h3>I would like to know about your future project. Maybe I can help you with it.</h3>
               <p>Email: paulschade98@gmail.com</p>
-              <Button asLink={true} href="mailto::paulschadde98@gmail.com">
+              <Button asLink={true} href="mailto:paulschade98@gmail.com">
                 Contact me
               </Button>
             </div>
