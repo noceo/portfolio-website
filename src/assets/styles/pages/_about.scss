@@ -1,24 +1,29 @@
 .page-about {
   padding: 150px 0;
+  background-color: map-get($map: $colors, $key: bg);
 
-  h2 {
-    position: relative;
-    margin-bottom: 50px;
-  }
-
-  h3 {
-    font-size: font-size(30px);
-    line-height: font-size(35px);
+  &::after {
+    background-image: linear-gradient(35deg, map-get($map: $colors, $key: green) 0%, transparent 100%);
   }
 
   .profile-picture {
     display: none;
     position: absolute;
     width: 100%;
-    top: 120px;
+    top: -30px;
 
     @include media-breakpoint-up(lg) {
       display: block;
     }
   }
+
+  // .blur {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   backdrop-filter: blur(20px);
+  //   z-index: 500;
+  // }
 }

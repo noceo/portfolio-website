@@ -1,0 +1,14 @@
+.page-contact {
+  position: relative;
+  padding: 150px 0;
+  background-color: map-get($map: $colors, $key: bg);
+  z-index: 0;
+
+  &::after {
+    background-image: linear-gradient(50deg, map-get($map: $colors, $key: magenta) 0%, transparent 100%);
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+}
