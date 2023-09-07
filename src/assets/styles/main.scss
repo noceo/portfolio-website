@@ -1,5 +1,5 @@
-@import "./abstracts/variables";
 @import "./abstracts/functions";
+@import "./abstracts/variables";
 @import "./abstracts/mixins";
 
 @import "./vendors/bootstrap";
@@ -7,6 +7,7 @@
 @import "./base/reset";
 @import "./base/base";
 @import "./base/typography";
+@import "./base/spacing";
 
 @import "layout/base";
 @import "layout/navigation";
@@ -16,6 +17,8 @@
 @import "layout/sidebar";
 
 @import "components/figureText";
+@import "components/button";
+@import "components/quote";
 
 @import "pages/home";
 @import "pages/works";

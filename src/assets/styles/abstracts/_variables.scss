@@ -1,6 +1,9 @@
+$enable-important-utilities: false;
+
 $colors: (
   bg: #dbd5c2,
   orange: #ff8900,
+  light-gray: #e0e0e0,
 );
 
 $html-font-size: 16px;
@@ -53,6 +56,37 @@ $container-max-widths: (
 $grid-columns: 12 !default;
 $grid-gutter-width: 2rem !default;
 $grid-row-columns: 6 !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+// $spacer: 1rem !default;
+// $spacers: (
+//   0: 0,
+//   1: font-size(10px),
+//   2: font-size(20px),
+//   3: font-size(30px),
+//   4: font-size(40px),
+//   5: font-size(50px),
+// ) !default;
+// scss-docs-end spacer-variables-maps
+
+$spacers: ();
+$i: 10;
+@while $i < 200 {
+  $spacers: map-merge(
+    $map1: $spacers,
+    $map2: (
+      $i: font-size($i),
+    ),
+  );
+
+  $i: $i + 10;
+}
 
 // // Container padding
 

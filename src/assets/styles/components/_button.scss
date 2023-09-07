@@ -1,0 +1,60 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 30px;
+  border: none;
+  // width: 160px;
+  height: 60px;
+  padding: 10px 50px;
+  background-color: map-get($map: $colors, $key: light-gray);
+  overflow: hidden;
+  text-transform: none;
+  cursor: pointer;
+  transition: padding 0.4s ease-in-out;
+
+  &-copy {
+    font-size: font-size(18px);
+  }
+
+  &-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 0 50px;
+    transform: translate(-50%, -50%);
+    // opacity: 0;
+    transition: left 0.35s ease-in-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: black;
+    transition: left 0.35s ease-in-out;
+  }
+
+  &:hover {
+    padding: 10px 100px;
+
+    .button-icon {
+      left: 50%;
+      // opacity: 1;
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+}
