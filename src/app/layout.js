@@ -11,6 +11,8 @@ export default function RootLayout({ children }) {
       <body>
         <div className="layout-default">
           {children}
+          <div className="lines-left" />
+          <div className="lines-right" />
           {/* <div className="noise" /> */}
         </div>
       </body>

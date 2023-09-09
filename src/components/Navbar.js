@@ -8,7 +8,7 @@ export default function Navbar() {
           <nav className="navbar-items col-md-12 offset-md-0 col-xl-8 offset-xl-2">
             <Link href="/works">Opera / Works</Link>
             <Link href="/about">De me / About</Link>
-            <a href="/">Nuntiate / Contact</a>
+            <Link href="/">Nuntia / Contact</Link>
           </nav>
         </div>
       </div>

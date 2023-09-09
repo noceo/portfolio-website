@@ -8,6 +8,10 @@
     background-image: linear-gradient(50deg, map-get($map: $colors, $key: magenta) 0%, transparent 100%);
   }
 
+  h3 {
+    margin-bottom: 80px;
+  }
+
   p {
     margin-bottom: 3rem;
   }

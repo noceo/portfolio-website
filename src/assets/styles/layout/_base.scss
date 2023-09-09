@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  background-color: map-get($map: $colors, $key: bg);
 }
 
 #root,
@@ -33,11 +34,12 @@ main {
     max-width: 500px;
     max-height: 500px;
     border-radius: 50%;
-    background-color: #ef8d8d59;
+    // background-color: #ef8d8d59;
+    background-image: linear-gradient(50deg, #ff8a8a 0%, transparent 100%);
     opacity: 0.6;
     z-index: 2;
     pointer-events: none;
-    filter: blur(2px);
+    filter: blur(10px);
 
     @include media-breakpoint-up(sm) {
       width: 500px;
@@ -103,6 +105,52 @@ main {
 a,
 span {
   display: inline-block;
+}
+
+.lines {
+  &-left {
+    &::before {
+      content: "";
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+      width: 1px;
+      height: 40px;
+      background-color: black;
+    }
+
+    &::after {
+      content: "";
+      position: fixed;
+      bottom: 30px;
+      left: 20px;
+      width: 40px;
+      height: 1px;
+      background-color: black;
+    }
+  }
+
+  &-right {
+    &::before {
+      content: "";
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      width: 1px;
+      height: 40px;
+      background-color: black;
+    }
+
+    &::after {
+      content: "";
+      position: fixed;
+      top: 30px;
+      right: 20px;
+      width: 40px;
+      height: 1px;
+      background-color: black;
+    }
+  }
 }
 
 .noise {

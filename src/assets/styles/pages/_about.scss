@@ -15,6 +15,11 @@
     @include media-breakpoint-up(lg) {
       display: block;
     }
+
+    img {
+      object-fit: cover;
+      height: 500px;
+    }
   }
 
   // .blur {
