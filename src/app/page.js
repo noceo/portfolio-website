@@ -5,14 +5,14 @@ export default function Home() {
     <div className="page-home">
       <div className="circle"></div>
       <Navbar />
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-5">
             <h2 data-title="salve.">salve.</h2>
           </div>
         </div>
       </div>
-      <div className="page-home__description container">
+      <div className="page-home__description container-fluid">
         <div className="row">
           <div className="col-md-4">
             <h4>Paul Schade</h4>
@@ -24,10 +24,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="info">
+      {/* <div className="info">
         <span></span>
         <p>Lorem ipsum dolor sit amet.</p>
-      </div>
+      </div> */}
     </div>
   );
 }

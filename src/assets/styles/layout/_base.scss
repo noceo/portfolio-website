@@ -109,11 +109,17 @@ span {
 
 .lines {
   &-left {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
     &::before {
       content: "";
       position: fixed;
       bottom: 20px;
-      left: 30px;
+      left: 20px;
       width: 1px;
       height: 40px;
       background-color: black;
@@ -123,7 +129,7 @@ span {
       content: "";
       position: fixed;
       bottom: 30px;
-      left: 20px;
+      left: 10px;
       width: 40px;
       height: 1px;
       background-color: black;
@@ -131,6 +137,12 @@ span {
   }
 
   &-right {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
     &::before {
       content: "";
       position: fixed;

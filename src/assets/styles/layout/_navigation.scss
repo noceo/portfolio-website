@@ -8,11 +8,16 @@
   @include media-breakpoint-up(md) {
     display: block;
   }
+
+  // @media (max-height: 800px) {
+  //   display: none;
+  // }
 }
 
 .navbar-items {
   display: flex;
   justify-content: space-between;
+  margin: 0 -12px;
 
   a {
     position: relative;

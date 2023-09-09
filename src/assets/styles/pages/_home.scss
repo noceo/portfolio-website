@@ -1,6 +1,12 @@
 .page-home {
+  position: relative;
   background-color: map-get($map: $colors, $key: bg);
-  padding-top: 120px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  @include media-breakpoint-up(md) {
+    padding: 120px 0;
+  }
 
   h2 {
     position: relative;
@@ -33,6 +39,7 @@
 
     p {
       line-height: font-size(30px);
+      margin-bottom: 0;
     }
   }
 
