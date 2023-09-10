@@ -8,6 +8,7 @@
   height: 50px;
   padding: 10px 30px;
   background-color: transparent;
+  color: black;
   overflow: hidden;
   text-transform: none;
   cursor: pointer;
@@ -69,4 +70,39 @@
       left: 0;
     }
   }
+}
+
+.icon-only {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  color: black;
+
+  &::before {
+    display: none;
+  }
+
+  &:hover {
+    padding: 10px;
+  }
+
+  .button-copy {
+    display: none;
+  }
+
+  .button-icon {
+    left: 50%;
+    padding: 0;
+    width: 50%;
+    height: 50%;
+    color: black;
+  }
+}
+
+.no-border {
+  border: none;
+}
+
+.br-0 {
+  border-radius: 0;
 }

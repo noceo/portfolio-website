@@ -1,4 +1,5 @@
 import "@/assets/styles/main.scss";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
           <div className="lines-left" />
           <div className="lines-right" />
           {/* <div className="noise" /> */}
+          <Footer />
         </div>
       </body>
     </html>

@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
+import Icon from "@/components/Icon";
 
 export default function Home() {
   return (
     <div className="page-home">
       <div className="circle"></div>
-      <Navbar />
+      <Navbar closeIcon={<Icon name="hamburger" />} />
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-5">
