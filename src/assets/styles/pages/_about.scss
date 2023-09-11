@@ -11,6 +11,7 @@
     position: absolute;
     width: 100%;
     top: -30px;
+    pointer-events: none;
 
     @include media-breakpoint-up(lg) {
       display: block;
@@ -31,4 +32,8 @@
   //   backdrop-filter: blur(20px);
   //   z-index: 500;
   // }
+
+  p {
+    font-size: font-size(14px);
+  }
 }

@@ -11,15 +11,20 @@
   h2 {
     position: relative;
     display: inline-block;
-    margin-bottom: 50vh;
+    // font-size: clamp(14px, 22vw, 60px);
+    height: 50vh;
+    min-height: 350px;
+    // margin-bottom: 350px;
     z-index: 0;
 
     @include media-breakpoint-up(md) {
-      margin-bottom: 180px;
+      height: 150px;
+      min-height: initial;
+      // margin-bottom: 120px;
     }
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 180px;
+      margin-bottom: 120px;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -28,37 +33,55 @@
   }
 
   &__description {
+    // margin-bottom: 70px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 70px;
+    }
+
     h4 {
       font-family: "neue-haas-grotesk-display", sans-serif;
       font-weight: 700;
-      font-size: font-size(20px);
-      margin-bottom: 20px;
+      font-size: font-size(14px);
+      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 0.5pt;
+
+      @include media-breakpoint-up(md) {
+        font-size: font-size(18px);
+        margin-bottom: 20px;
+      }
     }
 
     p {
-      line-height: font-size(30px);
+      font-size: font-size(12px);
+      line-height: font-size(18px);
       margin-bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        font-size: font-size(16px);
+        line-height: font-size(24px);
+      }
     }
   }
 
   .circle {
     position: absolute;
-    top: 50%;
+    top: max(40vh, 320px);
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 50vw;
-    max-width: 250px;
-    max-height: 250px;
+    width: min(50vw, 50vh);
+    height: min(50vw, 50vh);
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 50%;
     background-color: #3e2100;
-    filter: blur(0.5px);
+    // filter: blur(0.5px);
 
     @include media-breakpoint-up(sm) {
-      width: 250px;
-      height: 250px;
+      left: 60%;
+      width: 230px;
+      height: 230px;
       max-width: none;
       max-height: none;
     }
@@ -72,14 +95,14 @@
 
     @include media-breakpoint-up(lg) {
       top: 45%;
-      left: 65%;
+      left: 70%;
       width: 350px;
       height: 350px;
     }
 
     @include media-breakpoint-up(xl) {
-      width: 400px;
-      height: 400px;
+      // width: 350px;
+      // height: 350px;
     }
 
     @include media-breakpoint-up(xxl) {

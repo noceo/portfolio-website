@@ -114,6 +114,7 @@
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
+    margin: 0 -12px;
   }
 
   a {

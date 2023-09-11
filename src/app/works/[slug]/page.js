@@ -23,6 +23,7 @@ export default async function Project({ params }) {
           <DynamicComponentRenderer key={index} componentData={component} />
         ))}
       </main>
+      <div className="circle" />
     </div>
   );
 }
