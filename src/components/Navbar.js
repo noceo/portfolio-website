@@ -17,7 +17,7 @@ export default function Navbar(props) {
       <div className="navbar-wrapper">
         <div className="container-fluid">
           <div className="row">
-            <div col-md-12 offset-md-0 col-xl-8 offset-xl-2>
+            <div className="col-md-12 offset-md-0 col-xl-8 offset-xl-2">
               <nav className="navbar-items">
                 <Link href="/works">Opera / Works</Link>
                 <Link href="/about">De me / About</Link>
