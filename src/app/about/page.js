@@ -1,16 +1,18 @@
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import Quote from "@/components/Quote";
+import Circle from "@/components/Circle";
 
 export default function About() {
   return (
     <div className="page-about">
+      <Circle />
       <main>
         <div className="profile-picture">
           <div className="container-fluid">
             <div className="row">
               <figure className="col-10 offset-1 col-md-3 offset-md-9">
-                <img src={"./images/chair.jpeg"} alt="Profile Picture" />
+                <img src={"./images/profile.jpeg"} alt="Profile Picture" />
               </figure>
             </div>
           </div>
@@ -42,7 +44,7 @@ export default function About() {
               <Button className="mb-100" asLink={true} href="/">
                 My CV
               </Button>
-              <h4>Let's work together</h4>
+              <h4>Let’s work together</h4>
               <p className="mb-50">I can help you with your project idea and take it from concept to deployment.</p>
               <Button>Contact me</Button>
             </div>

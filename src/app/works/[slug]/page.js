@@ -1,11 +1,13 @@
 import projects from "@/config";
 import { getLocalData } from "@/lib/localData";
 import DynamicComponentRenderer from "@/components/DynamicComponentRenderer";
+import Circle from "@/components/Circle";
 
 export default async function Project({ params }) {
   const data = await getLocalData(params.slug);
   return (
     <div className="page-project">
+      <Circle />
       <main>
         <div className="title-wrapper">
           <div className="container-fluid">
@@ -23,7 +25,6 @@ export default async function Project({ params }) {
           <DynamicComponentRenderer key={index} componentData={component} />
         ))}
       </main>
-      <div className="circle" />
     </div>
   );
 }

@@ -39,11 +39,11 @@ main {
     max-height: 500px;
     border-radius: 50%;
     // background-color: #ef8d8d59;
-    background-image: linear-gradient(50deg, #ff8a8a 0%, transparent 100%);
+    background-image: linear-gradient(50deg, #ffbbbb 0%, transparent 100%);
     opacity: 0.6;
     z-index: 2;
     pointer-events: none;
-    filter: blur(10px);
+    filter: blur(5px);
 
     @include media-breakpoint-up(sm) {
       width: 500px;
@@ -102,7 +102,7 @@ main {
 
 .page-about,
 .page-contact {
-  &::after {
+  .circle {
     content: "";
     position: fixed;
     // top: 300px;
