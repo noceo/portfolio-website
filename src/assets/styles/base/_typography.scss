@@ -105,7 +105,7 @@ a {
   text-transform: uppercase;
   text-decoration: none;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     font-size: font-size(14px);
   }
 }

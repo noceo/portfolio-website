@@ -1,6 +1,5 @@
 import "@/assets/styles/main.scss";
 import Footer from "@/components/Footer";
-import ScrollIndicator from "@/components/ScrollIndicator";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +15,6 @@ export default function RootLayout({ children }) {
           {/* <div className="noise" /> */}
           <Footer />
         </div>
-        <ScrollIndicator />
       </body>
     </html>
   );

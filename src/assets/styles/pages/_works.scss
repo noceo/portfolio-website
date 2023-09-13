@@ -34,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(30deg, #481c00 0, #262626 70%);
+    background-image: linear-gradient(30deg, #481c00 0, #262626 80%);
     mix-blend-mode: color;
     z-index: 1;
   }
@@ -52,7 +52,7 @@
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         a {
-          transform: translateX(20px);
+          transform: translateX(10px);
         }
       }
     }
@@ -80,5 +80,9 @@
         font-size: font-size(80px);
       }
     }
+  }
+
+  ~ .footer {
+    color: white;
   }
 }

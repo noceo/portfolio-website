@@ -16,10 +16,13 @@ main {
 
 .page-home {
   height: 100vh;
-  min-height: 700px;
+  min-height: 600px;
+
+  @include media-breakpoint-up(sm) {
+    min-height: 700px;
+  }
 }
 
-.page-home,
 .page-works,
 .page-about,
 .page-contact {
