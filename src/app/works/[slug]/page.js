@@ -1,7 +1,7 @@
 import projects from "@/config";
 import { getLocalData } from "@/lib/localData";
 import DynamicComponentRenderer from "@/components/DynamicComponentRenderer";
-import Circle from "@/components/Circle";
+import Circle from "@/components/BackgroundCircle";
 
 export default async function Project({ params }) {
   const data = await getLocalData(params.slug);

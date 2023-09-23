@@ -1,5 +1,8 @@
 import "@/assets/styles/main.scss";
 import Footer from "@/components/Footer";
+// import Loading from "./loading";
+import SplashScreen from "@/components/SplashScreen";
+import PageWrapper from "@/components/PageWrapper";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,9 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="layout-default">
-          {children}
-          {/* <div className="noise" /> */}
-          <Footer />
+          <PageWrapper>{children}</PageWrapper>
         </div>
       </body>
     </html>

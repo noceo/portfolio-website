@@ -1,12 +1,12 @@
 "use client";
 
-import Icon from "./Icon";
+// import Icon from "./Icon";
 
 export default function Button(props) {
   var content = (
     <>
       <span className="button-copy">{props.children}</span>
-      <span className="button-icon">{props.icon ?? <Icon name="arrow_right" />}</span>
+      <span className="button-icon">{props.icon}</span>
     </>
   );
 

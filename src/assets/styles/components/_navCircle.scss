@@ -1,0 +1,83 @@
+#circle-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.circle-item-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+}
+
+.circle-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // animation: circle 6s linear infinite;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1vw;
+    // width: 100%;
+    // height: 100%;
+  }
+}
+
+#circle-works {
+  top: -80%;
+  left: 70%;
+
+  a {
+    background-color: pink;
+    width: 75%;
+    height: 75%;
+  }
+}
+
+#circle-about {
+  top: 10%;
+  left: -110%;
+
+  a {
+    background-color: map-get($map: $colors, $key: green);
+    width: 50%;
+    height: 50%;
+  }
+}
+
+#circle-contact {
+  top: 75%;
+  left: 75%;
+  a {
+    background-color: orange;
+    width: 35%;
+    height: 35%;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(150px) rotate(-360deg);
+  }
+}

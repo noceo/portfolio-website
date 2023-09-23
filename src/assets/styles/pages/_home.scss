@@ -1,6 +1,5 @@
 .page-home {
   position: relative;
-  background-color: map-get($map: $colors, $key: bg);
   padding-top: max(80px, 12vh);
   padding-bottom: 100px;
 
@@ -71,7 +70,39 @@
     }
   }
 
-  .circle {
+  .circle-nav-vis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    background-color: #3e2100;
+  }
+
+  .circle-nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 70px;
+    min-height: 70px;
+    // border-radius: 50%;
+    // background-color: #3e2100;
+
+    // @include media-breakpoint-up(sm) {
+    //   width: 125px;
+    //   height: 125px;
+    // }
+
+    // @include media-breakpoint-up(md) {
+    //   width: 150px;
+    //   height: 150px;
+    // }
+  }
+
+  .nav-circle-wrapper {
     position: absolute;
     top: max(40vh, 320px);
     left: 50%;
@@ -82,8 +113,9 @@
     min-height: 100px;
     max-width: 200px;
     max-height: 200px;
-    border-radius: 50%;
-    background-color: #3e2100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // filter: blur(0.5px);
 
     @include media-breakpoint-up(sm) {
@@ -95,17 +127,17 @@
     }
 
     @include media-breakpoint-up(md) {
-      top: 50%;
+      top: 50vmax;
       left: 70%;
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
     }
 
     @include media-breakpoint-up(lg) {
       top: 45%;
-      left: 70%;
-      width: 350px;
-      height: 350px;
+      left: 65%;
+      width: 250px;
+      height: 250px;
     }
 
     @include media-breakpoint-up(xl) {
@@ -116,20 +148,6 @@
     @include media-breakpoint-up(xxl) {
       width: 500px;
       height: 500px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -25%;
-      left: -25%;
-      width: 130%;
-      height: 130%;
-      border-radius: 50%;
-      background-image: linear-gradient(50deg, map-get($map: $colors, $key: orange) 0%, transparent 100%);
-      filter: blur(30px);
-      mix-blend-mode: color;
-      z-index: -1;
     }
   }
 

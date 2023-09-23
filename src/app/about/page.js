@@ -1,32 +1,50 @@
+"use client";
+
+import { useEffect, useContext } from "react";
+import { SplashScreenContext } from "@/components/PageWrapper";
+import anime from "animejs";
 import Button from "@/components/Button";
-import Icon from "@/components/Icon";
 import Quote from "@/components/Quote";
-import Circle from "@/components/Circle";
+import Circle from "@/components/BackgroundCircle";
+import ArrowRight from "../../../public/icons/arrow_right.svg";
+import ButtonBack from "@/components/ButtonBack";
 
 export default function About() {
+  const context = useContext(SplashScreenContext);
+
+  useEffect(() => {
+    const fadeIn = anime({
+      targets: ".anime.fade-in",
+      translateY: [50, 0],
+      opacity: [0, 1],
+      duration: 600,
+      delay: anime.stagger(200),
+      easing: "easeInOutQuad",
+      direction: "forward",
+      autoplay: false,
+    });
+
+    if (!context.isSplashScreenLoading) {
+      console.log("PAGE LOAD");
+      fadeIn.play();
+    }
+  }, [context.isSplashScreenLoading]);
+
   return (
     <div className="page-about">
       <Circle />
+      <ButtonBack className="anime fade-in" backLocation="/" />
       <main>
-        <div className="profile-picture">
-          <div className="container-fluid">
-            <div className="row">
-              <figure className="col-10 offset-1 col-md-3 offset-md-9">
-                <img src={"./images/profile.jpeg"} alt="Profile Picture" />
-              </figure>
-            </div>
-          </div>
-        </div>
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
-              <div>
-                <h2 data-title="de me.">de me.</h2>
-              </div>
-              <h3>I’m Paul. A developer, art enthusiast and music maker.</h3>
+              <h2 data-title="de me." className="anime fade-in">
+                de me.
+              </h2>
+              <h3 className="anime fade-in">I’m Paul. A developer, art enthusiast and music maker.</h3>
             </div>
           </div>
-          <div className="row">
+          <div className="row anime fade-in">
             <div className="col-md-6 offset-md-1">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed eros nec tortor aliquam elementum volutpat eget sem. Maecenas fringilla et libero vel congue. Nullam ullamcorper nibh id accumsan ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eleifend odio aliquam mattis bibendum. Nulla bibendum tellus ac dapibus scelerisque. Donec vel urna sit amet enim convallis suscipit vitae vel urna. Integer sem ex, gravida in mollis non, sagittis ac leo.
@@ -40,13 +58,21 @@ export default function About() {
               <p>Etiam vel magna id lorem blandit consectetur vel quis lacus. Proin pretium lacus vitae enim dictum, nec luctus purus semper. Phasellus in molestie lectus. Donec dui nunc, mollis feugiat dignissim vel, convallis vitae est. Maecenas sed elit non diam condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque consequat congue nunc quis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce pharetra eget nisi commodo mollis. Sed sed purus justo.</p>
               <h4>Skills</h4>
               <p className="mb-50">Ut nunc felis, rhoncus et massa et, posuere convallis nunc. Integer mollis nisl quam, quis convallis ante pharetra quis. Morbi porta ligula at libero placerat ullamcorper. Vestibulum ac cursus mauris, vel consectetur lectus.</p>
-
-              <Button className="mb-100" asLink={true} href="/">
+              <Button className="mb-100" asLink={true} href="/" icon={<ArrowRight />}>
                 My CV
               </Button>
               <h4>Let’s work together</h4>
               <p className="mb-50">I can help you with your project idea and take it from concept to deployment.</p>
-              <Button>Contact me</Button>
+              <Button icon={<ArrowRight />}>Contact me</Button>
+            </div>
+          </div>
+        </div>
+        <div className="profile-picture anime fade-in">
+          <div className="container-fluid">
+            <div className="row">
+              <figure className="col-10 offset-1 col-md-3 offset-md-9">
+                <img src={"./images/profile.jpeg"} alt="Profile Picture" />
+              </figure>
             </div>
           </div>
         </div>
