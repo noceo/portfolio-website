@@ -1,17 +1,21 @@
 "use client";
 
 import { useEffect, useContext } from "react";
-import { SplashScreenContext } from "@/components/PageWrapper";
+import { SplashScreenContext, PreviousRouteContext } from "@/components/PageWrapper";
 import anime from "animejs";
-import { fadeInRight } from "@/animations";
+import { fadeInLeft, fadeInRight } from "@/animations";
 import Link from "next/link";
-import ButtonBack from "@/components/ButtonBack";
+import ButtonPageTransition from "@/components/ButtonPageTransition";
+import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
 
 export default function Works({ works }) {
   const context = useContext(SplashScreenContext);
+  const prevPage = useContext(PreviousRouteContext);
 
   useEffect(() => {
-    const fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
+    var fadeIn;
+    if (prevPage == "/") fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
+    else fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
 
     if (!context.isSplashScreenLoading) {
       fadeIn.play();
@@ -20,7 +24,9 @@ export default function Works({ works }) {
 
   return (
     <div className="page-works">
-      <ButtonBack className="anime fade-in" location="/" />
+      <ButtonPageTransition className="link-back anime fade-in" location="/" redirectBack={true}>
+        <ArrowLeftIcon />
+      </ButtonPageTransition>
       <div className="container">
         <div className="row">
           <div className="col-10 offset-1">
@@ -28,10 +34,10 @@ export default function Works({ works }) {
               {works.default.map((project) => {
                 return (
                   <li key={project.title} className="anime fade-in">
-                    <Link href={`/works/${project.slug}`}>
+                    <ButtonPageTransition location={`/works/${project.slug}`}>
                       <span>{project.title}</span>
                       <span>– {project.description}</span>
-                    </Link>
+                    </ButtonPageTransition>
                   </li>
                 );
               })}

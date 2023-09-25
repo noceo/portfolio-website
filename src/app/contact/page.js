@@ -5,7 +5,8 @@ import { SplashScreenContext } from "@/components/PageWrapper";
 import anime from "animejs";
 import { fadeInRight } from "@/animations";
 import Button from "@/components/Button";
-import ButtonBack from "@/components/ButtonBack";
+import ButtonPageTransition from "@/components/ButtonPageTransition";
+import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
 
 export default function Contact() {
   const context = useContext(SplashScreenContext);
@@ -20,7 +21,9 @@ export default function Contact() {
 
   return (
     <div className="page-contact">
-      <ButtonBack className="anime fade-in" location="/" />
+      <ButtonPageTransition className="link-back anime fade-in" location="/" redirectBack={true}>
+        <ArrowLeftIcon />
+      </ButtonPageTransition>
       <main>
         <div className="container-fluid">
           <div className="row">

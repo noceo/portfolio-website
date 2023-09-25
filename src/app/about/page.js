@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useContext } from "react";
-import { SplashScreenContext } from "@/components/PageWrapper";
+import { PreviousRouteContext, SplashScreenContext } from "@/components/PageWrapper";
 import anime from "animejs";
 import { fadeInRight } from "@/animations";
 import Button from "@/components/Button";
@@ -9,9 +9,12 @@ import Quote from "@/components/Quote";
 import Circle from "@/components/BackgroundCircle";
 import ArrowRight from "../../../public/icons/arrow_right.svg";
 import ButtonBack from "@/components/ButtonBack";
+import ButtonPageTransition from "@/components/ButtonPageTransition";
+import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
 
 export default function About() {
   const context = useContext(SplashScreenContext);
+  const prevPage = useContext(PreviousRouteContext);
 
   useEffect(() => {
     const fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
@@ -19,12 +22,15 @@ export default function About() {
     if (!context.isSplashScreenLoading) {
       fadeIn.play();
     }
+    console.log(prevPage);
   }, [context.isSplashScreenLoading]);
 
   return (
     <div className="page-about">
       <Circle />
-      <ButtonBack className="anime fade-in" location="/" />
+      <ButtonPageTransition className="link-back anime fade-in" location="/" redirectBack={true}>
+        <ArrowLeftIcon />
+      </ButtonPageTransition>
       <main>
         <div className="container-fluid">
           <div className="row anime fade-in">

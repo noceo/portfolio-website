@@ -2,11 +2,16 @@ import projects from "@/config";
 import { getLocalData } from "@/lib/localData";
 import DynamicComponentRenderer from "@/components/DynamicComponentRenderer";
 import Circle from "@/components/BackgroundCircle";
+import ButtonPageTransition from "@/components/ButtonPageTransition";
+import ArrowLeftIcon from "../../../../public/icons/arrow_left.svg";
 
 export default async function Project({ params }) {
   const data = await getLocalData(params.slug);
   return (
     <div className="page-project">
+      <ButtonPageTransition className="link-back anime fade-in" location="/works" redirectBack={true}>
+        <ArrowLeftIcon />
+      </ButtonPageTransition>
       <Circle />
       <main>
         <div className="title-wrapper">
