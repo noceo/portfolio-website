@@ -3,6 +3,7 @@
 import { useEffect, useContext } from "react";
 import { SplashScreenContext } from "@/components/PageWrapper";
 import anime from "animejs";
+import { fadeInRight } from "@/animations";
 import Button from "@/components/Button";
 import Quote from "@/components/Quote";
 import Circle from "@/components/BackgroundCircle";
@@ -13,19 +14,9 @@ export default function About() {
   const context = useContext(SplashScreenContext);
 
   useEffect(() => {
-    const fadeIn = anime({
-      targets: ".anime.fade-in",
-      translateY: [50, 0],
-      opacity: [0, 1],
-      duration: 600,
-      delay: anime.stagger(200),
-      easing: "easeInOutQuad",
-      direction: "forward",
-      autoplay: false,
-    });
+    const fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
 
     if (!context.isSplashScreenLoading) {
-      console.log("PAGE LOAD");
       fadeIn.play();
     }
   }, [context.isSplashScreenLoading]);
@@ -33,15 +24,13 @@ export default function About() {
   return (
     <div className="page-about">
       <Circle />
-      <ButtonBack className="anime fade-in" backLocation="/" />
+      <ButtonBack className="anime fade-in" location="/" />
       <main>
         <div className="container-fluid">
-          <div className="row">
+          <div className="row anime fade-in">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
-              <h2 data-title="de me." className="anime fade-in">
-                de me.
-              </h2>
-              <h3 className="anime fade-in">I’m Paul. A developer, art enthusiast and music maker.</h3>
+              <h2 data-title="de me.">de me.</h2>
+              <h3 className="">I’m Paul. A developer, art enthusiast and music maker.</h3>
             </div>
           </div>
           <div className="row anime fade-in">

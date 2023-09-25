@@ -2,6 +2,7 @@
 
 import { useContext, useEffect } from "react";
 import anime from "animejs";
+import { pageFadeIn, fadeInLeft } from "@/animations";
 import Navbar from "@/components/Navbar";
 import NavCircle from "@/components/NavCircle";
 import { SplashScreenContext } from "@/components/PageWrapper";
@@ -10,8 +11,19 @@ export default function Home({}) {
   const context = useContext(SplashScreenContext);
 
   useEffect(() => {
+    const loop = anime({
+      targets: ["#circle-works", "#circle-about", "#circle-contact"],
+      translateY: function () {
+        return `${anime.random(5, 10)}px`;
+      },
+      duration: 1000,
+      easing: "easeInOutSine",
+      direction: "alternate",
+      loop: true,
+      autoplay: false,
+    });
+
     const loopAnimation = function () {
-      document.querySelector("#circle-works").style = "";
       const circleWorks = document.querySelector("#circle-works");
       const circleAbout = document.querySelector("#circle-about");
       const circleContact = document.querySelector("#circle-contact");
@@ -20,53 +32,44 @@ export default function Home({}) {
       circleAbout.style = "";
       circleContact.style = "";
 
-      anime({
-        targets: [circleWorks, circleAbout, circleContact],
-        translateY: function () {
-          return `${anime.random(5, 10)}px`;
-        },
-        duration: 1000,
-        easing: "easeInOutSine",
-        direction: "alternate",
-        loop: true,
-      });
+      loop.play();
     };
 
     const timeline = anime.timeline({ autoplay: false });
     timeline
       .add({
         targets: "#circle-works",
-        translateX: ["-60%", "0%"],
-        translateY: ["80%", "0%"],
+        top: ["0%", "-80%"],
+        left: ["0%", "70%"],
         skewY: [
           { value: -30, duration: 100, easing: "easeOutExpo" },
           { value: 0, duration: 600 },
         ],
         easing: "easeOutElastic(1, .6)",
         duration: 800,
+        changeComplete: () => {
+          loopAnimation();
+        },
       })
       .add(
         {
           targets: "#circle-about",
-          translateX: ["110%", "0%"],
-          translateY: ["-10%", "0%"],
+          top: ["0%", "10%"],
+          left: ["0%", "-110%"],
           scaleY: [
             { value: 0.5, duration: 100, easing: "easeOutExpo" },
             { value: 1, duration: 600 },
           ],
           easing: "easeOutElastic(1, .6)",
           duration: 800,
-          changeComplete: function () {
-            loopAnimation();
-          },
         },
         "-=700"
       )
       .add(
         {
           targets: "#circle-contact",
-          translateX: ["-75%", "0%"],
-          translateY: ["-75%", "0%"],
+          left: ["0%", "75%"],
+          top: ["0%", "75%"],
           scaleY: [
             { value: 0.5, duration: 100, easing: "easeOutExpo" },
             { value: 1, duration: 600 },
@@ -77,29 +80,20 @@ export default function Home({}) {
         "-=600"
       );
 
-    const fadeIn = anime({
-      targets: ".anime.fade-in",
-      translateY: [50, 0],
-      opacity: [0, 1],
-      duration: 600,
-      delay: anime.stagger(200),
-      easing: "easeInOutQuad",
-      direction: "forward",
-      complete: () => {
-        document.querySelector("#circle-items").style.opacity = 1;
-        timeline.play();
-      },
-      autoplay: false,
-    });
+    const fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
+    fadeIn.complete = () => {
+      document.querySelector("#circle-items").style.opacity = 1;
+      timeline.play();
+    };
 
     if (!context.isSplashScreenLoading) {
-      console.log("PAGE LOAD");
       fadeIn.play();
     }
 
     return () => {
       fadeIn.pause();
       timeline.pause();
+      loop.pause();
     };
   }, [context.isSplashScreenLoading]);
 

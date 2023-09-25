@@ -1,33 +1,27 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import anime from "animejs";
+import { pageFadeOut, fadeOutLeft } from "@/animations";
 
 export default function NavCircleButton(props) {
   const router = useRouter();
-  const animation = props.animationRef;
+  const fadeOut = useRef();
 
   useEffect(() => {
+    fadeOut.current = anime({ ...fadeOutLeft, delay: anime.stagger(fadeOutLeft.delay) });
+    fadeOut.current.complete = () => router.push(props.location);
+
     router.prefetch(props.location);
   }, []);
 
   const redirect = function (e) {
-    console.log(e, animation);
     e.preventDefault();
 
-    anime({
-      targets: ".anime.fade-in",
-      translateY: -50,
-      opacity: [1, 0],
-      duration: 400,
-      delay: anime.stagger(100),
-      easing: "easeInOutQuad",
-      direction: "forward",
-      complete: () => {
-        router.push(props.location);
-      },
-    });
+    if (!fadeOut.current.began) {
+      fadeOut.current.play();
+    }
   };
 
   return (
