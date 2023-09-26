@@ -1,6 +1,6 @@
 "use client";
 
-import NavCircleButton from "./NavCircleButton";
+import ButtonPageTransition from "./ButtonPageTransition";
 
 export default function NavCircle() {
   return (
@@ -9,20 +9,20 @@ export default function NavCircle() {
         <div id="circle-items">
           {/* <div className="circle-item-wrapper"> */}
           <div id="circle-works" className="circle-item">
-            <NavCircleButton location="/works">
+            <ButtonPageTransition location="/works">
               {/* Opera /<br />
               Works */}
-            </NavCircleButton>
+            </ButtonPageTransition>
           </div>
           {/* </div> */}
           {/* <div className="circle-item-wrapper"> */}
           <div id="circle-about" className="circle-item">
-            <NavCircleButton location="/about">{/* De me / About */}</NavCircleButton>
+            <ButtonPageTransition location="/about">{/* De me / About */}</ButtonPageTransition>
           </div>
           {/* </div> */}
           {/* <div className="circle-item-wrapper"> */}
           <div id="circle-contact" className="circle-item">
-            <NavCircleButton location="/contact">{/* Nuntia / Contact */}</NavCircleButton>
+            <ButtonPageTransition location="/contact">{/* Nuntia / Contact */}</ButtonPageTransition>
           </div>
           {/* </div> */}
         </div>
