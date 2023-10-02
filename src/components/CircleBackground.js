@@ -53,7 +53,8 @@ export default function CircleBackground({ circleStyles }) {
         {
           targets: cssVariables,
           backgroundColor: newCircleColor,
-          duration: 1000,
+          easing: "easeInOutSine",
+          duration: 300,
           update: () => {
             root.style.setProperty("--color-circle", cssVariables.backgroundColor);
           },

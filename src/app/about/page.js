@@ -3,7 +3,6 @@
 import useFadeIn from "@/hooks/useFadeIn";
 import Button from "@/components/Button";
 import Quote from "@/components/Quote";
-import Circle from "@/components/BackgroundCircle";
 import ArrowRight from "../../../public/icons/arrow_right.svg";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
@@ -13,7 +12,6 @@ export default function About() {
 
   return (
     <div className="page-about">
-      <Circle />
       <ButtonPageTransition className="link-back anime fade-in" location="/" redirectBack={true}>
         <ArrowLeftIcon />
       </ButtonPageTransition>
