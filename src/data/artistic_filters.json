@@ -2,6 +2,15 @@
   "title": "Artistic Filters",
   "slug": "artistic_filters",
   "description": "Image Processing",
+  "accentColor": "#4400f4",
+  "circleStyle": {
+    "xs": {
+      "top": "10%",
+      "left": "70%",
+      "width": "50vw",
+      "height": "50vw"
+    }
+  },
   "components": [
     {
       "type": "text",

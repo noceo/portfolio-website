@@ -2,15 +2,21 @@
 
 import SplashScreen from "./SplashScreen";
 import Footer from "./Footer";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import { usePreviousRoute } from "@/hooks/usePreviousRoute";
+import CircleBackground from "./CircleBackground";
 
 export const SplashScreenContext = React.createContext();
 export const PreviousRouteContext = React.createContext();
+export const PageTransitionContext = React.createContext();
 
-export default function PageWrapper({ children }) {
+export default function PageWrapper({ children, circleStyles }) {
   const [isSplashScreenLoading, setSplashScreenLoading] = useState(true);
+  const [pageTransition, setPageTransition] = useState({
+    isRunning: false,
+    location: "/",
+  });
   const prevRoute = usePreviousRoute();
 
   useEffect(() => {
@@ -21,13 +27,15 @@ export default function PageWrapper({ children }) {
 
   return (
     <>
-      <PreviousRouteContext.Provider value={prevRoute}>
-        <SplashScreenContext.Provider value={{ isSplashScreenLoading, setSplashScreenLoading }}>
-          <SplashScreen />
-          {children}
-        </SplashScreenContext.Provider>
-      </PreviousRouteContext.Provider>
-      <div className="circle-bg" />
+      <PageTransitionContext.Provider value={{ pageTransition, setPageTransition }}>
+        <PreviousRouteContext.Provider value={prevRoute}>
+          <SplashScreenContext.Provider value={{ isSplashScreenLoading, setSplashScreenLoading }}>
+            <SplashScreen />
+            {children}
+          </SplashScreenContext.Provider>
+        </PreviousRouteContext.Provider>
+        <CircleBackground circleStyles={circleStyles} />
+      </PageTransitionContext.Provider>
       <div className="noise" />
       <Footer />
     </>

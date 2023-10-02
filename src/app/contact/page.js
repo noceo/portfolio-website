@@ -1,23 +1,12 @@
 "use client";
 
-import { useEffect, useContext } from "react";
-import { SplashScreenContext } from "@/components/PageWrapper";
-import anime from "animejs";
-import { fadeInRight } from "@/animations";
+import useFadeIn from "@/hooks/useFadeIn";
 import Button from "@/components/Button";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
 
 export default function Contact() {
-  const context = useContext(SplashScreenContext);
-
-  useEffect(() => {
-    const fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
-
-    if (!context.isSplashScreenLoading) {
-      fadeIn.play();
-    }
-  }, [context.isSplashScreenLoading]);
+  useFadeIn("right");
 
   return (
     <div className="page-contact">

@@ -1,14 +1,13 @@
 "use client";
 
-import { useContext, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import anime from "animejs";
-import { pageFadeIn, fadeInLeft } from "@/animations";
 import Navbar from "@/components/Navbar";
 import NavCircle from "@/components/NavCircle";
-import { SplashScreenContext } from "@/components/PageWrapper";
+import useFadeIn from "@/hooks/useFadeIn";
 
 export default function Home({}) {
-  const context = useContext(SplashScreenContext);
+  const onFadeInComplete = useRef();
 
   useEffect(() => {
     const loop = anime({
@@ -80,22 +79,18 @@ export default function Home({}) {
         "-=600"
       );
 
-    const fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
-    fadeIn.complete = () => {
+    onFadeInComplete.current = () => {
       document.querySelector("#circle-items").style.opacity = 1;
       timeline.play();
     };
 
-    if (!context.isSplashScreenLoading) {
-      fadeIn.play();
-    }
-
     return () => {
-      fadeIn.pause();
       timeline.pause();
       loop.pause();
     };
-  }, [context.isSplashScreenLoading]);
+  }, []);
+
+  useFadeIn("left", onFadeInComplete);
 
   return (
     <div className="page-home">

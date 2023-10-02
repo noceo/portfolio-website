@@ -2,7 +2,6 @@
   position: relative;
   padding-bottom: 150px;
   background-color: map-get($map: $colors, $key: bg);
-  z-index: 0;
 
   .title-wrapper {
     position: relative;

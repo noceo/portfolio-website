@@ -1,26 +1,32 @@
 "use client";
 
 import { useEffect, useContext } from "react";
-import { SplashScreenContext, PreviousRouteContext } from "@/components/PageWrapper";
+import { SplashScreenContext, PreviousRouteContext, PageTransitionContext } from "@/components/PageWrapper";
 import anime from "animejs";
-import { fadeInLeft, fadeInRight } from "@/animations";
+import { fadeInLeft, fadeInRight } from "@/utils/animations";
 import Link from "next/link";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
+import { usePathname } from "next/navigation";
+import useFadeIn from "@/hooks/useFadeIn";
 
 export default function Works({ works }) {
   const context = useContext(SplashScreenContext);
   const prevPage = useContext(PreviousRouteContext);
-
-  useEffect(() => {
-    var fadeIn;
-    if (prevPage == "/") fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
-    else fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
-
-    if (!context.isSplashScreenLoading) {
-      fadeIn.play();
-    }
-  }, [context.isSplashScreenLoading]);
+  const pageTransitionContext = useContext(PageTransitionContext);
+  const pathname = usePathname();
+  useFadeIn(null);
+  // useEffect(() => {
+  //   var fadeIn;
+  //   if (prevPage == "/") fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
+  //   else fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
+  //   fadeIn.complete = () => {
+  //     pageTransitionContext.setPageTransition({ isRunning: false, location: pathname });
+  //   };
+  //   if (!context.isSplashScreenLoading) {
+  //     fadeIn.play();
+  //   }
+  // }, [context.isSplashScreenLoading]);
 
   return (
     <div className="page-works">

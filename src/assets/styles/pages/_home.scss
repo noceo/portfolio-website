@@ -169,27 +169,11 @@
       font-size: font-size(12px);
     }
   }
-}
 
-@keyframes heading {
-  0%,
-  100% {
-    top: -8px;
-    left: 8px;
-  }
-
-  30% {
-    top: -14px;
-    left: 14px;
-  }
-
-  50% {
-    top: -18px;
-    left: 18px;
-  }
-
-  70% {
-    top: -14px;
-    left: 14px;
+  + .circle-bg {
+    top: 35%;
+    left: 50%;
+    width: 50vw;
+    height: 50vw;
   }
 }
