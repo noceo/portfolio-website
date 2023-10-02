@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
@@ -18,9 +20,18 @@ export default function Navbar(props) {
           <div className="row">
             <div className="col-md-12 offset-md-0 col-xl-8 offset-xl-2">
               <nav className="navbar-items">
-                <Link href="/works">Opera / Works</Link>
-                <Link href="/about">De me / About</Link>
-                <Link href="/contact">Nuntia / Contact</Link>
+                <Link href="/" onClick={handleClick}>
+                  Domum / Home
+                </Link>
+                <Link href="/works" onClick={handleClick}>
+                  Opera / Works
+                </Link>
+                <Link href="/about" onClick={handleClick}>
+                  De me / About
+                </Link>
+                <Link href="/contact" onClick={handleClick}>
+                  Nuntia / Contact
+                </Link>
               </nav>
             </div>
           </div>

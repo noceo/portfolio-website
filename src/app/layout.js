@@ -1,4 +1,5 @@
 import "@/assets/styles/main.scss";
+import Navbar from "@/components/Navbar";
 import PageWrapper from "@/components/PageWrapper";
 import projects from "@/config";
 import { circleAnimations } from "@/utils/animations";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="layout-default">
+          <Navbar />
           <PageWrapper circleStyles={circleStyles}>{children}</PageWrapper>
         </div>
       </body>

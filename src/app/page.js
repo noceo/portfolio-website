@@ -94,7 +94,6 @@ export default function Home({}) {
 
   return (
     <div className="page-home">
-      <Navbar />
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-5">
