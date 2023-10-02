@@ -2,7 +2,6 @@
 import useFadeIn from "@/hooks/useFadeIn";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "../../../../public/icons/arrow_left.svg";
-import Circle from "@/components/BackgroundCircle";
 import DynamicComponentRenderer from "@/components/DynamicComponentRenderer";
 
 export default function Project({ data }) {
@@ -13,7 +12,6 @@ export default function Project({ data }) {
       <ButtonPageTransition className="link-back anime fade-in" location="/works" redirectBack={true}>
         <ArrowLeftIcon />
       </ButtonPageTransition>
-      <Circle />
       <main>
         <div className="title-wrapper">
           <div className="container-fluid">
