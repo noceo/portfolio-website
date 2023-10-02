@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import useBreakpoint from "@/hooks/useBreakpoint";
 import usePrevious from "@/hooks/usePrevious";
+import useScrollPercentage from "@/hooks/useScrollPosition";
 import { usePathname } from "next/navigation";
 import { PageTransitionContext } from "./PageWrapper";
 import anime from "animejs";
@@ -14,6 +15,14 @@ export default function CircleBackground({ circleStyles }) {
   const pathname = usePathname();
   const prevPathName = usePrevious(pathname);
 
+  const scrollPercentage = useScrollPercentage();
+  const [scale, setScale] = useState(0);
+
+  useEffect(() => {
+    setScale(scrollPercentage / 100 + 1);
+    console.log(scrollPercentage);
+  }, [scrollPercentage]);
+
   function runAnimation(toLocation) {
     const root = document.querySelector(":root");
 
@@ -24,7 +33,7 @@ export default function CircleBackground({ circleStyles }) {
     var newCircleColor;
 
     var animation = anime.timeline({
-      targets: ".circle-bg",
+      targets: ".circle-bg-wrapper",
       duration: 1500,
       easing: "easeOutElastic(1, 0.4)",
       autoplay: false,
@@ -60,7 +69,7 @@ export default function CircleBackground({ circleStyles }) {
   useEffect(() => {
     const onBrowserNavigation = () => pageTransitionContext.setPageTransition({ isRunning: false, location: pathname });
     window.addEventListener("popstate", onBrowserNavigation);
-    const circle = document.querySelector(".circle-bg");
+    const circle = document.querySelector(".circle-bg-wrapper");
     circle.style.top = "50%";
     circle.style.left = "50%";
     const style = circleStyles.find((style) => style.path === pathname);
@@ -90,5 +99,9 @@ export default function CircleBackground({ circleStyles }) {
       runAnimation(pathname);
     }
   }, [pageTransitionContext.pageTransition, pathname, breakpoint]);
-  return <div className="circle-bg" />;
+  return (
+    <div className="circle-bg-wrapper">
+      <div className="circle-bg" style={{ transform: `scale3d(${scale}, ${scale}, 1)` }} />
+    </div>
+  );
 }
