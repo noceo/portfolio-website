@@ -1,6 +1,7 @@
 import "@/assets/styles/main.scss";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import PageWrapper from "@/components/PageWrapper";
+import Footer from "@/components/Footer";
 import projects from "@/config";
 import { circleAnimations } from "@/utils/animations";
 
@@ -36,8 +37,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="layout-default">
-          <Navbar />
+          <Header />
           <PageWrapper circleStyles={circleStyles}>{children}</PageWrapper>
+          <Footer />
         </div>
       </body>
     </html>

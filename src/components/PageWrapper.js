@@ -1,7 +1,6 @@
 "use client";
 
 import SplashScreen from "./SplashScreen";
-import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import React from "react";
 import { usePreviousRoute } from "@/hooks/usePreviousRoute";
@@ -37,7 +36,6 @@ export default function PageWrapper({ children, circleStyles }) {
         <CircleBackground circleStyles={circleStyles} />
       </PageTransitionContext.Provider>
       <div className="noise" />
-      <Footer />
     </>
   );
 }
