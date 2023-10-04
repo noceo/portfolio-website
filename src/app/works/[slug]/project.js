@@ -3,6 +3,7 @@ import useFadeIn from "@/hooks/useFadeIn";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "../../../../public/icons/arrow_left.svg";
 import DynamicComponentRenderer from "@/components/DynamicComponentRenderer";
+import Headline from "@/components/Headline";
 
 export default function Project({ data }) {
   useFadeIn("right");
@@ -16,7 +17,9 @@ export default function Project({ data }) {
         <div className="title-wrapper">
           <div className="container-fluid">
             <div className="row">
-              <h2 className="col-10 offset-1 col-md-6 offset-md-3 anime fade-in">{data.title}</h2>
+              <div className="col-10 offset-1 col-md-6 offset-md-3 anime fade-in">
+                <Headline copy1={data.title} rotate={false} />
+              </div>
             </div>
           </div>
         </div>
