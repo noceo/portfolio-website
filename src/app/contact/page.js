@@ -17,9 +17,12 @@ export default function Contact() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
-              <h2 data-title="nuntia." className="anime fade-in">
-                nuntia.
-              </h2>
+              <div className="headline">
+                <h2 className="anime fade-in">
+                  <span data-title="nuntia.">nuntia.</span>
+                  <span data-title="contact.">contact.</span>
+                </h2>
+              </div>
               <h3 className="anime fade-in">I would like to know about your future project. Maybe I can help you with it.</h3>
               <div className="anime fade-in">
                 <p>Email: paulschade98@gmail.com</p>

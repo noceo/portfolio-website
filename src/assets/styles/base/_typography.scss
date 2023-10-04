@@ -12,8 +12,95 @@ h1 {
   -webkit-text-fill-color: white;
 }
 
-h2 {
+.headline {
+  display: inline-block;
   position: relative;
+  padding: 10px 20px;
+  margin-left: -20px;
+  cursor: crosshair;
+
+  &-switch {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 10px;
+    height: 60%;
+    transform: translateY(-50%);
+    border: 2px solid black;
+    border-radius: 5px;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 20%;
+      background-color: black;
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: top 0.4s ease-in-out;
+    }
+  }
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    perspective: 500px;
+  }
+
+  span {
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in;
+    transform-origin: center center -5vw;
+    display: inline-block;
+
+    &::after {
+      content: attr(data-title);
+      position: absolute;
+      top: -8px;
+      left: 8px;
+      margin-right: -8px;
+      // animation: heading 1s steps(1) infinite;
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: transparent;
+      z-index: -1;
+      transition: top 0.05s ease-out, left 0.05s ease-out;
+      pointer-events: none;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+  }
+
+  &:hover {
+    .headline-switch {
+      &::after {
+        top: 80%;
+      }
+    }
+
+    span {
+      &:nth-child(1) {
+        transform: rotateX(90deg);
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: rotateX(0deg);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+h2 {
   font-size: font-size(60px);
   font-weight: 700;
 
@@ -29,22 +116,12 @@ h2 {
     font-size: font-size(120px);
   }
 
-  @include media-breakpoint-up(xxl) {
-    font-size: font-size(150px);
+  @include media-breakpoint-up(xl) {
+    font-size: font-size(130px);
   }
 
-  &::after {
-    content: attr(data-title);
-    position: absolute;
-    top: -8px;
-    left: 8px;
-    margin-right: -8px;
-    // animation: heading 1s steps(1) infinite;
-    -webkit-text-stroke: 1px black;
-    -webkit-text-fill-color: transparent;
-    z-index: -1;
-    transition: top 0.05s ease-out, left 0.05s ease-out;
-    pointer-events: none;
+  @include media-breakpoint-up(xxl) {
+    font-size: font-size(200px);
   }
 }
 

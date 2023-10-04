@@ -19,7 +19,12 @@ export default function About() {
         <div className="container-fluid">
           <div className="row anime fade-in">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
-              <h2 data-title="de me.">de me.</h2>
+              <div className="headline">
+                <h2>
+                  <span data-title="de me.">de me.</span>
+                  <span data-title="about.">about.</span>
+                </h2>
+              </div>
               <h3 className="">I’m Paul. A developer, art enthusiast and music maker.</h3>
             </div>
           </div>

@@ -79,12 +79,21 @@
   padding: 10px;
   color: black;
 
+  @include media-breakpoint-up(lg) {
+    width: 60px;
+    height: 60px;
+  }
+
   &::before {
     display: none;
   }
 
   &:hover {
     padding: 10px;
+
+    .button-icon {
+      left: initial;
+    }
   }
 
   .button-copy {
@@ -92,11 +101,12 @@
   }
 
   .button-icon {
-    left: 50%;
+    position: relative;
+    top: initial;
+    left: initial;
     padding: 0;
-    width: 50%;
-    height: 50%;
     color: black;
+    transform: none;
   }
 }
 

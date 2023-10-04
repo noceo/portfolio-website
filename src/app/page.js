@@ -97,9 +97,13 @@ export default function Home({}) {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-5">
-            <h2 data-title="salve." className="anime fade-in">
-              salve.
-            </h2>
+            <div className="headline anime fade-in">
+              <h2>
+                <span data-title="salve.">salve.</span>
+                <span data-title="hi.">hi.</span>
+              </h2>
+              <div className="headline-switch" />
+            </div>
           </div>
         </div>
       </div>
