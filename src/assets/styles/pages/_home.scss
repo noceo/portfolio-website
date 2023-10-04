@@ -137,6 +137,8 @@
     }
 
     @include media-breakpoint-up(xxl) {
+      top: 50vh;
+      left: 65%;
       max-width: 500px;
       max-height: 500px;
     }

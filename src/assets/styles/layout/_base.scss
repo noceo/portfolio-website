@@ -24,6 +24,15 @@ body {
   }
 }
 
+.page-about,
+.page-contact {
+  padding: 110px 0 90px 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 150px 0 90px 0;
+  }
+}
+
 .page-works,
 .page-about,
 .page-contact,

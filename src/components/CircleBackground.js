@@ -19,8 +19,10 @@ export default function CircleBackground({ circleStyles }) {
   const [scale, setScale] = useState(0);
 
   useEffect(() => {
-    setScale(scrollPercentage / 100 + 1);
-    console.log(scrollPercentage);
+    if (circleStyles[pathname].scale) {
+      setScale(scrollPercentage / 175 + 1);
+      console.log(scrollPercentage);
+    }
   }, [scrollPercentage]);
 
   function runAnimation(toLocation) {
@@ -40,29 +42,33 @@ export default function CircleBackground({ circleStyles }) {
     });
     console.log(toLocation, breakpoint);
 
-    for (const circleStyle of circleStyles) {
-      if (circleStyle.path === toLocation) {
-        animation.add(circleStyle.animation[breakpoint]);
-        newCircleColor = circleStyle.color;
-        break;
-      }
-    }
+    // add move animation
+    animation.add(circleStyles[toLocation].animation[breakpoint]);
+    newCircleColor = circleStyles[toLocation].color;
 
-    if (breakpoint === prevBreakpoint) {
-      animation.add(
-        {
-          targets: cssVariables,
-          backgroundColor: newCircleColor,
-          easing: "easeInOutSine",
-          duration: 300,
-          update: () => {
-            root.style.setProperty("--color-circle", cssVariables.backgroundColor);
-          },
-          autoplay: false,
+    // add scale reset animation
+    animation.add(
+      {
+        targets: ".circle-bg",
+        scale: 1,
+      },
+      0
+    );
+
+    // add color animation
+    animation.add(
+      {
+        targets: cssVariables,
+        backgroundColor: newCircleColor,
+        easing: "easeInOutSine",
+        duration: 300,
+        update: () => {
+          root.style.setProperty("--color-circle", cssVariables.backgroundColor);
         },
-        0
-      );
-    }
+        autoplay: false,
+      },
+      0
+    );
 
     animation.play();
   }
@@ -73,7 +79,7 @@ export default function CircleBackground({ circleStyles }) {
     const circle = document.querySelector(".circle-bg-wrapper");
     circle.style.top = "50%";
     circle.style.left = "50%";
-    const style = circleStyles.find((style) => style.path === pathname);
+    const style = circleStyles[pathname];
     document.querySelector(":root").style.setProperty("--color-circle", style.color);
 
     return () => {
@@ -102,7 +108,7 @@ export default function CircleBackground({ circleStyles }) {
   }, [pageTransitionContext.pageTransition, pathname, breakpoint]);
   return (
     <div className="circle-bg-wrapper">
-      <div className="circle-bg" style={{ transform: `scale3d(${scale}, ${scale}, 1)` }} />
+      <div className="circle-bg" style={{ transform: `scale(${scale})` }} />
     </div>
   );
 }

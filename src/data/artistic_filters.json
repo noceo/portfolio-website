@@ -2,13 +2,19 @@
   "title": "Artistic Filters",
   "slug": "artistic_filters",
   "description": "Image Processing",
-  "accentColor": "#4400f4",
+  "accentColor": "rgba(68, 0, 244, 0.1)",
   "circleStyle": {
     "xs": {
+      "top": "40%",
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
+    },
+    "xl": {
       "top": "10%",
-      "left": "70%",
-      "width": "50vw",
-      "height": "50vw"
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
     }
   },
   "components": [

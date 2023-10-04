@@ -35,7 +35,7 @@ export default function Works({ works }) {
       </ButtonPageTransition>
       <div className="container">
         <div className="row">
-          <div className="col-10 offset-1">
+          <div className="col-10 offset-1 col-sm-8 col-md-7">
             <ul>
               {works.default.map((project) => {
                 return (

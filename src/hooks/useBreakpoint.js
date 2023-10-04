@@ -18,19 +18,19 @@ export default function useBreakpoint() {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     handleResize();
-    if (breakpoints["xs"] < windowSize.width && windowSize.width < breakpoints["sm"]) {
+    if (breakpoints["xs"] <= windowSize.width && windowSize.width < breakpoints["sm"]) {
       setBreakPoint("xs");
     }
-    if (breakpoints["sm"] < windowSize.width && windowSize.width < breakpoints["md"]) {
+    if (breakpoints["sm"] <= windowSize.width && windowSize.width < breakpoints["md"]) {
       setBreakPoint("sm");
     }
-    if (breakpoints["md"] < windowSize.width && windowSize.width < breakpoints["lg"]) {
+    if (breakpoints["md"] <= windowSize.width && windowSize.width < breakpoints["lg"]) {
       setBreakPoint("md");
     }
-    if (breakpoints["lg"] < windowSize.width && windowSize.width < breakpoints["xl"]) {
+    if (breakpoints["lg"] <= windowSize.width && windowSize.width < breakpoints["xl"]) {
       setBreakPoint("lg");
     }
-    if (breakpoints["xl"] < windowSize.width && windowSize.width < breakpoints["xxl"]) {
+    if (breakpoints["xl"] <= windowSize.width && windowSize.width < breakpoints["xxl"]) {
       setBreakPoint("xl");
     }
     if (windowSize.width >= breakpoints["xxl"]) {

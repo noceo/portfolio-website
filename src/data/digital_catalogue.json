@@ -3,13 +3,19 @@
   "slug": "digital_catalogue",
   "description": "Berlin Art Exhibition",
   "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
-  "accentColor": "#ff00a7",
+  "accentColor": "rgba(255,0,167,0.3)",
   "circleStyle": {
     "xs": {
+      "top": "40%",
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
+    },
+    "xl": {
       "top": "10%",
-      "left": "70%",
-      "width": "50vw",
-      "height": "50vw"
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
     }
   },
   "components": [

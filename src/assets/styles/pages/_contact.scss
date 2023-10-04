@@ -1,6 +1,4 @@
 .page-contact {
-  padding: 150px 0;
-
   &::after {
     background-image: linear-gradient(50deg, map-get($map: $colors, $key: magenta) 0%, transparent 100%);
   }
