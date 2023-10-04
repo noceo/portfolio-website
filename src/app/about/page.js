@@ -1,6 +1,7 @@
 "use client";
 
 import useFadeIn from "@/hooks/useFadeIn";
+import Headline from "@/components/Headline";
 import Button from "@/components/Button";
 import Quote from "@/components/Quote";
 import ArrowRight from "../../../public/icons/arrow_right.svg";
@@ -19,12 +20,7 @@ export default function About() {
         <div className="container-fluid">
           <div className="row anime fade-in">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
-              <div className="headline">
-                <h2>
-                  <span data-title="de me.">de me.</span>
-                  <span data-title="about.">about.</span>
-                </h2>
-              </div>
+              <Headline copy1="de me." copy2="about." />
               <h3 className="">I’m Paul. A developer, art enthusiast and music maker.</h3>
             </div>
           </div>

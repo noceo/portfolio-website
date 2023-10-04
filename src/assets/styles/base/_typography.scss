@@ -29,6 +29,11 @@ h1 {
     border: 2px solid black;
     border-radius: 5px;
     pointer-events: none;
+    display: none;
+
+    &.active::after {
+      top: 80%;
+    }
 
     &::after {
       content: "";
@@ -54,7 +59,7 @@ h1 {
     font-family: inherit;
     font-weight: inherit;
     letter-spacing: inherit;
-    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in;
+    // transition: transform 0.5s ease-in-out, opacity 0.4s ease-in;
     transform-origin: center center -5vw;
     display: inline-block;
 
@@ -81,12 +86,6 @@ h1 {
   }
 
   &:hover {
-    .headline-switch {
-      &::after {
-        top: 80%;
-      }
-    }
-
     span {
       &:nth-child(1) {
         transform: rotateX(90deg);

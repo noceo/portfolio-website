@@ -5,6 +5,7 @@ import anime from "animejs";
 import Navbar from "@/components/Navbar";
 import NavCircle from "@/components/NavCircle";
 import useFadeIn from "@/hooks/useFadeIn";
+import Headline from "@/components/Headline";
 
 export default function Home({}) {
   const onFadeInComplete = useRef();
@@ -96,14 +97,8 @@ export default function Home({}) {
     <div className="page-home">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-5">
-            <div className="headline anime fade-in">
-              <h2>
-                <span data-title="salve.">salve.</span>
-                <span data-title="hi.">hi.</span>
-              </h2>
-              <div className="headline-switch" />
-            </div>
+          <div className="col-md-5 anime fade-in">
+            <Headline className="anime fade-in" copy1="salve." copy2="hi." />
           </div>
         </div>
       </div>
