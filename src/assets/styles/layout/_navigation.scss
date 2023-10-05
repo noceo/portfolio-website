@@ -47,6 +47,9 @@
   }
 
   .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
   }
 }
@@ -136,10 +139,9 @@
 .navbar-items {
   display: flex;
   flex-direction: column;
-  margin: 45vh -12px 0 -12px;
+  margin-top: 100px;
 
   @include media-breakpoint-up(sm) {
-    margin-top: 40vh;
     align-items: center;
   }
 
