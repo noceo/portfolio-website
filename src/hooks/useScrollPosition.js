@@ -10,7 +10,7 @@ export default function useScrollPercentage() {
         st = "scrollTop",
         sh = "scrollHeight";
       const percentage = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-      console.log((h[st] || b[st]) / (h[sh] || b[sh]), percentage);
+      // console.log((h[st] || b[st]) / (h[sh] || b[sh]), percentage);
       setScrollPercentage(percentage);
       // setScrollPercentage(window.pageYOffset);
     };

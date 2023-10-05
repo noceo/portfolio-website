@@ -14,7 +14,7 @@ export default function Navbar(props) {
 
   return (
     <div className={"navbar " + (open ? "open" : "")}>
-      <Button id="navbar-toggle" className={"icon-only no-border br-0 "} icon={<HamburgerIcon />} onClick={handleClick}></Button>
+      <Button id="navbar-toggle" className={"icon-only no-border "} icon={<HamburgerIcon />} onClick={handleClick}></Button>
       <div className="navbar-wrapper">
         <div className="container-fluid">
           <div className="row">

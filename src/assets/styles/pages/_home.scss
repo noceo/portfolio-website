@@ -131,7 +131,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      top: max(450px, 40vh);
+      top: max(350px, 40vh);
       width: max(250px, 18vw);
       height: max(250px, 18vw);
     }

@@ -17,8 +17,10 @@ export default function Contact() {
       <main>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6 anime fade-in">
-              <Headline copy1="nuntia." copy2="contact." />
+            <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
+              <div className="anime fade-in">
+                <Headline copy1="nuntia." copy2="contact." />
+              </div>
               <h3 className="anime fade-in">I would like to know about your future project. Maybe I can help you with it.</h3>
               <div className="anime fade-in">
                 <p>Email: paulschade98@gmail.com</p>

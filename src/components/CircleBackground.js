@@ -16,7 +16,7 @@ export default function CircleBackground({ circleStyles }) {
   const prevPathName = usePrevious(pathname);
 
   const scrollPercentage = useScrollPercentage();
-  const [scale, setScale] = useState(0);
+  const [scale, setScale] = useState(1);
 
   useEffect(() => {
     if (circleStyles[pathname].scale) {
@@ -47,13 +47,16 @@ export default function CircleBackground({ circleStyles }) {
     newCircleColor = circleStyles[toLocation].color;
 
     // add scale reset animation
-    animation.add(
-      {
-        targets: ".circle-bg",
-        scale: 1,
-      },
-      0
-    );
+    console.log("SCALE", scale);
+    if (scale > 1) {
+      animation.add(
+        {
+          targets: ".circle-bg",
+          scale: 1,
+        },
+        0
+      );
+    }
 
     // add color animation
     animation.add(
