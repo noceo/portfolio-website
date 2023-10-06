@@ -29,16 +29,39 @@
   justify-content: center;
 
   a {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 1vw;
     transition: all 0.2s ease-out;
 
     &:hover {
       transform: scale(1.125);
     }
+
+    .circle-item-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+
+      svg {
+        animation: full-rotation linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes full-rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -47,9 +70,26 @@
   left: 70%;
 
   a {
-    background-color: rgb(255, 158, 177);
     width: 75%;
     height: 75%;
+    background-color: rgb(255, 158, 177);
+
+    @include media-breakpoint-up(md) {
+      font-size: font-size(10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: font-size(14px);
+    }
+
+    .circle-item-icon {
+      width: 60%;
+      height: 60%;
+    }
+
+    svg {
+      animation-duration: 60s;
+    }
   }
 }
 
@@ -61,6 +101,23 @@
     background-color: rgb(125, 255, 44);
     width: 50%;
     height: 50%;
+
+    @include media-breakpoint-up(md) {
+      font-size: font-size(10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: font-size(12px);
+    }
+
+    .circle-item-icon {
+      width: 60%;
+      height: 60%;
+
+      svg {
+        animation-duration: 30s;
+      }
+    }
   }
 }
 
@@ -69,8 +126,25 @@
   left: 75%;
   a {
     background-color: rgb(12, 170, 173);
-    width: 35%;
-    height: 35%;
+    width: 60%;
+    height: 60%;
+
+    @include media-breakpoint-up(md) {
+      font-size: font-size(10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: font-size(12px);
+    }
+
+    .circle-item-icon {
+      width: 60%;
+      height: 60%;
+
+      svg {
+        animation-duration: 45s;
+      }
+    }
   }
 }
 
