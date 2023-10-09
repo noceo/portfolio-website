@@ -15,6 +15,7 @@ var circleStyles = {
   "/works": { color: "rgba(255,116,143,0.75)", animation: circleAnimations.circleMoveWorks },
   "/about": { color: "rgba(98,255,0, 0.5)", animation: circleAnimations.circleMoveAbout, scale: true },
   "/contact": { color: "rgba(10,140,143, 0.75)", animation: circleAnimations.circleMoveContact },
+  "/music": { color: "rgba(10,140,143, 0.75)", animation: circleAnimations.circleMoveContact },
 };
 
 for (const project of projects.default) {
