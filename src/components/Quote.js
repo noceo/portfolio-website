@@ -1,3 +1,3 @@
-export default function Quote(props) {
-  return <span className="quote">&ldquo;{props.children}&rdquo;</span>;
+export default function Quote({ children }) {
+  return <p className="quote">&ldquo;{children}&rdquo;</p>;
 }

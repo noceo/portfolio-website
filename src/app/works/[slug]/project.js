@@ -10,25 +10,41 @@ export default function Project({ data }) {
 
   return (
     <div className="page-project">
-      <ButtonPageTransition className="link-back anime fade-in" location="/works" redirectBack={true}>
+      <ButtonPageTransition
+        className="link-back anime fade-in"
+        location="/works"
+        redirectBack={true}
+      >
         <ArrowLeftIcon />
       </ButtonPageTransition>
       <main>
         <div className="title-wrapper">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
-              <div className="col-10 offset-1 col-md-6 offset-md-3 anime fade-in">
+              <div className="col-xs-12 col-md-8 offset-md-1 anime fade-in">
                 <Headline copy1={data.title} rotate={false} />
               </div>
             </div>
           </div>
         </div>
-        <div className="container-fluid">
-          <div className="row">
-            <h3 className="col-10 offset-1 col-md-6 offset-md-3 anime fade-in">{data.description_long}</h3>
+        <div className="content container anime fade-in">
+          <div className="overview-section">
+            <div className="row">
+              <h3 className="overview-section__description col-xs-12 col-md-10 offset-md-1">
+                {data.description_long}
+              </h3>
+            </div>
+            <ul className="row">
+              <li className="overview-section__item col-xs-12 col-md-10 offset-md-1 col-lg-4">
+                <span>Responsibilities</span>
+                <p>{data.responsibilities}</p>
+              </li>
+              <li className="overview-section__item col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0">
+                <span>Project Goal</span>
+                <p>{data.project_goal}</p>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="anime fade-in">
           {data.components.map((component, index) => (
             <DynamicComponentRenderer key={index} componentData={component} />
           ))}

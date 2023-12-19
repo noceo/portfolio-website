@@ -95,15 +95,13 @@ export default function Home({}) {
 
   return (
     <div className="page-home">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col-md-5 anime fade-in">
             <Headline className="anime fade-in" copy1="salve." copy2="hi." />
           </div>
         </div>
-      </div>
-      <div className="page-home__description container-fluid">
-        <div className="row">
+        <div className="page-home__description row">
           <div className="col-md-4 anime fade-in">
             <h4>Paul Schade</h4>
             <p>

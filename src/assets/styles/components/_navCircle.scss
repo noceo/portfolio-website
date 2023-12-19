@@ -1,3 +1,92 @@
+.circle-nav-vis-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 70px;
+  min-height: 70px;
+}
+
+.circle-nav-vis {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #3e2100;
+}
+
+.circle-nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 70px;
+  min-height: 70px;
+  // border-radius: 50%;
+  // background-color: #3e2100;
+
+  // @include media-breakpoint-up(sm) {
+  //   width: 125px;
+  //   height: 125px;
+  // }
+
+  // @include media-breakpoint-up(md) {
+  //   width: 150px;
+  //   height: 150px;
+  // }
+}
+
+.nav-circle-wrapper {
+  position: absolute;
+  top: max(320px, 40vh);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  height: 35vw;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 150px;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-up(sm) {
+    top: max(350px, 40vh);
+    left: 60%;
+    width: 150px;
+    height: 150px;
+    max-width: none;
+    max-height: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: max(450px, 40vh);
+    left: 60%;
+    width: 200px;
+    height: 200px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: max(400px, 50vmin);
+    left: 60%;
+    width: max(200px, 18vw);
+    height: max(200px, 18vw);
+  }
+
+  @include media-breakpoint-up(xl) {
+    top: max(350px, 40vh);
+    width: max(250px, 18vw);
+    height: max(250px, 18vw);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    top: 50vh;
+    left: 65%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
 #circle-items {
   position: relative;
   width: 100%;
@@ -9,13 +98,10 @@
   z-index: -1;
 }
 
-.circle-item-wrapper {
+.parallax-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
 }
 
 .circle-item {
@@ -38,6 +124,10 @@
 
     &:hover {
       transform: scale(1.125);
+    }
+
+    &:active {
+      transform: scale(1);
     }
 
     .circle-item-icon {

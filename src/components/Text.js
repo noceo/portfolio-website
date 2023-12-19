@@ -1,11 +1,15 @@
-function Text(props) {
-  return (
-    <div className="container-fluid">
-      <div className="row">
-        <p className={props.classes}>{props.copy}</p>
-      </div>
-    </div>
-  );
+function Text({ text }) {
+  const renderContent = () => {
+    if (Array.isArray(text)) {
+      return text.map((paragraph, i) => (
+        <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+      ));
+    } else {
+      return <p dangerouslySetInnerHTML={{ __html: text }}></p>;
+    }
+  };
+
+  return renderContent();
 }
 
 export default Text;

@@ -1,43 +1,92 @@
 .page-works {
-  ul {
-    position: relative;
+  .project-list {
     margin-top: 200px;
-    z-index: 3;
-  }
 
-  li {
-    display: block;
-    margin-bottom: 70px;
+    ul {
+      position: relative;
+      z-index: 3;
+    }
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        a {
-          transform: translateX(10px);
+    li {
+      display: block;
+      margin-bottom: 70px;
+
+      a {
+        padding: 20px 0;
+        text-transform: none;
+        transition: transform 0.1s ease-out;
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            transform: translateX(10px);
+          }
+        }
+      }
+
+      span:first-child {
+        display: block;
+        margin-bottom: 10px;
+        @include font-headline;
+        font-weight: 700;
+        font-style: normal;
+        font-size: font-size(45px);
+
+        @include media-breakpoint-up(md) {
+          font-size: font-size(60px);
+        }
+
+        @include media-breakpoint-up(lg) {
+          font-size: font-size(80px);
         }
       }
     }
 
-    a {
-      padding: 20px 0;
-      // color: white;
-      text-transform: none;
-      transition: transform 0.1s ease-out;
-    }
+    &__images {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
 
-    span:first-child {
-      display: block;
-      margin-bottom: 10px;
-      font-family: "neue-haas-grotesk-display", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: font-size(45px);
+      .image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.5s ease-in-out;
 
-      @include media-breakpoint-up(md) {
-        font-size: font-size(60px);
-      }
+        &:after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          z-index: 1;
+          background: linear-gradient(
+            to right,
+            rgba(219, 213, 194, 1),
+            rgba(219, 213, 194, 0)
+          );
+        }
 
-      @include media-breakpoint-up(lg) {
-        font-size: font-size(80px);
+        img {
+          height: 100%;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        &.visible {
+          opacity: 1;
+          z-index: 10;
+
+          img {
+            transform: scale(1.1);
+          }
+        }
       }
     }
   }

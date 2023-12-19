@@ -1,5 +1,5 @@
-const digitalCatalogue = require("./digital_catalogue.json");
-const artisticFilters = require("./artistic_filters.json");
+const digitalCatalogue = require("./digital-catalogue.json");
+const artisticFilters = require("./artistic-filters.json");
 
 const projects = [digitalCatalogue, artisticFilters];
 

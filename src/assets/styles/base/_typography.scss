@@ -1,61 +1,44 @@
+body {
+  @include font-text;
+}
+
 h1,
 h2,
 h3,
 h4 {
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  @include font-headline;
+  font-style: normal;
+}
+
+.heading1,
+.heading2,
+.heading3,
+.heading4 {
+  @include font-headline;
   font-style: normal;
 }
 
 h1 {
-  font-weight: 700;
-  -webkit-text-stroke: 1px black;
-  -webkit-text-fill-color: white;
+  @include heading1;
+}
+
+.heading1 {
+  @include heading1;
 }
 
 .headline {
-  display: inline-block;
   position: relative;
-  padding: 10px 20px;
-  margin-left: -20px;
+  display: inline-block;
+  padding: 10px 0;
   cursor: crosshair;
 
-  &-switch {
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    width: 10px;
-    height: 60%;
-    transform: translateY(-50%);
-    border: 2px solid black;
-    border-radius: 5px;
-    pointer-events: none;
-    display: none;
-
-    &.active::after {
-      top: 80%;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 20%;
-      background-color: black;
-      border: 2px solid black;
-      border-radius: 5px;
-      transition: top 0.4s ease-in-out;
-    }
-  }
-
   h2 {
-    position: relative;
     display: inline-block;
     perspective: 500px;
   }
 
   span {
+    position: relative;
     font-family: inherit;
     font-weight: inherit;
     letter-spacing: inherit;
@@ -85,77 +68,36 @@ h1 {
 }
 
 h2 {
-  font-size: font-size(70px);
-  font-weight: 700;
+  @include heading2;
+}
 
-  @include media-breakpoint-up(sm) {
-    font-size: font-size(80px);
-  }
-
-  @include media-breakpoint-up(md) {
-    font-size: font-size(100px);
-  }
-
-  @include media-breakpoint-up(lg) {
-    font-size: font-size(120px);
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: font-size(130px);
-  }
-
-  @include media-breakpoint-up(xxl) {
-    font-size: font-size(200px);
-  }
+.heading2 {
+  @include heading2;
 }
 
 h3 {
-  font-size: font-size(22px);
-  font-weight: 300;
-  line-height: font-size(28px);
-  margin-bottom: 7rem;
+  @include heading3;
+}
 
-  @include media-breakpoint-up(md) {
-    font-size: font-size(30px);
-    line-height: font-size(35px);
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: font-size(32px);
-    line-height: font-size(37px);
-  }
+.heading3 {
+  @include heading3;
 }
 
 h4 {
-  font-size: font-size(22px);
-  font-weight: 300;
-  line-height: font-size(24px);
-  margin-bottom: 2rem;
+  @include heading4;
+}
 
-  @include media-breakpoint-up(md) {
-    font-size: font-size(25px);
-    line-height: font-size(30px);
-  }
+.heading4 {
+  @include heading4;
 }
 
 p {
-  font-family: "montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.8pt;
-  font-size: font-size(14px);
-  line-height: font-size(25px);
-
-  @include media-breakpoint-up(lg) {
-    font-size: inherit;
-    line-height: font-size(30px);
-  }
+  @include paragraph;
 }
 
 a,
 span {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   letter-spacing: 2pt;
 }
@@ -172,7 +114,6 @@ a {
 }
 
 small {
-  font-family: "montserrat", sans-serif;
   font-style: normal;
   font-size: font-size(12px);
   letter-spacing: 2pt;

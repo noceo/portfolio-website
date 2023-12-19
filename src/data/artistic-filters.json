@@ -1,8 +1,12 @@
 {
   "title": "Artistic Filters",
-  "slug": "artistic_filters",
+  "slug": "artistic-filters",
   "description": "Image Processing",
   "accentColor": "rgba(68, 0, 244, 0.1)",
+  "thumbnail": {
+    "src": "/images/test.png",
+    "alt": "A chair"
+  },
   "circleStyle": {
     "xs": {
       "top": "40%",

@@ -1,0 +1,101 @@
+{
+  "title": "Digital Catalogue",
+  "slug": "digital-catalogue",
+  "description": "Berlin Art Exhibition",
+  "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
+  "responsibilities": "Development",
+  "project_goal": "Buildinng a digital guide for an art exhibition. Due to COVID-19 this was an alternative for visiting the exhibition in person. Although the digital guide would never replace visiting in person, it was a good starting point to look through for potential future visitors.",
+  "accentColor": "rgba(255,0,167,0.3)",
+  "thumbnail": {
+    "src": "/images/chair.jpeg",
+    "alt": "A chair"
+  },
+  "circleStyle": {
+    "xs": {
+      "top": "40%",
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
+    },
+    "xl": {
+      "top": "10%",
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
+    }
+  },
+  "components": [
+    {
+      "type": "SingleColumnLayout",
+      "children": [
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair",
+          "caption": "The landing page of the project with a full-screen hero image."
+        },
+        {
+          "type": "Text",
+          "text": [
+            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus."
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair",
+          "caption": "The landing page of the project with a full-screen hero image."
+        },
+        {
+          "type": "Text",
+          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Quote",
+          "children": "I wanted to create something unique and aestetically pleasing for future visitors.",
+          "classes": "col-lg-10 offset-lg-1"
+        }
+      ]
+    },
+    {
+      "type": "Layout",
+      "classes": "breakout",
+      "children": [
+        {
+          "type": "Text",
+          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "classes": "col-xs-12 col-lg-5 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair",
+          "classes": "col-xs-12 col-lg-6 breakout-right"
+        }
+      ]
+    },
+    {
+      "type": "SingleColumnLayout",
+      "children": [
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair"
+        },
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair"
+        },
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair"
+        }
+      ]
+    }
+  ]
+}

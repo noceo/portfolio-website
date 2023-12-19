@@ -1,0 +1,17 @@
+.page-music {
+  h3 {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+
+  iframe {
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

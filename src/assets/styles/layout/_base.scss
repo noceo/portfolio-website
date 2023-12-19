@@ -25,7 +25,8 @@ body {
 }
 
 .page-about,
-.page-contact {
+.page-contact,
+.page-music {
   padding: 110px 0 90px 0;
 
   @include media-breakpoint-up(md) {
@@ -36,7 +37,8 @@ body {
 .page-works,
 .page-about,
 .page-contact,
-.page-project {
+.page-project,
+.page-music {
   position: relative;
   min-height: 100%;
   z-index: 2;
@@ -158,9 +160,30 @@ body {
   }
 }
 
+section {
+  margin-bottom: 100px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 a,
 span {
   display: inline-block;
+}
+
+figure {
+  figcaption {
+    margin-top: 40px;
+    @include font-text;
+    font-size: font-size(11px);
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      font-size: font-size(13px);
+    }
+  }
 }
 
 .scroll-indicator {
@@ -236,13 +259,18 @@ span {
   min-height: 200px;
   transform: translate(-50%, -50%);
   filter: blur(30px);
+  transition: opacity 0.3s linear;
 }
 
 .circle-bg {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: linear-gradient(50deg, var(--color-circle) 0%, transparent 95%);
+  background-image: linear-gradient(
+    50deg,
+    var(--color-circle) 0%,
+    transparent 95%
+  );
 }
 
 .noise {
@@ -258,6 +286,7 @@ span {
   background-repeat: repeat;
   opacity: 0.45;
   pointer-events: none;
+  z-index: 2000;
 }
 
 @keyframes grain {

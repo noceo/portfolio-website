@@ -1,0 +1,86 @@
+@mixin font-text {
+  font-family: "montserrat", Helvetica, sans-serif;
+}
+
+@mixin font-headline {
+  font-family: "neue-haas-grotesk-display", Arial, sans-serif;
+}
+
+@mixin heading1 {
+  font-weight: 700;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+  letter-spacing: 0;
+}
+
+@mixin heading2 {
+  font-size: font-size(70px);
+  font-weight: 700;
+  letter-spacing: 0;
+
+  @include media-breakpoint-up(sm) {
+    font-size: font-size(80px);
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: font-size(100px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: font-size(120px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: font-size(130px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: font-size(130px);
+  }
+}
+
+@mixin heading3 {
+  font-size: font-size(22px);
+  font-weight: 300;
+  line-height: font-size(28px);
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: font-size(30px);
+    line-height: font-size(40px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: font-size(32px);
+    line-height: font-size(37px);
+  }
+}
+
+@mixin heading4 {
+  font-size: font-size(22px);
+  font-weight: 300;
+  line-height: font-size(24px);
+  letter-spacing: 0;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: font-size(25px);
+    line-height: font-size(30px);
+  }
+}
+
+@mixin paragraph {
+  @include font-text;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.8pt;
+  font-size: font-size(14px);
+  line-height: font-size(25px);
+  hyphens: auto;
+
+  @include media-breakpoint-up(lg) {
+    font-size: font-size(17px);
+    line-height: font-size(30px);
+  }
+}

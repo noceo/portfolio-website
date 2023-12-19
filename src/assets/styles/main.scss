@@ -2,7 +2,8 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
-@import "./vendors/bootstrap";
+@import "layout/grid";
+// @import "./vendors/bootstrap";
 
 @import "./base/reset";
 @import "./base/base";
@@ -12,7 +13,6 @@
 
 @import "layout/base";
 @import "layout/navigation";
-@import "layout/grid";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/sidebar";
@@ -21,9 +21,11 @@
 @import "components/button";
 @import "components/quote";
 @import "components/navCircle";
+@import "components/audioCard";
 
 @import "pages/home";
 @import "pages/works";
 @import "pages/project";
 @import "pages/about";
 @import "pages/contact";
+@import "pages/music";

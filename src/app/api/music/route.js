@@ -6,7 +6,9 @@ export async function GET() {
   const tracks = items.map((track) => ({
     title: track.name,
     artist: track.artists.map((_artist) => _artist.name).join(", "),
-    songUrl: track.external_urls.spotify,
+    previewURL: track.preview_url,
+    externalURL: track.external_urls.spotify,
+    imgSrc: track.album.images?.[0].url,
   }));
 
   console.log(tracks);
