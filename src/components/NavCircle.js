@@ -11,11 +11,11 @@ import IconAboutSmall from "../../public/icons/circle_about_small.svg";
 import IconAboutLarge from "../../public/icons/circle_about_large.svg";
 import { useCallback, useEffect } from "react";
 
-const MAX_PARALLAX_MOVE = 5;
+const MAX_PARALLAX_MOVE = 10;
 const PARALLAX_DEPTH_FACTORS = [
-  { x: 5, y: -2, inverse: true },
-  { x: 2, y: -4, inverse: false },
-  { x: -2, y: 2, inverse: true },
+  { x: 1, y: -1, inverse: false },
+  { x: -1, y: -1, inverse: false },
+  { x: 0.5, y: -0.5, inverse: false },
 ];
 
 export default function NavCircle() {

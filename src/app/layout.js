@@ -1,4 +1,5 @@
 import "@/assets/styles/main.scss";
+import NextTopLoader from "nextjs-toploader";
 import Header from "@/components/Header";
 import PageWrapper from "@/components/PageWrapper";
 import Footer from "@/components/Footer";
@@ -32,6 +33,10 @@ var circleStyles = {
     color: "rgba(10,140,143, 0.75)",
     animation: circleAnimations.circleMoveContact,
   },
+  "/load": {
+    color: "rgba(10,140,143, 0.75)",
+    animation: circleAnimations.circleMoveContact,
+  },
 };
 
 for (const project of projects.default) {
@@ -56,6 +61,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/hke5bry.css" />
       </head>
       <body>
+        <NextTopLoader color="#000000" showSpinner={false} height={3} />
         <div className="layout-default">
           <Header />
           <PageWrapper circleStyles={circleStyles}>{children}</PageWrapper>

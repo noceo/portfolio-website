@@ -95,28 +95,6 @@ $container-widths: (
   lg: 75vw,
 );
 
-.breakout-xs {
-  @include media-breakpoint-only(xs) {
-    margin-left: calc(
-      (100vw - map-get($map: $container-widths, $key: xs)) / 2 * -1
-    );
-    margin-right: calc(
-      (100vw - map-get($map: $container-widths, $key: xs)) / 2 * -1
-    );
-  }
-}
-
-.breakout-sm {
-  @include media-breakpoint-only(sm) {
-    margin-left: calc(
-      (100vw - map-get($map: $container-widths, $key: sm)) / 2 * -1
-    );
-    margin-right: calc(
-      (100vw - map-get($map: $container-widths, $key: sm)) / 2 * -1
-    );
-  }
-}
-
 .container-fluid,
 .container {
   margin-right: auto;

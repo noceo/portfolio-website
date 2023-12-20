@@ -69,7 +69,7 @@
   .one-col-layout,
   .layout {
     [class^="col"] {
-      margin-bottom: 100px;
+      margin-bottom: 120px;
 
       p:last-child {
         margin-bottom: 0;
@@ -78,18 +78,50 @@
   }
 
   .row.breakout {
-    flex-wrap: nowrap;
+    @include media-breakpoint-up(md) {
+      flex-wrap: nowrap;
+    }
   }
 
-  .breakout-left {
-    flex-basis: min(calc(50% + 11vw), calc(50% + (100vw - 80rem) / 2));
-    max-width: min(calc(50% + 11vw), calc(50% + (100vw - 80rem) / 2));
-    padding-left: 0;
+  .breakout-md-left {
+    @include media-breakpoint-up(md) {
+      flex-basis: 50vw;
+      max-width: initial;
+      max-height: 500px;
+      padding-left: 0;
+
+      * {
+        max-height: inherit;
+      }
+    }
   }
 
-  .breakout-right {
-    flex-basis: calc(50% + 11vw);
-    max-width: calc(50% + 11vw);
-    padding-right: 0;
+  .breakout-md-right {
+    @include media-breakpoint-up(md) {
+      flex-basis: 50vw;
+      max-width: initial;
+      max-height: 500px;
+      padding-right: 0;
+
+      * {
+        max-height: inherit;
+      }
+    }
+  }
+
+  .breakout-sm-both {
+    position: relative;
+    left: calc(50% - 50vw);
+    flex-basis: 100vw;
+    max-width: 100vw;
+    padding: 0;
+  }
+
+  .reverse .breakout-sm-both {
+    position: relative;
+    right: calc(50% - 50vw);
+    flex-basis: 100vw;
+    max-width: 100vw;
+    padding: 0;
   }
 }

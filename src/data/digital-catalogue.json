@@ -67,13 +67,30 @@
         {
           "type": "Text",
           "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-          "classes": "col-xs-12 col-lg-5 offset-lg-1"
+          "classes": "col-xs-12 col-md-5 offset-md-1"
         },
         {
           "type": "Image",
           "src": "/images/chair.jpeg",
           "alt": "A chair",
-          "classes": "col-xs-12 col-lg-6 breakout-right"
+          "classes": "col-xs-12 col-md-6 breakout-md-right"
+        }
+      ]
+    },
+    {
+      "type": "Layout",
+      "classes": "reverse breakout",
+      "children": [
+        {
+          "type": "Text",
+          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "classes": "col-xs-12 col-md-6"
+        },
+        {
+          "type": "Image",
+          "src": "/images/chair.jpeg",
+          "alt": "A chair",
+          "classes": "col-xs-12 col-md-6 breakout-md-left"
         }
       ]
     },

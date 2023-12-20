@@ -6,9 +6,16 @@ import Navbar from "@/components/Navbar";
 import NavCircle from "@/components/NavCircle";
 import useFadeIn from "@/hooks/useFadeIn";
 import Headline from "@/components/Headline";
+import Router from "next/router";
 
 export default function Home({}) {
   const onFadeInComplete = useRef();
+
+  useEffect(() => {
+    Router.events.on("routeChangeStart", () => {
+      console.log("ROUTE CHANGE START");
+    });
+  });
 
   useEffect(() => {
     const loop = anime({
