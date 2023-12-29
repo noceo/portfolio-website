@@ -1,13 +1,19 @@
 import { Howl, Howler } from "howler";
-import PlayIcon from "../../public/icons/play.svg";
-import PauseIcon from "../../public/icons/pause.svg";
+import PlayIcon from "@/../public/icons/play.svg";
+import PauseIcon from "@/../public/icons/pause.svg";
 // import ProgressIcon from "";
 import { useContext, useEffect, useRef, useState } from "react";
-import { CurrentTrackContext } from "@/app/music/music";
+import { CurrentTrackContext } from "@/app/[locale]/music/music";
 
 const fadeOutTime = 4000;
 
-export default function AudioCard({ title, artist, imgSrc, previewURL, externalURL }) {
+export default function AudioCard({
+  title,
+  artist,
+  imgSrc,
+  previewURL,
+  externalURL,
+}) {
   const [isPlaying, setPlaying] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -85,11 +91,37 @@ export default function AudioCard({ title, artist, imgSrc, previewURL, externalU
     <div className="audio-card">
       <div className="audio-cover">
         <img src={imgSrc} />
-        <div className="audio-cover__controls" onClick={togglePlay} style={isPlaying ? { opacity: "1" } : null}>
+        <div
+          className="audio-cover__controls"
+          onClick={togglePlay}
+          style={isPlaying ? { opacity: "1" } : null}
+        >
           {renderControls()}
           <div className="progress-circle">
-            <svg width="50" height="50" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" style={{ transform: "rotate(-90deg)" }}>
-              <circle r="25" cx="25" cy="25" stroke="#ffffff" fill="transparent" strokeWidth="5" strokeLinecap="butt" strokeDashoffset={`${157.08 - progress * 157.08}px`} strokeDasharray="157.08px" style={isPlaying ? { transition: "stroke-dashoffset 0.5s ease-in-out" } : null}></circle>
+            <svg
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ transform: "rotate(-90deg)" }}
+            >
+              <circle
+                r="25"
+                cx="25"
+                cy="25"
+                stroke="#ffffff"
+                fill="transparent"
+                strokeWidth="5"
+                strokeLinecap="butt"
+                strokeDashoffset={`${157.08 - progress * 157.08}px`}
+                strokeDasharray="157.08px"
+                style={
+                  isPlaying
+                    ? { transition: "stroke-dashoffset 0.5s ease-in-out" }
+                    : null
+                }
+              ></circle>
             </svg>
           </div>
         </div>

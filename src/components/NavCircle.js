@@ -3,12 +3,12 @@
 import anime from "animejs";
 import useBreakpoint from "@/hooks/useBreakpoint";
 import ButtonPageTransition from "./ButtonPageTransition";
-import IconWorksSmall from "../../public/icons/circle_works_small.svg";
-import IconWorksLarge from "../../public/icons/circle_works_large.svg";
-import IconContactSmall from "../../public/icons/circle_contact_small.svg";
-import IconContactLarge from "../../public/icons/circle_contact_large.svg";
-import IconAboutSmall from "../../public/icons/circle_about_small.svg";
-import IconAboutLarge from "../../public/icons/circle_about_large.svg";
+import IconWorksSmall from "@/../public/icons/circle_works_small.svg";
+import IconWorksLarge from "@/../public/icons/circle_works_large.svg";
+import IconContactSmall from "@/../public/icons/circle_contact_small.svg";
+import IconContactLarge from "@/../public/icons/circle_contact_large.svg";
+import IconAboutSmall from "@/../public/icons/circle_about_small.svg";
+import IconAboutLarge from "@/../public/icons/circle_about_large.svg";
 import { useCallback, useEffect } from "react";
 
 const MAX_PARALLAX_MOVE = 10;

@@ -10,9 +10,10 @@ import anime from "animejs";
 import { fadeInLeft, fadeInRight } from "@/utils/animations";
 import Link from "next/link";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
-import ArrowLeftIcon from "../../../public/icons/arrow_left.svg";
+import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
 import { usePathname } from "next/navigation";
 import useFadeIn from "@/hooks/useFadeIn";
+import { useTranslations } from "next-intl";
 
 export default function Works({ works }) {
   const context = useContext(SplashScreenContext);
@@ -21,11 +22,11 @@ export default function Works({ works }) {
   const pathname = usePathname();
   const projectListRef = useRef();
   const projectImagesRef = useRef();
+  const t = useTranslations("WorksPage");
 
   useFadeIn(null);
 
   useEffect(() => {
-    console.log(projectListRef.current);
     projectListRef.current;
   }, []);
 
@@ -52,6 +53,7 @@ export default function Works({ works }) {
       .classList.add("visible");
 
     const circle = document.querySelector(".circle-bg-wrapper");
+    circle.style.transition = "opacity 0.3s linear";
     circle.style.opacity = 0;
   }
 
@@ -66,6 +68,7 @@ export default function Works({ works }) {
       .classList.remove("visible");
 
     const circle = document.querySelector(".circle-bg-wrapper");
+    circle.style.transition = "opacity 3s linear";
     circle.style.opacity = 1;
   }
 
@@ -85,7 +88,7 @@ export default function Works({ works }) {
       <div className="project-list container">
         <div className="row">
           <ul ref={projectListRef} className="col-xs-12 col-sm-8 col-md-7">
-            {works.default.map((project) => {
+            {works.map((project) => {
               return (
                 <li
                   key={project.title}
@@ -103,7 +106,7 @@ export default function Works({ works }) {
             })}
           </ul>
           <div ref={projectImagesRef} className="project-list__images">
-            {works.default.map((project, i) => (
+            {works.map((project, i) => (
               <div key={i} className="image-wrapper">
                 <img src={project.thumbnail.src} alt={project.thumbnail.alt} />
               </div>

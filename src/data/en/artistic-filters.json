@@ -1,0 +1,34 @@
+{
+  "title": "Artistic Filters",
+  "slug": "artistic-filters",
+  "description": "Image Processing",
+  "accentColor": "rgba(68, 0, 244, 0.1)",
+  "thumbnail": {
+    "src": "/images/test.png",
+    "alt": "A chair"
+  },
+  "circleStyle": {
+    "xs": {
+      "top": "40%",
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
+    },
+    "xl": {
+      "top": "10%",
+      "left": "100%",
+      "width": "70vw",
+      "height": "70vw"
+    }
+  },
+  "components": [
+    {
+      "type": "text",
+      "copy": "Lorem ipsum dolor sit amet."
+    },
+    {
+      "type": "text",
+      "copy": "Lorem ipsum dolor sit amet."
+    }
+  ]
+}

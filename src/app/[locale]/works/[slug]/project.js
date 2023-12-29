@@ -1,7 +1,7 @@
 "use client";
 import useFadeIn from "@/hooks/useFadeIn";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
-import ArrowLeftIcon from "../../../../public/icons/arrow_left.svg";
+import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
 import DynamicComponentRenderer from "@/components/DynamicComponentRenderer";
 import Headline from "@/components/Headline";
 

@@ -1,0 +1,57 @@
+{
+  "HomePage": {
+    "headline": "hi",
+    "description": "Frontend Engineer<br>Musik / Kunst / Digitale Medien"
+  },
+  "AboutPage": {
+    "headline": "about.",
+    "subline": "I’m Paul. A developer, art enthusiast and music maker.",
+    "content": "<p>You are able to basically build whatever you desire by learning the principles of code once. Do not get me wrong: Learning how to code is a lifelong process. There is so much to learn that you will never be proficient in all different areas at the same time. But during my time studying computer science I fell in love with the idea of having all the necessary tools in hand to build something that helps people out there and possibly also yourself. The possibilities and options are endless and once you dig deeper you soon notice that it takes a whole lot to understand the various abstractions that are built on top of bare metal machines. Looking back I must say that I would always take the same route again when it comes to learning how to code. Understanding the underlying methodology and design patterns is key to being able to adapt quickly in this fast paced industry. Obviously it was not always easy and I also criticize the curricula of established universities that they think are suited for people who want to go into the industry. I could write a whole book about what is good and bad about the way universities teach but that is for another day.</p><p>I am 25 years old and born in Germany, holding a Master’s degree in computer science from Texas A&M University. In my free time I like being creative by making music. But I also listen to a lot of music (Spotify says I am a vampire since it is mostly techno but I also listen to Jazz and soul soothing music if I want to relax). Cooking, gaming and sometimes just enjoying precious time with friends are other free time activities of mine. I also enjoy visiting art exhibitions and museums. I am proficient in talking English and German. I am currently looking for full-time job opportunities in the Chicago area.</p>",
+    "skills": {
+      "headline": "Skills",
+      "text": "Ut nunc felis, rhoncus et massa et, posuere convallis nunc. Integer mollis nisl quam, quis convallis ante pharetra quis. Morbi porta ligula at libero placerat ullamcorper. Vestibulum ac cursus mauris, vel consectetur lectus."
+    },
+    "contact": {
+      "headline": "Let‘s work together",
+      "text": "I can help you with your project idea and take it from concept to deployment."
+    }
+  },
+  "Navigation": {
+    "home": {
+      "linkText": "Home"
+    },
+    "works": {
+      "linkText": "Works",
+      "icon": {
+        "xs": "",
+        "md": ""
+      }
+    },
+    "about": {
+      "linkText": "About",
+      "icon": {
+        "xs": "",
+        "md": ""
+      }
+    },
+    "contact": {
+      "linkText": "Contact",
+      "icon": {
+        "xs": "",
+        "md": ""
+      }
+    },
+    "music": {
+      "linkText": "Music",
+      "icon": {
+        "xs": "",
+        "md": ""
+      }
+    }
+  },
+  "NotFound": {
+    "headline": "Oops, looks like you hit a dead end",
+    "subline": "Click the button below to get back on track.",
+    "button": "Home"
+  }
+}

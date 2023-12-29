@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useContext } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "@/navigation";
 import anime from "animejs";
 import { fadeOutLeft, fadeOutRight } from "@/utils/animations";
 import { PageTransitionContext } from "./PageWrapper";
@@ -14,7 +14,6 @@ export default function ButtonPageTransition({
   className,
 }) {
   const router = useRouter();
-  const path = usePathname();
   const animation = useRef();
   const pageTransitionContext = useContext(PageTransitionContext);
   // const circleAnimation = useRef();

@@ -1,5 +1,5 @@
-import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { usePathname } from "@/navigation";
 
 export const usePreviousRoute = () => {
   const path = usePathname();

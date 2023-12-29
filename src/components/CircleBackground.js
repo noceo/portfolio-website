@@ -4,9 +4,9 @@ import { useEffect, useState, useContext } from "react";
 import useBreakpoint from "@/hooks/useBreakpoint";
 import usePrevious from "@/hooks/usePrevious";
 import useScrollPercentage from "@/hooks/useScrollPosition";
-import { usePathname } from "next/navigation";
 import { PageTransitionContext } from "./PageWrapper";
-import anime from "animejs";
+import anime, { path } from "animejs";
+import { usePathname } from "@/navigation";
 
 export default function CircleBackground({ circleStyles }) {
   const pageTransitionContext = useContext(PageTransitionContext);
@@ -19,9 +19,9 @@ export default function CircleBackground({ circleStyles }) {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
+    console.log(circleStyles[pathname], pathname);
     if (circleStyles[pathname].scale) {
       setScale(scrollPercentage / 175 + 1);
-      console.log(scrollPercentage);
     }
   }, [scrollPercentage]);
 
@@ -29,7 +29,8 @@ export default function CircleBackground({ circleStyles }) {
     const root = document.querySelector(":root");
 
     const cssVariables = {
-      backgroundColor: getComputedStyle(root).getPropertyValue("--color-circle"),
+      backgroundColor:
+        getComputedStyle(root).getPropertyValue("--color-circle"),
     };
 
     var newCircleColor;
@@ -47,7 +48,6 @@ export default function CircleBackground({ circleStyles }) {
     newCircleColor = circleStyles[toLocation].color;
 
     // add scale reset animation
-    console.log("SCALE", scale);
     if (scale > 1) {
       animation.add(
         {
@@ -66,7 +66,10 @@ export default function CircleBackground({ circleStyles }) {
         easing: "easeInOutSine",
         duration: 300,
         update: () => {
-          root.style.setProperty("--color-circle", cssVariables.backgroundColor);
+          root.style.setProperty(
+            "--color-circle",
+            cssVariables.backgroundColor
+          );
         },
         autoplay: false,
       },
@@ -77,13 +80,19 @@ export default function CircleBackground({ circleStyles }) {
   }
 
   useEffect(() => {
-    const onBrowserNavigation = () => pageTransitionContext.setPageTransition({ isRunning: false, location: pathname });
+    const onBrowserNavigation = () =>
+      pageTransitionContext.setPageTransition({
+        isRunning: false,
+        location: pathname,
+      });
     window.addEventListener("popstate", onBrowserNavigation);
     const circle = document.querySelector(".circle-bg-wrapper");
     circle.style.top = "50%";
     circle.style.left = "50%";
     const style = circleStyles[pathname];
-    document.querySelector(":root").style.setProperty("--color-circle", style.color);
+    document
+      .querySelector(":root")
+      .style.setProperty("--color-circle", style.color);
 
     return () => {
       window.removeEventListener("popstate", onBrowserNavigation);
@@ -92,14 +101,27 @@ export default function CircleBackground({ circleStyles }) {
 
   useEffect(() => {
     // usual page transition
-    if (pageTransitionContext.pageTransition.isRunning && pathname === prevPathName) {
-      console.log("1 CIRCLE RUNNING TO ", pageTransitionContext.pageTransition.location);
+    if (
+      pageTransitionContext.pageTransition.isRunning &&
+      pathname === prevPathName
+    ) {
+      console.log(
+        "1 CIRCLE RUNNING TO ",
+        pageTransitionContext.pageTransition.location
+      );
       console.log("breakpoint", breakpoint);
       runAnimation(pageTransitionContext.pageTransition.location);
     }
     // if user intercepts transition via browser navigation
-    else if (!pageTransitionContext.pageTransition.isRunning && prevPathName && pathname !== prevPathName) {
-      console.log("2 CIRCLE RUNNING TO ", pageTransitionContext.pageTransition.location);
+    else if (
+      !pageTransitionContext.pageTransition.isRunning &&
+      prevPathName &&
+      pathname !== prevPathName
+    ) {
+      console.log(
+        "2 CIRCLE RUNNING TO ",
+        pageTransitionContext.pageTransition.location
+      );
       console.log("breakpoint", breakpoint);
       runAnimation(pathname);
     }

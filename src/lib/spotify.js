@@ -24,7 +24,7 @@ const getAccessToken = async () => {
 
 export const getTopTracks = async (limit = 10, offset = 0) => {
   const { access_token } = await getAccessToken();
-
+  console.log(access_token);
   const params = new URLSearchParams({
     limit,
     offset,

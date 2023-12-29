@@ -1,8 +1,12 @@
-import { PageTransitionContext, SplashScreenContext, PreviousRouteContext } from "@/components/PageWrapper";
-import { usePathname } from "next/navigation";
+import {
+  PageTransitionContext,
+  SplashScreenContext,
+  PreviousRouteContext,
+} from "@/components/PageWrapper";
 import { useContext, useEffect } from "react";
 import anime from "animejs";
 import { fadeInLeft, fadeInRight } from "@/utils/animations";
+import { usePathname } from "@/navigation";
 
 export default function useFadeIn(direction, onCompleteCallback) {
   const context = useContext(SplashScreenContext);
@@ -12,11 +16,24 @@ export default function useFadeIn(direction, onCompleteCallback) {
 
   useEffect(() => {
     var fadeIn;
-    if (direction === "left") fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
-    else if (direction === "right") fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
+    if (direction === "left")
+      fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
+    else if (direction === "right")
+      fadeIn = anime({
+        ...fadeInRight,
+        delay: anime.stagger(fadeInRight.delay),
+      });
     else {
-      if (prevPage == "/") fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
-      else fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
+      if (prevPage == "/")
+        fadeIn = anime({
+          ...fadeInRight,
+          delay: anime.stagger(fadeInRight.delay),
+        });
+      else
+        fadeIn = anime({
+          ...fadeInLeft,
+          delay: anime.stagger(fadeInLeft.delay),
+        });
     }
 
     const onComplete = () => {
@@ -24,7 +41,10 @@ export default function useFadeIn(direction, onCompleteCallback) {
         console.log(onCompleteCallback.current);
         onCompleteCallback.current();
       }
-      pageTransitionContext.setPageTransition({ isRunning: false, location: pathname });
+      pageTransitionContext.setPageTransition({
+        isRunning: false,
+        location: pathname,
+      });
     };
     fadeIn.complete = onComplete;
 

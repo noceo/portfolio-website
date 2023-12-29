@@ -1,6 +1,4 @@
-const digitalCatalogue = require("./digital-catalogue.json");
-const artisticFilters = require("./artistic-filters.json");
+import { en } from "./en";
+import { de } from "./de";
 
-const projects = [digitalCatalogue, artisticFilters];
-
-export default projects;
+export const projects = { en, de };
