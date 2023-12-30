@@ -25,7 +25,7 @@ export default function About() {
       <main>
         <div className="container">
           <div className="row anime fade-in">
-            <div className="col-xs-12 col-md-10 offset-md-1 col-lg-8 col-xl-6">
+            <div className="col-xs-12 col-md-10 offset-md-1 col-lg-10 col-xl-6">
               <Headline copy1="de me." copy2={t("headline") + "."} />
               <p className="heading3 mb-7">{t("subline")}</p>
             </div>
@@ -55,7 +55,7 @@ export default function About() {
           <div className="container-fluid">
             <div className="row">
               <figure className="col-xs-12 col-md-3 offset-md-9">
-                <img src={"./images/profile.jpeg"} alt="Profile Picture" />
+                <img src="/images/profile.jpeg" alt="Profile Picture" />
               </figure>
             </div>
           </div>

@@ -1,14 +1,14 @@
 {
-  "title": "digital catalogue",
-  "slug": "digital-catalogue",
-  "description": "Berlin Art Exhibition",
-  "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
+  "title": "DenseNet Classifier",
+  "slug": "densenet-classifier",
+  "description": "Deep Learning on Images",
+  "description_long": "I trained a model to classify images into multiple categories.",
   "responsibilities": "Development",
-  "project_goal": "Building a digital guide for an art exhibition. Due to COVID-19 this was an alternative for visiting the exhibition in person. Although the digital guide would never replace visiting in person, it was a good starting point to look through for potential future visitors.",
-  "accentColor": "rgba(255,0,167,0.3)",
+  "project_goal": "Extending the ResNet Image Classifier so that the model can achieve an even higher accuracy.",
+  "accentColor": "rgba(174, 43, 255, 0.5)",
   "thumbnail": {
-    "src": "/images/chair.jpeg",
-    "alt": "A chair"
+    "src": "/images/aware-thumbnail.png",
+    "alt": "Multiple magazine articles stacked on top of each other"
   },
   "circleStyle": {
     "xs": {

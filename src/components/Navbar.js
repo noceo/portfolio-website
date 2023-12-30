@@ -4,8 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
 import HamburgerIcon from "@/../public/icons/hamburger.svg";
+import { useTranslations } from "next-intl";
 
-export default function Navbar(props) {
+export default function Navbar() {
+  const t = useTranslations("Navigation");
   const [open, setOpen] = useState(false);
 
   const handleClick = function () {
@@ -26,16 +28,16 @@ export default function Navbar(props) {
             <div className="col-md-12 offset-md-0 col-xl-8 offset-xl-2">
               <nav className="navbar-items">
                 <Link href="/" onClick={handleClick}>
-                  Domum / Home
+                  Domum / {t("home.linkText")}
                 </Link>
                 <Link href="/works" onClick={handleClick}>
-                  Opera / Works
+                  Opera / {t("works.linkText")}
                 </Link>
                 <Link href="/about" onClick={handleClick}>
-                  De me / About
+                  De me / {t("about.linkText")}
                 </Link>
                 <Link href="/contact" onClick={handleClick}>
-                  Nuntia / Contact
+                  Nuntia / {t("contact.linkText")}
                 </Link>
               </nav>
             </div>

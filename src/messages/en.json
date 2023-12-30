@@ -18,6 +18,11 @@
       "buttonText": "Contact me"
     }
   },
+  "ContactPage": {
+    "headline": "contact",
+    "subline": "I would like to know about your future project. Let me help you with it.",
+    "buttonText": "Contact me"
+  },
   "Navigation": {
     "home": {
       "linkText": "Home"

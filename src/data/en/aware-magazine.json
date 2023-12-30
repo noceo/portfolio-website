@@ -1,14 +1,14 @@
 {
-  "title": "digital catalogue",
-  "slug": "digital-catalogue",
-  "description": "Berlin Art Exhibition",
-  "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
-  "responsibilities": "Development",
-  "project_goal": "Building a digital guide for an art exhibition. Due to COVID-19 this was an alternative for visiting the exhibition in person. Although the digital guide would never replace visiting in person, it was a good starting point to look through for potential future visitors.",
-  "accentColor": "rgba(255,0,167,0.3)",
+  "title": "aware",
+  "slug": "aware-magazine",
+  "description": "Scientific Magazine",
+  "description_long": "Developing the online presence for the official student-run, scientific journalistic magazine for Psychology at the University of Zurich.",
+  "responsibilities": "Planning, Development, Deployment",
+  "project_goal": "Building and deploying a new website for the <em>aware</em> magazine. Also aligning the digital experience with the print version of the magazine.",
+  "accentColor": "rgba(241, 93, 42, 0.5)",
   "thumbnail": {
-    "src": "/images/chair.jpeg",
-    "alt": "A chair"
+    "src": "/images/aware-thumbnail.png",
+    "alt": "Multiple magazine articles stacked on top of each other"
   },
   "circleStyle": {
     "xs": {

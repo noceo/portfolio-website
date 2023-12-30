@@ -3,13 +3,51 @@
 import anime from "animejs";
 import useBreakpoint from "@/hooks/useBreakpoint";
 import ButtonPageTransition from "./ButtonPageTransition";
-import IconWorksSmall from "@/../public/icons/circle_works_small.svg";
-import IconWorksLarge from "@/../public/icons/circle_works_large.svg";
-import IconContactSmall from "@/../public/icons/circle_contact_small.svg";
-import IconContactLarge from "@/../public/icons/circle_contact_large.svg";
-import IconAboutSmall from "@/../public/icons/circle_about_small.svg";
-import IconAboutLarge from "@/../public/icons/circle_about_large.svg";
+import EnglishIconWorksSmall from "@/../public/icons/circle_works_small.svg";
+import EnglishIconWorksLarge from "@/../public/icons/circle_works_large.svg";
+import EnglishIconContactSmall from "@/../public/icons/circle_contact_small.svg";
+import EnglishIconContactLarge from "@/../public/icons/circle_contact_large.svg";
+import EnglishIconAboutSmall from "@/../public/icons/circle_about_small.svg";
+import EnglishIconAboutLarge from "@/../public/icons/circle_about_large.svg";
+import GermanIconWorksSmall from "@/../public/icons/circle_works_small.svg";
+import GermanIconWorksLarge from "@/../public/icons/circle_works_large.svg";
+import GermanIconContactSmall from "@/../public/icons/circle_contact_small.svg";
+import GermanIconContactLarge from "@/../public/icons/circle_contact_large.svg";
+import GermanIconAboutSmall from "@/../public/icons/circle_about_small.svg";
+import GermanIconAboutLarge from "@/../public/icons/circle_about_large.svg";
 import { useCallback, useEffect } from "react";
+import { useLocale } from "next-intl";
+
+const circleIcons = {
+  en: {
+    works: {
+      sm: EnglishIconWorksSmall,
+      lg: EnglishIconWorksLarge,
+    },
+    contact: {
+      sm: EnglishIconContactSmall,
+      lg: EnglishIconContactLarge,
+    },
+    about: {
+      sm: EnglishIconAboutSmall,
+      lg: EnglishIconAboutLarge,
+    },
+  },
+  de: {
+    works: {
+      sm: GermanIconWorksSmall,
+      lg: GermanIconWorksLarge,
+    },
+    contact: {
+      sm: GermanIconContactSmall,
+      lg: GermanIconContactLarge,
+    },
+    about: {
+      sm: GermanIconAboutSmall,
+      lg: GermanIconAboutLarge,
+    },
+  },
+};
 
 const MAX_PARALLAX_MOVE = 10;
 const PARALLAX_DEPTH_FACTORS = [
@@ -19,6 +57,13 @@ const PARALLAX_DEPTH_FACTORS = [
 ];
 
 export default function NavCircle() {
+  const locale = useLocale();
+  const IconWorksSmall = circleIcons[locale].works.sm;
+  const IconWorksLarge = circleIcons[locale].works.lg;
+  const IconAboutSmall = circleIcons[locale].about.sm;
+  const IconAboutLarge = circleIcons[locale].about.lg;
+  const IconContactSmall = circleIcons[locale].contact.sm;
+  const IconContactLarge = circleIcons[locale].contact.lg;
   const breakpoint = useBreakpoint();
 
   const onMouseMove = useCallback((e) => {

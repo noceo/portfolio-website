@@ -5,8 +5,10 @@ import Button from "@/components/Button";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import Headline from "@/components/Headline";
 import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("ContactPage");
   useFadeIn("right");
 
   return (
@@ -23,16 +25,13 @@ export default function Contact() {
           <div className="row">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
               <div className="anime fade-in">
-                <Headline copy1="nuntia." copy2="contact." />
+                <Headline copy1="nuntia." copy2={t("headline") + "."} />
               </div>
-              <h3 className="anime fade-in">
-                I would like to know about your future project. Maybe I can help
-                you with it.
-              </h3>
+              <h3 className="anime fade-in">{t("subline")}</h3>
               <div className="anime fade-in">
                 <p>Email: paulschade98@gmail.com</p>
                 <Button asLink={true} href="mailto:paulschade98@gmail.com">
-                  Contact me
+                  {t("buttonText")}
                 </Button>
               </div>
             </div>

@@ -12,12 +12,14 @@ export default function Headline({ copy1, copy2, rotate = true }) {
   copy1RotateRef.current = copy1Rotate;
   // const breakpoint = useBreakpoint();
   const onResize = useCallback(() => {
-    const newHeight = Math.max(
-      copy1Ref.current.offsetHeight,
-      copy2Ref.current.offsetHeight
-    );
-    headlineRef.current.style.height = `${newHeight}px`;
-    headlineHeight.current = newHeight;
+    if (copy1Ref.current && copy2Ref.current) {
+      const newHeight = Math.max(
+        copy1Ref.current.offsetHeight,
+        copy2Ref.current.offsetHeight
+      );
+      headlineRef.current.style.height = `${newHeight}px`;
+      headlineHeight.current = newHeight;
+    }
   }, []);
 
   useEffect(() => {

@@ -1,48 +1,55 @@
 {
   "HomePage": {
-    "headline": "hi",
+    "headline": "hallo",
     "description": "Frontend Engineer<br>Musik / Kunst / Digitale Medien"
   },
   "AboutPage": {
-    "headline": "about.",
-    "subline": "I’m Paul. A developer, art enthusiast and music maker.",
-    "content": "<p>You are able to basically build whatever you desire by learning the principles of code once. Do not get me wrong: Learning how to code is a lifelong process. There is so much to learn that you will never be proficient in all different areas at the same time. But during my time studying computer science I fell in love with the idea of having all the necessary tools in hand to build something that helps people out there and possibly also yourself. The possibilities and options are endless and once you dig deeper you soon notice that it takes a whole lot to understand the various abstractions that are built on top of bare metal machines. Looking back I must say that I would always take the same route again when it comes to learning how to code. Understanding the underlying methodology and design patterns is key to being able to adapt quickly in this fast paced industry. Obviously it was not always easy and I also criticize the curricula of established universities that they think are suited for people who want to go into the industry. I could write a whole book about what is good and bad about the way universities teach but that is for another day.</p><p>I am 25 years old and born in Germany, holding a Master’s degree in computer science from Texas A&M University. In my free time I like being creative by making music. But I also listen to a lot of music (Spotify says I am a vampire since it is mostly techno but I also listen to Jazz and soul soothing music if I want to relax). Cooking, gaming and sometimes just enjoying precious time with friends are other free time activities of mine. I also enjoy visiting art exhibitions and museums. I am proficient in talking English and German. I am currently looking for full-time job opportunities in the Chicago area.</p>",
+    "headline": "über mich",
+    "subline": "Ich heiße Paul. Ich bin Entwickler, liebe Kunst und mache Musik.",
+    "content": "<p>Ich bin 25 Jahre alt und in Deutschland geboren. Ich habe einen Masterabschluss an der Texas A&M University gemacht. In meiner freien Zeit bin ich gern kreativ. Ich mache selber Musik aber ich höre auch sehr viel Musik (Spotify denkt ich sei ein Vampir weil ich meistens Techno höre aber ich höre auch gern Jazz und entspannte Musik). Ich liebe es zu kochen, zu spielen und manchmal einfach wertvolle Zeit mit Freunden zu verbringen. Ich gehe zudem auch gern in Kunstaustellungen und Museen. Ich spreche Deutsch und Englisch.</p><p>You are able to basically build whatever you desire by learning the principles of code once. Do not get me wrong: Learning how to code is a lifelong process. There is so much to learn that you will never be proficient in all different areas at the same time. But during my time studying computer science I fell in love with the idea of having all the necessary tools in hand to build something that helps people out there and possibly also yourself. The possibilities and options are endless and once you dig deeper you soon notice that it takes a whole lot to understand the various abstractions that are built on top of bare metal machines. Looking back I must say that I would always take the same route again when it comes to learning how to code. Understanding the underlying methodology and design patterns is key to being able to adapt quickly in this fast paced industry. Obviously it was not always easy and I also criticize the curricula of established universities that they think are suited for people who want to go into the industry. I could write a whole book about what is good and bad about the way universities teach but that is for another day.</p>",
     "skills": {
-      "headline": "Skills",
-      "text": "Ut nunc felis, rhoncus et massa et, posuere convallis nunc. Integer mollis nisl quam, quis convallis ante pharetra quis. Morbi porta ligula at libero placerat ullamcorper. Vestibulum ac cursus mauris, vel consectetur lectus."
+      "headline": "Erfahrung",
+      "text": "Ich habe bereits 1 Jahr in professionellem Kontext gearbeitet. Darüber hinaus habe ich 6 Jahre Erfahrung in meinem Informatikstudium gesammelt. In den letzten Jahren habe ich meinen Fokus auf die Frontend Entwicklung gesetzt. Ich habe viel Übung in JavaScrript als auch in den Frameworks Vue und React oder auch Nuxt und Next; ich finde CSS toll. Es ist einfach wunderschön das übersetzte Layout auf dem Bildschirm zum Leben zu erwecken. Während meines Studiums habe ich zudem mit einigen Backend Frameworks wie Flask in Python oder Express in JavaScript gearbeitet und damit einhergehend auch mit Datenbanksystemen wie PostgreSQL. Wenn ich freelance benutze ich die Adobe Creative Suite mit Illustrator und XD um Designideen zu erarbeiten.",
+      "buttonText": "Mein Lebenslauf"
     },
     "contact": {
-      "headline": "Let‘s work together",
-      "text": "I can help you with your project idea and take it from concept to deployment."
+      "headline": "Lassen Sie uns zusammenarbeiten",
+      "text": "Ich kann Ihnen helfen Ihre Projektidee vom Konzept bis zur fertigen Website zu führen.",
+      "buttonText": "Schreiben Sie mir"
     }
+  },
+  "ContactPage": {
+    "headline": "kontakt",
+    "subline": "Ich würde gern mehr über Ihr nächstes Projekt erfahren. Ich kann Ihnen sicher dabei helfen.",
+    "buttonText": "Schreiben Sie mir"
   },
   "Navigation": {
     "home": {
       "linkText": "Home"
     },
     "works": {
-      "linkText": "Works",
+      "linkText": "Projekte",
       "icon": {
         "xs": "",
         "md": ""
       }
     },
     "about": {
-      "linkText": "About",
+      "linkText": "Über mich",
       "icon": {
         "xs": "",
         "md": ""
       }
     },
     "contact": {
-      "linkText": "Contact",
+      "linkText": "Kontakt",
       "icon": {
         "xs": "",
         "md": ""
       }
     },
     "music": {
-      "linkText": "Music",
+      "linkText": "Musik",
       "icon": {
         "xs": "",
         "md": ""
@@ -50,8 +57,8 @@
     }
   },
   "NotFound": {
-    "headline": "Oops, looks like you hit a dead end",
-    "subline": "Click the button below to get back on track.",
+    "headline": "Oops, hier geht es leider nicht weiter",
+    "subline": "Klicken Sie den Button um zurück zur Homepage zu gelangen.",
     "button": "Home"
   }
 }
