@@ -1,23 +1,27 @@
 "use client";
 
-// import Icon from "./Icon";
-
-export default function Button(props) {
+export default function Button({
+  children,
+  icon,
+  href,
+  asLink,
+  onClick,
+  className,
+  id,
+}) {
   var content = (
     <>
-      <span className="button-copy">{props.children}</span>
-      <span className="button-icon">{props.icon}</span>
+      <span className="button-copy">{children}</span>
+      <span className="button-icon">{icon}</span>
     </>
   );
 
-  if (props.asLink && props.href) {
+  if (asLink && href) {
     return (
       <a
-        id={props.id}
-        className={
-          "button interactable" + (props.className ? ` ${props.className}` : "")
-        }
-        href={props.href}
+        id={id}
+        className={"button interactable" + (className ? ` ${className}` : "")}
+        href={href}
       >
         {content}
       </a>
@@ -26,11 +30,9 @@ export default function Button(props) {
 
   return (
     <button
-      id={props.id}
-      className={
-        "button interactable" + (props.className ? ` ${props.className}` : "")
-      }
-      onClick={props.onClick}
+      id={id}
+      className={"button interactable" + (className ? ` ${className}` : "")}
+      onClick={onClick}
     >
       {content}
     </button>
