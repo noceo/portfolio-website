@@ -53,7 +53,7 @@ export default function ButtonPageTransition({
 
   return (
     <a
-      className={className ? ` ${className}` : ""}
+      className={"interactable" + (className ? ` ${className}` : "")}
       href={location}
       onClick={redirect}
     >

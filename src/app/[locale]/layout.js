@@ -8,6 +8,7 @@ import { circleAnimations } from "@/utils/animations";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
+import CursorTrailer from "@/components/CursorTrailer";
 
 export const metadata = {
   title: "Create Next App",
@@ -82,6 +83,7 @@ export default async function MainLayout({ children, params }) {
             <Header />
             <PageWrapper circleStyles={circleStyles}>{children}</PageWrapper>
             {/* <Footer /> */}
+            <CursorTrailer />
           </div>
         </NextIntlClientProvider>
       </body>

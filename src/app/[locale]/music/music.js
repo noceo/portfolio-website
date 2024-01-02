@@ -19,7 +19,7 @@ export default function Music() {
   const { data, error, isLoading, isValidating } = useSWR(
     "/api/music",
     fetcher,
-    { refreshInterval: 10000000 }
+    { refreshInterval: 1000 }
   );
   const [currentTrack, setCurrentTrack] = useState();
 

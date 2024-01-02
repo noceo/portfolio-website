@@ -12,14 +12,26 @@ export default function Button(props) {
 
   if (props.asLink && props.href) {
     return (
-      <a id={props.id} className={"button" + (props.className ? ` ${props.className}` : "")} href={props.href}>
+      <a
+        id={props.id}
+        className={
+          "button interactable" + (props.className ? ` ${props.className}` : "")
+        }
+        href={props.href}
+      >
         {content}
       </a>
     );
   }
 
   return (
-    <button id={props.id} className={"button" + (props.className ? ` ${props.className}` : "")} onClick={props.onClick}>
+    <button
+      id={props.id}
+      className={
+        "button interactable" + (props.className ? ` ${props.className}` : "")
+      }
+      onClick={props.onClick}
+    >
       {content}
     </button>
   );

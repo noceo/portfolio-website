@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Button from "./Button";
 import HamburgerIcon from "@/../public/icons/hamburger.svg";
+import Link from "./Link";
 import { useTranslations } from "next-intl";
 
 export default function Navbar() {

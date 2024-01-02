@@ -89,7 +89,7 @@ export default function AudioCard({
 
   return (
     <div className="audio-card">
-      <div className="audio-cover">
+      <div className="audio-cover interactable">
         <img src={imgSrc} />
         <div
           className="audio-cover__controls"
