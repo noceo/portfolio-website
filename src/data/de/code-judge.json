@@ -1,14 +1,14 @@
 {
-  "title": "Digital Catalogue",
-  "slug": "digital-catalogue",
-  "description": "Berlin Art Exhibition",
-  "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
-  "responsibilities": "Development",
-  "project_goal": "Building a digital guide for an art exhibition. Due to COVID-19 this was an alternative for visiting the exhibition in person. Although the digital guide would never replace visiting in person, it was a good starting point to look through for potential future visitors.",
-  "accentColor": "rgba(255,0,167,0.3)",
+  "title": "Code Judge",
+  "slug": "code-judge",
+  "description": "Coding Exercise Platform",
+  "description_long": "A small scale prototype for a coding exercise platform.",
+  "responsibilities": "Scrum Master, Development",
+  "project_goal": "Creating a platform that the university department can use to give out coding homeworks to students. Students should be able to solve coding problems and submit them.",
+  "accentColor": "rgba(40, 237, 234, 0.5)",
   "thumbnail": {
-    "src": "/images/chair.jpeg",
-    "alt": "A chair"
+    "src": "/images/aware-thumbnail.png",
+    "alt": "Multiple magazine articles stacked on top of each other"
   },
   "circleStyle": {
     "xs": {
