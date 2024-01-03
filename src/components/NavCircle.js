@@ -9,12 +9,16 @@ import EnglishIconContactSmall from "@/../public/icons/circle_contact_small.svg"
 import EnglishIconContactLarge from "@/../public/icons/circle_contact_large.svg";
 import EnglishIconAboutSmall from "@/../public/icons/circle_about_small.svg";
 import EnglishIconAboutLarge from "@/../public/icons/circle_about_large.svg";
-import GermanIconWorksSmall from "@/../public/icons/circle_works_small.svg";
-import GermanIconWorksLarge from "@/../public/icons/circle_works_large.svg";
-import GermanIconContactSmall from "@/../public/icons/circle_contact_small.svg";
-import GermanIconContactLarge from "@/../public/icons/circle_contact_large.svg";
-import GermanIconAboutSmall from "@/../public/icons/circle_about_small.svg";
-import GermanIconAboutLarge from "@/../public/icons/circle_about_large.svg";
+import EnglishIconMusicSmall from "@/../public/icons/circle_music_small.svg";
+import EnglishIconMusicLarge from "@/../public/icons/circle_music_large.svg";
+import GermanIconWorksSmall from "@/../public/icons/circle_works_small_de.svg";
+import GermanIconWorksLarge from "@/../public/icons/circle_works_large_de.svg";
+import GermanIconContactSmall from "@/../public/icons/circle_contact_small_de.svg";
+import GermanIconContactLarge from "@/../public/icons/circle_contact_large_de.svg";
+import GermanIconAboutSmall from "@/../public/icons/circle_about_small_de.svg";
+import GermanIconAboutLarge from "@/../public/icons/circle_about_large_de.svg";
+import GermanIconMusicSmall from "@/../public/icons/circle_music_small_de.svg";
+import GermanIconMusicLarge from "@/../public/icons/circle_music_large_de.svg";
 import { useCallback, useEffect } from "react";
 import { useLocale } from "next-intl";
 
@@ -32,6 +36,10 @@ const circleIcons = {
       sm: EnglishIconAboutSmall,
       lg: EnglishIconAboutLarge,
     },
+    music: {
+      sm: EnglishIconMusicSmall,
+      lg: EnglishIconMusicLarge,
+    },
   },
   de: {
     works: {
@@ -46,14 +54,19 @@ const circleIcons = {
       sm: GermanIconAboutSmall,
       lg: GermanIconAboutLarge,
     },
+    music: {
+      sm: GermanIconMusicSmall,
+      lg: GermanIconMusicLarge,
+    },
   },
 };
 
-const MAX_PARALLAX_MOVE = 10;
+const MAX_PARALLAX_MOVE = 20;
 const PARALLAX_DEPTH_FACTORS = [
-  { x: 1, y: -1, inverse: false },
-  { x: -1, y: -1, inverse: false },
-  { x: 0.5, y: -0.5, inverse: false },
+  { x: -0.4, y: -0.4, inverse: false },
+  { x: -0.3, y: -0.3, inverse: false },
+  { x: 0.5, y: -0.3, inverse: false },
+  { x: 0.1, y: -0.1, inverse: false },
 ];
 
 export default function NavCircle() {
@@ -64,6 +77,8 @@ export default function NavCircle() {
   const IconAboutLarge = circleIcons[locale].about.lg;
   const IconContactSmall = circleIcons[locale].contact.sm;
   const IconContactLarge = circleIcons[locale].contact.lg;
+  const IconMusicSmall = circleIcons[locale].music.sm;
+  const IconMusicLarge = circleIcons[locale].music.lg;
   const breakpoint = useBreakpoint();
 
   const onMouseMove = useCallback((e) => {
@@ -144,6 +159,15 @@ export default function NavCircle() {
                   ) : (
                     <IconContactSmall />
                   )}
+                </div>
+              </ButtonPageTransition>
+            </div>
+          </div>
+          <div className="parallax-wrapper">
+            <div id="circle-music" className="circle-item">
+              <ButtonPageTransition location="/music">
+                <div className="circle-item-icon">
+                  {isLargeScreen() ? <IconMusicLarge /> : <IconMusicSmall />}
                 </div>
               </ButtonPageTransition>
             </div>
