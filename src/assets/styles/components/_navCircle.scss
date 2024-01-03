@@ -238,6 +238,34 @@
   }
 }
 
+#circle-music {
+  top: -60%;
+  left: -80%;
+
+  a {
+    background-color: rgb(250, 255, 152);
+    width: 40%;
+    height: 40%;
+
+    @include media-breakpoint-up(md) {
+      font-size: font-size(10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: font-size(12px);
+    }
+
+    .circle-item-icon {
+      width: 60%;
+      height: 60%;
+
+      svg {
+        animation-duration: 45s;
+      }
+    }
+  }
+}
+
 @keyframes circle {
   0% {
     transform: rotate(0deg) translate(150px) rotate(0deg);
