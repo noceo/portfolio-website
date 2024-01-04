@@ -134,7 +134,13 @@ export default function NavCircle() {
         <div id="circle-items">
           <div className="parallax-wrapper">
             <div id="circle-works" className="circle-item">
-              <ButtonPageTransition location="/works">
+              <ButtonPageTransition
+                location="/works"
+                onBeforeTransition={document.removeEventListener(
+                  "mousemove",
+                  onMouseMove
+                )}
+              >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? <IconWorksLarge /> : <IconWorksSmall />}
                 </div>
@@ -143,7 +149,13 @@ export default function NavCircle() {
           </div>
           <div className="parallax-wrapper">
             <div id="circle-about" className="circle-item">
-              <ButtonPageTransition location="/about">
+              <ButtonPageTransition
+                location="/about"
+                onBeforeTransition={document.removeEventListener(
+                  "mousemove",
+                  onMouseMove
+                )}
+              >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? <IconAboutLarge /> : <IconAboutSmall />}
                 </div>
@@ -152,7 +164,13 @@ export default function NavCircle() {
           </div>
           <div className="parallax-wrapper">
             <div id="circle-contact" className="circle-item">
-              <ButtonPageTransition location="/contact">
+              <ButtonPageTransition
+                location="/contact"
+                onBeforeTransition={document.removeEventListener(
+                  "mousemove",
+                  onMouseMove
+                )}
+              >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? (
                     <IconContactLarge />
@@ -165,7 +183,13 @@ export default function NavCircle() {
           </div>
           <div className="parallax-wrapper">
             <div id="circle-music" className="circle-item">
-              <ButtonPageTransition location="/music">
+              <ButtonPageTransition
+                location="/music"
+                onBeforeTransition={document.removeEventListener(
+                  "mousemove",
+                  onMouseMove
+                )}
+              >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? <IconMusicLarge /> : <IconMusicSmall />}
                 </div>

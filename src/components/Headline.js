@@ -70,25 +70,27 @@ export default function Headline({ copy1, copy2, rotate = true }) {
       }, 6000);
     }
 
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        const newHeight = entry.target.offsetHeight;
-        if (
-          typeof newHeight === "number" &&
-          newHeight !== headlineHeight.current
-        ) {
-          onResize();
-          console.log("RESIZE");
+    let resizeObserver;
+    if (copy1Ref.current && copy2Ref.current) {
+      resizeObserver = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          const newHeight = entry.target.offsetHeight;
+          if (
+            typeof newHeight === "number" &&
+            newHeight !== headlineHeight.current
+          ) {
+            onResize();
+            console.log("RESIZE");
+          }
         }
-      }
-    });
-
-    resizeObserver.observe(copy1Ref.current);
-    resizeObserver.observe(copy2Ref.current);
+      });
+      resizeObserver.observe(copy1Ref.current);
+      resizeObserver.observe(copy2Ref.current);
+    }
 
     return () => {
       if (rotate) timeline.pause();
-      resizeObserver.disconnect();
+      if (resizeObserver) resizeObserver.disconnect();
     };
   }, []);
 

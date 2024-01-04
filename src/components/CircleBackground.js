@@ -19,7 +19,6 @@ export default function CircleBackground({ circleStyles }) {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
-    console.log(circleStyles[pathname], pathname);
     if (circleStyles[pathname].scale) {
       setScale(scrollPercentage / 175 + 1);
     }

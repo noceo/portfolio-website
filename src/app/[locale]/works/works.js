@@ -22,7 +22,6 @@ export default function Works({ works }) {
   const pathname = usePathname();
   const projectListRef = useRef();
   const projectImagesRef = useRef();
-  const t = useTranslations("WorksPage");
 
   useFadeIn(null);
 

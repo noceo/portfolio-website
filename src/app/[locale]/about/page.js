@@ -25,14 +25,19 @@ export default function About() {
       <main>
         <div className="container">
           <div className="row anime fade-in">
-            <div className="col-xs-12 col-md-10 offset-md-1 col-lg-10 col-xl-6">
+            <div className="col-xs-12 col-md-10 offset-md-1 col-lg-8 col-xl-6">
               <Headline copy1="de me." copy2={t("headline") + "."} />
               <p className="heading3 mb-7">{t("subline")}</p>
             </div>
           </div>
           <div className="row anime fade-in">
-            <div className="col-xs-12 col-md-6 offset-md-1">
-              <div dangerouslySetInnerHTML={{ __html: t.raw("content") }} />
+            <div className="col-xs-12 col-md-8 offset-md-1 col-lg-6">
+              <div>
+                {t.rich("content", {
+                  p: (chunks) => <p>{chunks}</p>,
+                  Quote: (chunks) => <Quote>{chunks}</Quote>,
+                })}
+              </div>
               <h4 className="heading3">{t("skills.headline")}</h4>
               <p className="mb-3">{t("skills.text")}</p>
               <Button

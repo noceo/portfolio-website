@@ -5,6 +5,7 @@ import Button from "@/components/Button";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import Headline from "@/components/Headline";
 import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
+import ArrowRightIcon from "@/../public/icons/arrow_right.svg";
 import { useTranslations } from "next-intl";
 
 export default function Contact() {
@@ -30,7 +31,11 @@ export default function Contact() {
               <h3 className="anime fade-in">{t("subline")}</h3>
               <div className="anime fade-in">
                 <p>Email: paulschade98@gmail.com</p>
-                <Button asLink={true} href="mailto:paulschade98@gmail.com">
+                <Button
+                  asLink={true}
+                  href="mailto:paulschade98@gmail.com"
+                  icon={<ArrowRightIcon />}
+                >
                   {t("buttonText")}
                 </Button>
               </div>

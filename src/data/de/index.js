@@ -8,12 +8,12 @@ import densenetClassifier from "./densenet-classifier.json";
 import pgaPlatform from "./pga-platform.json";
 
 export const de = [
-  paulschade,
+  // paulschade,
   awareMagazine,
-  digitalCatalogue,
-  artisticFilters,
-  solidiwise,
-  codeJudge,
-  densenetClassifier,
-  pgaPlatform,
+  // digitalCatalogue,
+  // artisticFilters,
+  // solidiwise,
+  // codeJudge,
+  // densenetClassifier,
+  // pgaPlatform,
 ];
