@@ -114,6 +114,10 @@ export default function NavCircle() {
     }
   }, []);
 
+  function onBeforeTransition() {
+    document.removeEventListener("mousemove", onMouseMove);
+  }
+
   const isLargeScreen = () => {
     if (breakpoint != "xs" && breakpoint != "sm") return true;
   };
@@ -124,7 +128,7 @@ export default function NavCircle() {
     }
 
     return () => {
-      document.removeEventListener("mousemove", onMouseMove);
+      onBeforeTransition();
     };
   }, [breakpoint]);
 
@@ -136,10 +140,7 @@ export default function NavCircle() {
             <div id="circle-works" className="circle-item">
               <ButtonPageTransition
                 location="/works"
-                onBeforeTransition={document.removeEventListener(
-                  "mousemove",
-                  onMouseMove
-                )}
+                onBeforeTransition={onBeforeTransition}
               >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? <IconWorksLarge /> : <IconWorksSmall />}
@@ -151,10 +152,7 @@ export default function NavCircle() {
             <div id="circle-about" className="circle-item">
               <ButtonPageTransition
                 location="/about"
-                onBeforeTransition={document.removeEventListener(
-                  "mousemove",
-                  onMouseMove
-                )}
+                onBeforeTransition={onBeforeTransition}
               >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? <IconAboutLarge /> : <IconAboutSmall />}
@@ -166,10 +164,7 @@ export default function NavCircle() {
             <div id="circle-contact" className="circle-item">
               <ButtonPageTransition
                 location="/contact"
-                onBeforeTransition={document.removeEventListener(
-                  "mousemove",
-                  onMouseMove
-                )}
+                onBeforeTransition={onBeforeTransition}
               >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? (
@@ -185,10 +180,7 @@ export default function NavCircle() {
             <div id="circle-music" className="circle-item">
               <ButtonPageTransition
                 location="/music"
-                onBeforeTransition={document.removeEventListener(
-                  "mousemove",
-                  onMouseMove
-                )}
+                onBeforeTransition={onBeforeTransition}
               >
                 <div className="circle-item-icon">
                   {isLargeScreen() ? <IconMusicLarge /> : <IconMusicSmall />}
