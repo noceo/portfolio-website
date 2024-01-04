@@ -6,22 +6,22 @@
   "AboutPage": {
     "headline": "über mich",
     "subline": "Ich heiße Paul. Ich bin Entwickler, liebe Kunst und mache Musik.",
-    "content": "<p>Ich bin 25 Jahre alt und in Deutschland geboren. Ich habe einen Masterabschluss an der Texas A&M University gemacht. In meiner freien Zeit bin ich gern kreativ. Ich mache selber Musik aber ich höre auch sehr viel Musik (Spotify denkt ich sei ein Vampir weil ich meistens Techno höre aber ich höre auch gern Jazz und entspannte Musik). Ich liebe es zu kochen, zu spielen und manchmal einfach wertvolle Zeit mit Freunden zu verbringen. Ich gehe zudem auch gern in Kunstaustellungen und Museen. Ich spreche Deutsch und Englisch.</p><p>You are able to basically build whatever you desire by learning the principles of code once. Do not get me wrong: Learning how to code is a lifelong process. There is so much to learn that you will never be proficient in all different areas at the same time. But during my time studying computer science I fell in love with the idea of having all the necessary tools in hand to build something that helps people out there and possibly also yourself. The possibilities and options are endless and once you dig deeper you soon notice that it takes a whole lot to understand the various abstractions that are built on top of bare metal machines. Looking back I must say that I would always take the same route again when it comes to learning how to code. Understanding the underlying methodology and design patterns is key to being able to adapt quickly in this fast paced industry. Obviously it was not always easy and I also criticize the curricula of established universities that they think are suited for people who want to go into the industry. I could write a whole book about what is good and bad about the way universities teach but that is for another day.</p>",
+    "content": "<p>Ich bin 25 Jahre alt und in Deutschland geboren. Ich habe meinen Masterabschluss in Informatik an der Texas A&M University gemacht. In meiner freien Zeit bin ich gern kreativ. Ich mache selber Musik aber ich höre auch sehr viel Musik (Spotify denkt ich sei ein Vampir weil ich meistens Techno höre aber ich höre auch gern Jazz und entspannte Musik). Ich liebe es zu kochen, zu spielen und manchmal einfach wertvolle Zeit mit Freunden zu verbringen. Ich gehe zudem auch gern in Kunstaustellungen und Museen. Ich spreche Deutsch und Englisch.</p><Quote>Du kannst im Grunde alles bauen, was Du Dir wünschst, wenn Du einmal verstanden hast wie Software funktioniert.</Quote><p>Bitte nicht falsch verstehen: Programmieren zu lernen ist ein lebenslanger Prozess. Es gibt so viel zu lernen, sodass man nie alles gleichzeitig beherrschen wird. Aber während meines Informatikstudiums habe ich mich an dem Gedanken festgehangen, irgendwann alle notwendigen Werkzeuge in der Hand zu halten, um etwas zu bauen, was Menschen jeden Tag hilft. Die Möglichkeiten und Optionen sind endlos, und wenn man tiefer einsteigt, merkt man schnell, dass es eine ganze Menge braucht, um die verschiedenen Abstraktionen in Software zu durchdringen. Rückblickend muss ich sagen, dass ich immer wieder den gleichen Weg einschlagen würde, wenn es darum geht, das Programmieren zu lernen. Das Verständnis der zugrunde liegenden Methodik und der Entwurfsmuster ist der Schlüssel, um sich in dieser schnelllebigen Welt an neue Dinge anpassen zu können. Ich kritisiere aber auch gewisse Bestandteile der Lehre an etablierten Universitäten. Ich könnte ein ganzes Buch darüber schreiben, was an der Art und Weise, wie Universitäten lehren, gut und schlecht ist. Aber das vielleicht ein andermal.</p>",
     "skills": {
       "headline": "Erfahrung",
-      "text": "Ich habe bereits 1 Jahr in professionellem Kontext gearbeitet. Darüber hinaus habe ich 6 Jahre Erfahrung in meinem Informatikstudium gesammelt. In den letzten Jahren habe ich meinen Fokus auf die Frontend Entwicklung gesetzt. Ich habe viel Übung in JavaScrript als auch in den Frameworks Vue und React oder auch Nuxt und Next; ich finde CSS toll. Es ist einfach wunderschön das übersetzte Layout auf dem Bildschirm zum Leben zu erwecken. Während meines Studiums habe ich zudem mit einigen Backend Frameworks wie Flask in Python oder Express in JavaScript gearbeitet und damit einhergehend auch mit Datenbanksystemen wie PostgreSQL. Wenn ich freelance benutze ich die Adobe Creative Suite mit Illustrator und XD um Designideen zu erarbeiten.",
+      "text": "Ich habe bereits 1 Jahr in professionellem Kontext als Webentwickler gearbeitet. Darüber hinaus habe ich 6 Jahre Erfahrung durch mein Informatikstudium gesammelt. In den letzten Jahren habe ich meinen Fokus auf die Frontend-Entwicklung gesetzt. Ich habe viel Übung in JavaScrript sowie in den Frameworks Vue und React oder auch Nuxt und Next; außerdem finde ich CSS klasse. Es ist einfach wunderschön das übersetzte Layout auf dem Bildschirm zum Leben zu erwecken. Während meines Studiums habe ich zudem mit einigen Backend Frameworks wie Flask in Python oder Express in JavaScript gearbeitet und damit einhergehend auch mit Datenbanksystemen wie PostgreSQL. Wenn ich freelance benutze ich die Adobe Creative Suite mit Illustrator und XD um Designideen zu erarbeiten.",
       "buttonText": "Mein Lebenslauf"
     },
     "contact": {
-      "headline": "Lassen Sie uns zusammenarbeiten",
-      "text": "Ich kann Ihnen helfen Ihre Projektidee vom Konzept bis zur fertigen Website zu führen.",
-      "buttonText": "Schreiben Sie mir"
+      "headline": "Kontakt",
+      "text": "Gefällt Dir diese Seite?",
+      "buttonText": "Schreib mir"
     }
   },
   "ContactPage": {
     "headline": "kontakt",
-    "subline": "Wenn Ihnen diese Seite gefallen hat, lassen Sie es mich gern in einer Nachricht wissen.",
-    "buttonText": "Schreiben Sie mir"
+    "subline": "Hat dir meine Seite gefallen? Dann lass es mich gern wissen.",
+    "buttonText": "Schreib mir"
   },
   "Navigation": {
     "home": {
