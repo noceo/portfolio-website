@@ -4,9 +4,11 @@ import { useContext, useEffect } from "react";
 // import { usePathname, useSearchParams } from "next/navigation";
 import anime from "animejs";
 import { SplashScreenContext } from "./PageWrapper";
+import SplashLoader from "@/../public/icons/splash_loader.svg";
 
 export default function SplashScreen() {
-  const { isSplashScreenLoading, setSplashScreenLoading } = useContext(SplashScreenContext);
+  const { isSplashScreenLoading, setSplashScreenLoading } =
+    useContext(SplashScreenContext);
   // const pathname = usePathname();
   // const searchParams = useSearchParams();
   // const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -33,5 +35,11 @@ export default function SplashScreen() {
     });
   }, []);
 
-  return <div id="splashscreen">SPLASH</div>;
+  return (
+    <div id="splashscreen">
+      <div id="splash-loader">
+        <SplashLoader />
+      </div>
+    </div>
+  );
 }
