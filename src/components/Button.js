@@ -4,7 +4,6 @@ export default function Button({
   children,
   icon,
   href,
-  asLink,
   onClick,
   className,
   id,
@@ -16,12 +15,13 @@ export default function Button({
     </>
   );
 
-  if (asLink && href) {
+  if (href) {
     return (
       <a
         id={id}
         className={"button interactable" + (className ? ` ${className}` : "")}
         href={href}
+        target="_blank"
       >
         {content}
       </a>

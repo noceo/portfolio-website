@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const t = useTranslations("ContactPage");
+  const tButton = useTranslations("Button");
   useFadeIn("right");
 
   return (
@@ -36,7 +37,7 @@ export default function Contact() {
                   href="mailto:paulschade98@gmail.com"
                   icon={<ArrowRightIcon />}
                 >
-                  {t("buttonText")}
+                  {tButton("contact")}
                 </Button>
               </div>
             </div>

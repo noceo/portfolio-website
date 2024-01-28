@@ -23,6 +23,10 @@
     "subline": "Hat dir meine Seite gefallen? Dann lass es mich gern wissen.",
     "buttonText": "Schreib mir"
   },
+  "ProjectPage": {
+    "projectLocked": "Das Projekt ist momentan nicht öffentlich zugänglich.",
+    "cta": "Hier geht’s zum Projekt"
+  },
   "Navigation": {
     "home": {
       "linkText": "Home"
@@ -60,5 +64,8 @@
     "headline": "Oops, hier geht es leider nicht weiter",
     "subline": "Klicken Sie den Button um zurück zur Homepage zu gelangen.",
     "button": "Home"
+  },
+  "Button": {
+    "contact": "Schreib mir"
   }
 }

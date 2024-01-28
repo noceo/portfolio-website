@@ -16,7 +16,7 @@
 
     .headline {
       position: absolute;
-      bottom: 10%;
+      bottom: 20%;
     }
   }
 
@@ -49,7 +49,18 @@
     }
 
     &__description {
+      position: relative;
       margin-bottom: 150px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        height: 2px;
+        width: 20%;
+        background-color: black;
+      }
     }
 
     &__item {
@@ -66,10 +77,22 @@
     }
   }
 
+  .cta-section {
+    text-align: center;
+
+    p {
+      margin-bottom: 50px;
+    }
+  }
+
   .one-col-layout,
   .layout {
     [class^="col"] {
-      margin-bottom: 120px;
+      margin-bottom: 80px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 120px;
+      }
 
       p:last-child {
         margin-bottom: 0;

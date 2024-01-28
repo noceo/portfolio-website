@@ -3,9 +3,10 @@
   "slug": "aware-magazine",
   "description": "Scientific Magazine",
   "description_long": "Developing the online presence for the official student-run, scientific journalistic magazine for Psychology at the University of Zurich.",
-  "responsibilities": "Planning, Development, Deployment",
-  "project_goal": "Building and deploying a new website for the <em>aware</em> magazine. Also aligning the digital experience with the print version of the magazine.",
+  "responsibilities": "Planning, Development, Deployment, Maintanance",
+  "project_goal": "Building and deploying a new website for the <strong>aware</strong> magazine. Also aligning the digital experience with the print version of the magazine.",
   "accentColor": "rgba(241, 93, 42, 0.5)",
+  "url": "http://dev.aware-psymagazin.ch/ausgabe",
   "thumbnail": {
     "src": "/images/aware-thumbnail.png",
     "alt": "Multiple magazine articles stacked on top of each other"
@@ -30,32 +31,32 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
+          "src": "/images/aware_collage_2.png",
           "alt": "A chair",
           "caption": "The landing page of the project with a full-screen hero image."
         },
         {
           "type": "Text",
           "text": [
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus."
+            "The psychological magazine aware gives psychology students of the University of Zurich a voice. It creates a space to critically question psychological concepts and the latest research but also offers students a way to show their various creative skills besides their chosen study program. The magazine consists of multiple departments, each of them responsible for a different part of the end product. With joined forces they deliver a beautifully illustrated magazine every semester. You can find it at multiple locations around the city of Zurich.",
+            "I felt honored that they had entrusted me with rebuilding their website. Together, we wanted to build another pillar for the magazine to stand on. The printed magazine should still remain the main focus while having another way of engaging with interested readers. In order to reach out to a wider audience a website that resembles the magazine in an authentic way was essential. To reach that goal I worked hand in hand together with the magazine’s layout department to build a new digital experience."
           ],
           "classes": "col-lg-10 offset-lg-1"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
+          "src": "/images/collage_aware.png",
           "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
+          "caption": "Edition overview with associated articles and location page."
         },
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "The project has been built using Next.js for the frontend and Strapi as a content management system for the backend. One requirement was that specialized team members could easily edit the content of the entire website. The Strapi CMS was used exactly for that reason. I am especially proud of this website since it was my first project that I planned and implemented from start to deployment on my own and that is now out there in the wild getting views from interested readers.",
           "classes": "col-lg-10 offset-lg-1"
         },
         {
           "type": "Quote",
-          "children": "I wanted to create something unique and aestetically pleasing for future visitors.",
+          "children": "Articles on this website are going to be read by experts and laypeople alike. It helps pushing psychological research at UZH out to the public.",
           "classes": "col-lg-10 offset-lg-1"
         }
       ]
@@ -66,12 +67,12 @@
       "children": [
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "Each article that is released has its own page. In the image you can see hero images for some of the article pages. Giving every article a dedicated page creates space for the article to breathe. Since the website should resemble the printed magazine each article is presented as a self-contained story. Being able to reference specific stories via a unique url is a must-have feature since the magazine must be able to present specifically curated articles to people at fairs and other events.",
           "classes": "col-xs-12 col-md-5 offset-md-1"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
+          "src": "/images/aware_collage_3.png",
           "alt": "A chair",
           "classes": "col-xs-12 col-md-6 breakout-md-right"
         }
@@ -83,12 +84,12 @@
       "children": [
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "The articles themselves have infoboxes and quotes that can be dynamically set to the desired position by content managers. The infoboxes usually fulfill the purpose of creating space for additional information that is related to the text but not mandatory for the understanding of the text. Elements like these make the text engaging and reader-friendly since they explain certain topics that not everybody knows about.",
           "classes": "col-xs-12 col-md-6"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
+          "src": "/images/aware_infobox.png",
           "alt": "A chair",
           "classes": "col-xs-12 col-md-6 breakout-md-left"
         }
@@ -98,19 +99,9 @@
       "type": "SingleColumnLayout",
       "children": [
         {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
+          "type": "Text",
+          "text": "The website is not only a place where you can find the latest articles related to psychology but also an archive for all past editions. The magazine is eager to make past editions fully digital. Until this is the case, every past edition can be downloaded as a PDF.",
+          "classes": "col-lg-10 offset-lg-1"
         }
       ]
     }

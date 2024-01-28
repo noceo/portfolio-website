@@ -14,14 +14,17 @@
     },
     "contact": {
       "headline": "Let‘s work together",
-      "text": "I can help you with your project idea and take it from concept to deployment.",
-      "buttonText": "Contact me"
+      "text": "I can help you with your project idea and take it from concept to deployment."
     }
   },
   "ContactPage": {
     "headline": "contact",
     "subline": "Inspired by the showcased projects? Feel free to leave me a message.",
     "buttonText": "Contact me"
+  },
+  "ProjectPage": {
+    "projectLocked": "The project is not publicly available at the moment.",
+    "cta": "Check out the project"
   },
   "Navigation": {
     "home": {
@@ -60,5 +63,8 @@
     "headline": "Oops, looks like you hit a dead end",
     "subline": "Click the button below to get back on track.",
     "button": "Home"
+  },
+  "Button": {
+    "contact": "Contact me"
   }
 }
