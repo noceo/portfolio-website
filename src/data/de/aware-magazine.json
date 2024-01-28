@@ -8,7 +8,7 @@
   "accentColor": "rgba(241, 93, 42, 0.5)",
   "url": "http://dev.aware-psymagazin.ch/ausgabe",
   "thumbnail": {
-    "src": "/images/aware-thumbnail.png",
+    "src": "/images/aware_thumbnail.png",
     "alt": "Multiple magazine articles stacked on top of each other"
   },
   "circleStyle": {
@@ -31,7 +31,7 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/aware_collage_2.png",
+          "src": "/images/aware_article_collage.png",
           "alt": "A chair",
           "caption": "The landing page of the project with a full-screen hero image."
         },
@@ -45,7 +45,7 @@
         },
         {
           "type": "Image",
-          "src": "/images/collage_aware.png",
+          "src": "/images/aware_mobile_collage.png",
           "alt": "A chair",
           "caption": "Edition overview with associated articles and location page."
         },

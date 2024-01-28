@@ -31,7 +31,7 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/aware_collage_2.png",
+          "src": "/images/aware_article_collage.png",
           "alt": "A chair",
           "caption": "The landing page of the project with a full-screen hero image."
         },
@@ -45,7 +45,7 @@
         },
         {
           "type": "Image",
-          "src": "/images/collage_aware.png",
+          "src": "/images/aware_mobile_collage.png",
           "alt": "A chair",
           "caption": "Edition overview with associated articles and location page."
         },
