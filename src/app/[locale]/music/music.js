@@ -18,8 +18,8 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 export default function Music() {
   const { data, error, isLoading, isValidating } = useSWR(
     "/api/music",
-    fetcher,
-    { refreshInterval: 1000 }
+    fetcher
+    // { refreshInterval: 1000 }
   );
   const [currentTrack, setCurrentTrack] = useState();
 

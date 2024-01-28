@@ -2,6 +2,7 @@ import { getTopTracks } from "@/lib/spotify";
 
 export async function GET() {
   const { items } = await getTopTracks();
+  console.log(items);
 
   const tracks = items.map((track) => ({
     title: track.name,
