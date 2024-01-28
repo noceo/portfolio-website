@@ -11,6 +11,5 @@ export async function GET() {
     imgSrc: track.album.images?.[0].url,
   }));
 
-  console.log(tracks);
   return Response.json({ tracks });
 }

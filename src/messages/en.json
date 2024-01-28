@@ -13,8 +13,9 @@
       "buttonText": "My CV"
     },
     "contact": {
-      "headline": "Let‘s work together",
-      "text": "I can help you with your project idea and take it from concept to deployment."
+      "headline": "Contact",
+      "text": "You like what you are seeing?",
+      "buttonText": "Contact me"
     }
   },
   "ContactPage": {
