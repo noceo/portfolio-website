@@ -40,23 +40,6 @@ export default function CursorTrailer() {
       animationFrameRef.current = requestAnimationFrame(rafRender);
     };
 
-    // const onMouseMove = (e) => {
-    //   const x = e.clientX - cursorContainerRef.current.offsetWidth / 2;
-    //   const y = e.clientY - cursorContainerRef.current.offsetHeight / 2;
-
-    //   const delayX = x * 0.8 - lastPos.current.x * 0.2;
-    //   const delayY = y * 0.8 - lastPos.current.y * 0.2;
-    //   const scale =
-    //     (interactingRef.current ? 4 : 1) * (mouseDownRef.current ? 2 : 1);
-
-    //   cursorContainerRef.current.style.transform = `translate(${delayX}px, ${delayY}px)`;
-    //   cursorRef.current.style.transform = `scale(${scale})`;
-    //   if (hideRef.current) cursorContainerRef.current.style.opacity = 0;
-    //   else cursorContainerRef.current.style.opacity = 1;
-
-    //   lastPos.current = { x, y };
-    // };
-
     const onMouseDown = () => {
       mouseDownRef.current = true;
       const scale = (interactingRef.current ? 4 : 1) * 2;
@@ -89,6 +72,10 @@ export default function CursorTrailer() {
       cursorContainerRef.current.style.opacity = 1;
       rafRender();
     }
+
+    return () => {
+      cancelAnimationFrame(animationFrameRef.current);
+    };
   }, []);
 
   return (
