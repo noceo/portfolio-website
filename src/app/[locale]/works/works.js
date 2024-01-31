@@ -1,25 +1,12 @@
 "use client";
 
-import { useEffect, useContext, useRef } from "react";
-import {
-  SplashScreenContext,
-  PreviousRouteContext,
-  PageTransitionContext,
-} from "@/components/PageWrapper";
-import anime from "animejs";
-import { fadeInLeft, fadeInRight } from "@/utils/animations";
-import Link from "next/link";
+import { useEffect, useRef } from "react";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
-import { usePathname } from "next/navigation";
 import useFadeIn from "@/hooks/useFadeIn";
-import { useTranslations } from "next-intl";
+import { detectMobileAndTablet } from "@/utils/detect-mobile";
 
 export default function Works({ works }) {
-  const context = useContext(SplashScreenContext);
-  const prevPage = useContext(PreviousRouteContext);
-  const pageTransitionContext = useContext(PageTransitionContext);
-  const pathname = usePathname();
   const projectListRef = useRef();
   const projectImagesRef = useRef();
 
@@ -29,19 +16,8 @@ export default function Works({ works }) {
     projectListRef.current;
   }, []);
 
-  // useEffect(() => {
-  //   var fadeIn;
-  //   if (prevPage == "/") fadeIn = anime({ ...fadeInRight, delay: anime.stagger(fadeInRight.delay) });
-  //   else fadeIn = anime({ ...fadeInLeft, delay: anime.stagger(fadeInLeft.delay) });
-  //   fadeIn.complete = () => {
-  //     pageTransitionContext.setPageTransition({ isRunning: false, location: pathname });
-  //   };
-  //   if (!context.isSplashScreenLoading) {
-  //     fadeIn.play();
-  //   }
-  // }, [context.isSplashScreenLoading]);
-
   function onMouseEnter(e) {
+    if (detectMobileAndTablet()) return;
     const elementIndex = Array.prototype.indexOf.call(
       projectListRef.current.children,
       e.currentTarget

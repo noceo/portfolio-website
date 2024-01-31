@@ -51,7 +51,7 @@ export default function Music() {
         <ArrowLeftIcon />
       </ButtonPageTransition>
       <main>
-        <div className="container-fluid">
+        <div className="container">
           <div className="row anime fade-in">
             <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
               <Headline copy1="musica." copy2="music." />

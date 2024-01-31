@@ -40,14 +40,14 @@ export default function About() {
               </div>
               <h4 className="heading3">{t("skills.headline")}</h4>
               <p className="mb-3">{t("skills.text")}</p>
-              <Button
+              {/* <Button
                 className="mb-7"
                 asLink={true}
                 href="/"
                 icon={<ArrowRight />}
               >
                 {t("skills.buttonText")}
-              </Button>
+              </Button> */}
               <h4 className="heading3">{t("contact.headline")}</h4>
               <p className="mb-3">{t("contact.text")}</p>
               <Button className="mb-7" icon={<ArrowRight />}>
@@ -56,15 +56,15 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="profile-picture anime fade-in">
-          <div className="container-fluid">
+        {/* <div className="profile-picture anime fade-in">
+          <div className="container">
             <div className="row">
               <figure className="col-xs-12 col-md-3 offset-md-9">
                 <img src="/images/profile.jpeg" alt="Profile Picture" />
               </figure>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
       <div className="blur"></div>
     </div>
