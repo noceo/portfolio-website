@@ -31,24 +31,12 @@ export const metadata = {
   openGraph: {
     title: {
       template: "Paul Schade – %s",
+      default: "Paul Schade",
     },
     description:
-      "Frontend Developer with a focus on creating custom solutions and beautiful designs. Explore my portfolio for a glimpse into my work in blending functionality with aesthetics.",
+      "Frontend Developer with a focus on creating custom solutions and beautiful designs. Explore my portfolio and explore my work.",
     url: "https://paulscha.de",
-    siteName: "Paul Schade",
-    // images: [
-    //   {
-    //     url: 'https://nextjs.org/og.png', // Must be an absolute URL
-    //     width: 800,
-    //     height: 600,
-    //   },
-    //   {
-    //     url: 'https://nextjs.org/og-alt.png', // Must be an absolute URL
-    //     width: 1800,
-    //     height: 1600,
-    //     alt: 'My custom alt',
-    //   },
-    // ],
+    siteName: "https://paulscha.de",
     locale: "en_US",
     type: "website",
   },

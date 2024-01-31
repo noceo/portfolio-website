@@ -8,7 +8,7 @@
   "accentColor": "rgba(241, 93, 42, 0.5)",
   "url": "http://dev.aware-psymagazin.ch/ausgabe",
   "thumbnail": {
-    "src": "/images/aware-thumbnail.png",
+    "src": "/images/aware_thumbnail.png",
     "alt": "Multiple magazine articles stacked on top of each other"
   },
   "circleStyle": {
