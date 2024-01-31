@@ -339,7 +339,7 @@ figure {
   opacity: 0;
   z-index: 10000;
   mix-blend-mode: difference;
-  transition: opacity 0.5s ease, transform 0.08s;
+  transition: opacity 0.5s ease;
 
   > div {
     width: 20px;
@@ -356,9 +356,9 @@ figure {
   height: 40px;
 }
 
-body:hover #cursor-trailer {
-  opacity: 1;
-}
+// body:hover #cursor-trailer {
+//   opacity: 1;
+// }
 
 #splashscreen {
   position: fixed;
