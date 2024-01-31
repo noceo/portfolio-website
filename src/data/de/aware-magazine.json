@@ -2,9 +2,9 @@
   "title": "Aware",
   "slug": "aware-magazine",
   "description": "Scientific Magazine",
-  "description_long": "Developing the online presence for the official student-run, scientific journalistic magazine for Psychology at the University of Zurich.",
-  "responsibilities": "Planning, Development, Deployment, Maintanance",
-  "project_goal": "Building and deploying a new website for the <strong>aware</strong> magazine. Also aligning the digital experience with the print version of the magazine.",
+  "description_long": "Entwicklung des Online-Auftritts der offiziellen studentischen, wissenschafts-journalistischen Zeitschrift für Psychologie an der Universität Zürich.",
+  "responsibilities": "Planung, Entwicklung, Bereitstellung, Pflege",
+  "project_goal": "Aufbau und Bereitstellung einer neuen Website für das Magazin. Angleichung des digitalen Erlebnisses an die gedruckte Version des Magazins.",
   "accentColor": "rgba(241, 93, 42, 0.5)",
   "url": "http://dev.aware-psymagazin.ch/ausgabe",
   "thumbnail": {
@@ -31,32 +31,32 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/aware_article_collage.png",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
+          "src": "/images/aware_cover_collage.png",
+          "alt": "Eine Collage der aware Magazincover der letzten Jahre.",
+          "caption": "Eine Auswahl an Magzincover der letzten Jahre. Jedes einzelne einzigartig."
         },
         {
           "type": "Text",
           "text": [
             "Das psychologische Magazin aware gibt Psychologiestudierenden der Universität Zürich eine Stimme. Es schafft einen Raum, um psychologische Konzepte und neue Forschung kritisch zu hinterfragen, bietet den Studierenden aber auch eine Möglichkeit, ihre vielfältigen kreativen Fähigkeiten abseits des gewählten Studiengangs zu zeigen. Das Magazin besteht aus mehreren Ressorts, von denen jedes für einen bestimmten Teil der nächsten Ausgabe verantwortlich ist. Mit vereinten Kräften veröffentlicht das aware jedes Semester ein wunderschön illustriertes Magazin. Dieses liegt an verschiedenen Orten innerhalb der Stadt Zürich zum Mitnehmen aus.",
-            "Ich fühle mich geehrt, dass mir das aware die Neugestaltung ihrer Website anvertraut hat. Gemeinsam wollten wir eine weitere Säule des Magazins aufbauen während das gedruckte Magazin dabei aber nach wie vor im Mittelpunkt steht. Die Website soll dazu dienen das Magazin zukünftig einem breiteren Publikum zugänglich zu machen. Sie soll das gedruckte Magazin auf authentische Weise digital erfahrbar machen. Um dies zu erreichen, habe ich Hand in Hand mit der Layout-Abteilung des Magazins zusammengearbeitet."
+            "Ich fühle mich geehrt, dass mir das aware die Neugestaltung ihrer Website anvertraut hat. Gemeinsam haben wir eine weitere Säule des Magazins aufgebaut, welche das gedruckte Magazin in seiner Präsenz unterstützt. Die Website soll dazu dienen das Magazin zukünftig einem breiteren Publikum zugänglich zu machen. Sie soll das gedruckte Magazin auf authentische Weise digital erfahrbar machen. Um dies zu erreichen, habe ich Hand in Hand mit dem Layout-Ressort des Magazins zusammengearbeitet."
           ],
           "classes": "col-lg-10 offset-lg-1"
         },
         {
           "type": "Image",
           "src": "/images/aware_mobile_collage.png",
-          "alt": "A chair",
-          "caption": "Edition overview with associated articles and location page."
+          "alt": "Zwei Screenshots der neuen Website. Zum einen die Übersichtsseite für die Ausgabe HS23 und zum anderen die Standortseite, auf der die diversen Standorte gelistet sind, an denen das Magazin erhältlich ist.",
+          "caption": "Die Übersicht der Ausgabe HS23 und Standortseite."
         },
         {
           "type": "Text",
-          "text": "Das Projekt wurde mit Next.js im Frontend und Strapi als Content-Management-System im Backend realisiert. Eine wichtige Anforderung war, dass spezialisierte Teammitglieder den Inhalt der gesamten Website leicht bearbeiten können. Strapi als Headless CMS bietet genau diese Funktionalität und wurde deshalb eingesetzt. Ich bin besonders stolz auf dieses Projekt, da es das erste war, das ich von Anfang bis Ende selbst geplant und umgesetzt habe und nun täglich von interessierten Lesern genutzt wird.",
+          "text": "Das Projekt wurde mit Next.js im Frontend und Strapi als Content-Management-System im Backend realisiert. Eine wichtige Anforderung war, dass spezialisierte Teammitglieder den Inhalt der gesamten Website leicht bearbeiten können. Strapi als Headless CMS bietet genau diese Funktionalität und wurde deshalb eingesetzt. Ich bin besonders stolz auf dieses Projekt, da es das Erste war, das ich von Anfang bis Ende selbst geplant und umgesetzt habe und nun täglich von interessierten Leser*innen genutzt wird.",
           "classes": "col-lg-10 offset-lg-1"
         },
         {
           "type": "Quote",
-          "children": "Artikel auf dieser Website werden in Zukunft von Expert*innen sowie auch von Laien gelesen. Sie hilft dabei psychlogische Forschung der Öffentlichkeit zugänglicher zu machen.",
+          "children": "Artikel auf dieser Website werden in Zukunft von Expert*innen sowie auch von Laien gelesen. Sie hilft dabei, psychlogische Forschung der Öffentlichkeit zugänglicher zu machen.",
           "classes": "col-lg-10 offset-lg-1"
         }
       ]
@@ -67,13 +67,13 @@
       "children": [
         {
           "type": "Text",
-          "text": "Jeder Artikel, der veröffentlicht wird, bekommt eine eigene Seite. In der Abbildung sehen Sie Titelbilder für einige dieser Seiten. Jedem Artikel eine eigene Seite zu geben, schafft Raum damit der Artikel wirken kann. Um möglichst nah am gedruckten Magazin zu sein, wird jeder Artikel als in sich geschlossene Geschichte präsentiert. Die Möglichkeit über eine eindeutige URL auf bestimmte Artikel zu verweisen, ist sehr wichtig, da das aware nun in der Lage ist, speziell kuratierte Artikel auf Messen und anderen Veranstaltungen per QR-Code zu präsentieren.",
+          "text": "Jeder Artikel, der veröffentlicht wird, bekommt eine eigene Seite. In der Abbildung sind Titelbilder für einige dieser Seiten zu sehen. Jedem Artikel eine eigene Seite zu geben, schafft Raum, damit der Artikel wirken kann. Um möglichst nah am gedruckten Magazin zu sein, wird jeder Artikel als in sich geschlossene Geschichte präsentiert. Die Möglichkeit über eine eindeutige URL auf bestimmte Artikel zu verweisen, ist sehr wichtig, da das aware nun in der Lage ist, speziell kuratierte Artikel auf Messen und anderen Veranstaltungen per QR-Code zu präsentieren.",
           "classes": "col-xs-12 col-md-5 offset-md-1"
         },
         {
           "type": "Image",
-          "src": "/images/aware_collage_3.png",
-          "alt": "A chair",
+          "src": "/images/aware_article_collage.png",
+          "alt": "Mehrere Artikelseiten in einer Collage zusammengefasst. Jeder Artikel hat eine spezielle Akzentfarbe, die dafür sorgt, dass jeder Artikel einzigartig aussieht.",
           "classes": "col-xs-12 col-md-6 breakout-md-right"
         }
       ]
@@ -84,13 +84,13 @@
       "children": [
         {
           "type": "Text",
-          "text": "Die Artikel selbst verfügen über Infoboxen und Zitate, die von Content-Managern beliebig befüllt und dynamisch an die gewünschte Stelle im Text gesetzt werden können. Die Infoboxen erfüllen in der Regel den Zweck, Platz für zusätzliche Informationen zu schaffen, die mit dem Text in Zusammenhang stehen, aber für das Verständnis des Textes nicht zwingend erforderlich sind. Elemente wie diese machen den Text noch ansprechender und lesenswerter, da sie bestimmte Sachverhalte erklären, die nicht jeder Person geläufig sind.",
+          "text": "Die Artikel selbst verfügen über Infoboxen und Zitate, die von Content-Manager*innen beliebig befüllt und dynamisch an die gewünschte Stelle im Text gesetzt werden können. Die Infoboxen erfüllen in der Regel den Zweck, Platz für zusätzliche Informationen zu schaffen, die mit dem Text in Zusammenhang stehen, aber für das Verständnis des Textes nicht zwingend erforderlich sind. Elemente wie diese machen den Text noch ansprechender und lesenswerter, da sie bestimmte Sachverhalte erklären, die nicht jeder Person geläufig sind.",
           "classes": "col-xs-12 col-md-6"
         },
         {
           "type": "Image",
           "src": "/images/aware_infobox.png",
-          "alt": "A chair",
+          "alt": "Eine Infobox sowie ein Zitatblock als Beispiel für zusätzliche Informationsquellen innerhalb eines Artikels.",
           "classes": "col-xs-12 col-md-6 breakout-md-left"
         }
       ]

@@ -20,10 +20,12 @@
   },
   "ContactPage": {
     "headline": "contact",
-    "subline": "Inspired by the showcased projects? Feel free to leave me a message.",
+    "subline": "Inspired by my projects? Leave me a message.",
     "buttonText": "Contact me"
   },
   "ProjectPage": {
+    "responsibilities": "Responsibilities",
+    "goal": "Project Goal",
     "projectLocked": "The project is not publicly available at the moment.",
     "cta": "Check out the project"
   },

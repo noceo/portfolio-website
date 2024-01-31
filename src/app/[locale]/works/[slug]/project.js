@@ -45,13 +45,13 @@ export default function Project({ data }) {
             </div>
             <ul className="row">
               <li className="overview-section__item col-xs-12 col-md-10 offset-md-1 col-lg-4">
-                <span>Responsibilities</span>
+                <span>{t("responsibilities")}</span>
                 <p
                   dangerouslySetInnerHTML={{ __html: data.responsibilities }}
                 />
               </li>
               <li className="overview-section__item col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0">
-                <span>Project Goal</span>
+                <span>{t("goal")}</span>
                 <p dangerouslySetInnerHTML={{ __html: data.project_goal }} />
               </li>
             </ul>
