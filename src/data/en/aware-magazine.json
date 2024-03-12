@@ -1,12 +1,12 @@
 {
-  "title": "Aware",
+  "title": "aware",
   "slug": "aware-magazine",
   "description": "Scientific Magazine",
   "description_long": "Developing the online presence for the official student-run, scientific journalistic magazine for Psychology at the University of Zurich.",
   "responsibilities": "Planning, Development, Deployment, Maintanance",
   "project_goal": "Building and deploying a new website for the <strong>aware</strong> magazine. Aligning the digital experience with the print version of the magazine.",
   "accentColor": "rgba(241, 93, 42, 0.5)",
-  "url": "http://dev.aware-psymagazin.ch/ausgabe",
+  "url": "http://aware-psymagazin.ch",
   "thumbnail": {
     "src": "/images/aware_thumbnail.png",
     "alt": "Multiple magazine articles stacked on top of each other"
@@ -31,7 +31,7 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/aware_cover_collage.png",
+          "src": "/images/aware_cover_collage.jpg",
           "alt": "The magazine covers of recent years.",
           "caption": "The magazine covers of recent years. Each one is unique."
         },

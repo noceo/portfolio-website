@@ -2,13 +2,13 @@
   "title": "PGA Platform",
   "slug": "pga-platform",
   "description": "Visualizing Air Pollution",
-  "description_long": "I built a platform that developers can use to develop and explore visualizations.",
+  "description_long": "An experimental platform for the data-driven exploration of procedural generation algorithms.",
   "responsibilities": "Research, Planning, Development",
-  "project_goal": "Building a system that offers a user interface for the development of generative algorithms.",
+  "project_goal": "Building a system for developers that offers a user interface for the testing of generative algorithms.",
   "accentColor": "rgba(255, 0, 0, 0.5)",
   "thumbnail": {
-    "src": "/images/aware-thumbnail.png",
-    "alt": "Multiple magazine articles stacked on top of each other"
+    "src": "/images/pga_tree_good.jpg",
+    "alt": "A green generated tree structure"
   },
   "circleStyle": {
     "xs": {
@@ -30,32 +30,28 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
+          "src": "/images/pga_measurement_summer.jpg",
+          "alt": "Pollution measurements expressed in the growth and color of three trees",
+          "caption": "Pollution measurements expressed in the growth and color of three trees"
         },
         {
           "type": "Text",
           "text": [
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus."
+            "This project was the main aspect of my Bachelor’s thesis. It is about new and creative ways to do data visualization. Almost everyone should be familiar with the fact that mobility causes emissions. Especially in urban areas where there is much traffic at rush hour. I wanted to make those emissions visible because they can harm the people living in the city. In order to do that I wanted to develop a platform that allows me as a developer to write an algorithm that draws something creative on the screen and integrate that algorithm with an already existing architecture."
           ],
           "classes": "col-lg-10 offset-lg-1"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
+          "src": "/images/pga_component_diagram.png",
+          "alt": "Component diagram of the system",
+          "caption": "Component diagram of the system"
         },
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-          "classes": "col-lg-10 offset-lg-1"
-        },
-        {
-          "type": "Quote",
-          "children": "I wanted to create something unique and aestetically pleasing for future visitors.",
+          "text": [
+            "All the drawing should be influenced by given values that a developer can easily set up using the platform. After development, I showcased the platform using a space colonization algorithm as an example. This specific algorithm was drawing 3D trees that were influenced by the given emission levels. For example, you could set up the algorithm so that it draws the tree much shorter and in red color if there was a lot of nitrogen dioxide (NO2) in the air. The platform essentially does the mapping between measurement and algorithm parameters."
+          ],
           "classes": "col-lg-10 offset-lg-1"
         }
       ]
@@ -66,51 +62,14 @@
       "children": [
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "The algorithm lays out a bunch of points in a certain 3D shape e.g. a sphere. To simulate the growth of the tree structure, every point acts like a magnet that the branches gravitate towards. You can see a sketch drawing of the mesh generation process. Every branch is built out of multiple branch pieces that are stitched together with an angle that is determined by the gravitation of the points in space.",
           "classes": "col-xs-12 col-md-5 offset-md-1"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
+          "src": "/images/pga_mesh_generation.png",
+          "alt": "Sketch drawing of the mesh generation process",
           "classes": "col-xs-12 col-md-6 breakout-md-right"
-        }
-      ]
-    },
-    {
-      "type": "Layout",
-      "classes": "reverse breakout",
-      "children": [
-        {
-          "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-          "classes": "col-xs-12 col-md-6"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "classes": "col-xs-12 col-md-6 breakout-md-left"
-        }
-      ]
-    },
-    {
-      "type": "SingleColumnLayout",
-      "children": [
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
         }
       ]
     }

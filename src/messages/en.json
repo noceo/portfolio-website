@@ -26,7 +26,7 @@
   "ProjectPage": {
     "responsibilities": "Responsibilities",
     "goal": "Project Goal",
-    "projectLocked": "The project is not publicly available at the moment.",
+    "projectLocked": "You want to have a look at the code?",
     "cta": "Check out the project"
   },
   "Navigation": {

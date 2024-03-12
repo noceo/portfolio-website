@@ -2,10 +2,13 @@
   "title": "Artistic Filters",
   "slug": "artistic-filters",
   "description": "Image Processing",
-  "accentColor": "rgba(68, 0, 244, 0.1)",
+  "description_long": "A set of 2D image filters that aim to mimic different art styles.",
+  "responsibilities": "Planning, Development",
+  "project_goal": "Building proof of concept for multiple different image processing techniques.",
+  "accentColor": "rgba(241, 93, 42, 0.5)",
   "thumbnail": {
-    "src": "/images/test.png",
-    "alt": "A chair"
+    "src": "/images/artistic_filters_kuwahara.jpg",
+    "alt": "A bird"
   },
   "circleStyle": {
     "xs": {
@@ -23,12 +26,87 @@
   },
   "components": [
     {
-      "type": "text",
-      "copy": "Lorem ipsum dolor sit amet."
-    },
-    {
-      "type": "text",
-      "copy": "Lorem ipsum dolor sit amet."
+      "type": "SingleColumnLayout",
+      "children": [
+        {
+          "type": "Text",
+          "text": [
+            "In spent the summer of 2022 in Vienna and visited the Albertina art gallery which featured a painting of Monet’s famous series The Waterlily Pond, as well as other impressionist and pointillist works of famous artists like Paul Signac, e.g. Venice, The Pink Cloud. I had the chance to explore different approaches to filter digital images taking a Computational Photography class during my Master’s. I wanted to implement techniques so that the images appear in a style comparable to the way previously mentioned artists painted their works. You can see the approaches that I considered implementing and the corresponding results below."
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/artistic_filters_signac.jpg",
+          "alt": "Venice, The Pink Cloud, 1909 by Paul Signac",
+          "caption": "Venice, The Pink Cloud, 1909 by Paul Signac"
+        },
+        {
+          "type": "Text",
+          "headline": "Kuwahara Filtering",
+          "text": [
+            "The basic Kuwahara filter is a non-linear edge-preserving filter that gives the image an drawn look. I applied the following algorithm:",
+            "<ol><li>For every pixel we define a n*n kernel that is split into four quadrants</li><li>Compute the standard deviation for each of the four kernel quadrants</li><li>Choose the quadrant that has the smallest standard deviation and compute the average color of this quadrant</li><li>Set this as the color of the center pixel</li><li>Repeat steps 1-4 for all pixels</li></ol>"
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/artistic_filters_kuwahara_progress.png",
+          "alt": "Before and after filtering a photo of a bird with the Kuwahara filter. Kernel size: 30px.",
+          "caption": "Before and after filtering a photo of a bird with the Kuwahara filter. Kernel size: 30px."
+        },
+        {
+          "type": "Text",
+          "text": [
+            "The basic Kuwahara Filter has some limitations. Due to the quadratic shape of the kernel we end up with visible box-shaped artifacts. Recent extensions of the Kuwahara Filter have tackled this problem by using a round kernel with 8 different sectors. By rotating and stretching the kernel depending on the gradient they were able to completely remove the artifacts. Take a look at this paper for a better but far more complicated approach to <a href='http://www.umsl.edu/~kangh/Papers/kang-tpcg2010.pdf' target=_blank>improve the Kuwahara Filter</a> (http://www.umsl.edu/~kangh/Papers/kang-tpcg2010.pdf)."
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Text",
+          "headline": "Oil Painting Filter",
+          "text": [
+            "This filter has a similar behavior to the Kuwahara Filter but this time we do not split the kernel into quadrants. Instead, we think of luminance range buckets. We take all of the pixels under the kernel and put them into the bucket that corresponds to the range the luminance of that pixel falls into. So let us assume we have 3 buckets and we have pixel luminance values from 0 to 1. That means, all the pixels with a luminance smaller than 0.33 go into the first bucket. All pixels with luminance between 0.33 and 0.66 go into the second bucket. The rest would go into the third bucket. One thing to note is that with a decreasing number of buckets we get a less detailed image in terms of colors. That makes sense because we essentially move towards a box filter by decreasing the amount of buckets. If we set the bucket count to 1, we get a box filter. The kernel size acts the same as for other filters: the larger the kernel the less edge detail and vice versa."
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/artistic_filters_oil_bird.jpg",
+          "alt": "A photo of a bird filtered with the oil filter",
+          "caption": "A photo of a bird filtered with the oil filter. Kernel size: 14px, Bucket count: 20."
+        },
+        {
+          "type": "Image",
+          "src": "/images/artistic_filters_oil_monkey.jpg",
+          "alt": "A photo of a monkey filtered with the oil filter",
+          "caption": "A photo of a monkey filtered with the oil filter. Kernel size: 14px, Bucket count: 10."
+        },
+        {
+          "type": "Text",
+          "headline": "Stroke-Based Filter",
+          "text": [
+            "The <a href='https://web.tecgraf.puc-rio.br/~scuri/inf1378/pub/litwinowicz.pdf' target=_blank>stroke-based filter</a> is inspired by a paper from Litwinowicz (https://web.tecgraf.puc-rio.br/~scuri/inf1378/pub/litwinowicz.pdf). This technique tries to mimic the workflow of a real artist. It first generates a color palette from the original image using the K-Means algorithm. The user can choose how many colors this palette should have. Once the color palette is obtained we create a randomized grid of pixel positions so that we can draw the strokes in random order (that was we do not end up with ugly patterns in the drawn image). For each of the pixels in this random grid we compute the distance of the pixel color to all of the colors in the palette. We now have an array of size (pixels x colors_in_palette)."
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/artistic_filters_stroke_street.jpg",
+          "alt": "A photo of a street heading towards a mountain filtered with the stroke-based filter",
+          "caption": "A photo of a street heading towards a mountain range filtered with the stroke-based filter"
+        },
+        {
+          "type": "Text",
+          "text": [
+            "After all of this preparation has been done, we can start painting the image. For every pixel position in the random grid we get the color that is the closest to the actual pixel color in the original image and use it as the stroke color.",
+            "To compute the length and the direction of the stroke we first have to obtain a gradient image. This is done by first taking the grayscale version of the image and filtering it with a Scharr filter and a Gaussian filter to smooth out the edges. The length of the stroke is computed according to the overall image size and the magnitude of the gradient at the pixels position. The stroke direction is also determined by the gradient direction rotated by 90 degrees since the gradient points in perpendicular direction to the edge.",
+            "All the following results are obtained using a color palette with 20 initial colors and three slight hue variations of that palette."
+          ],
+          "classes": "col-lg-10 offset-lg-1"
+        }
+      ]
     }
   ]
 }

@@ -22,6 +22,7 @@ export default function Button({
         className={"button interactable" + (className ? ` ${className}` : "")}
         href={href}
         target="_blank"
+        referrerPolicy="no-referrer"
       >
         {content}
       </a>
