@@ -44,12 +44,6 @@
           "classes": "col-lg-10 offset-lg-1"
         },
         {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
-        },
-        {
           "type": "Text",
           "text": [
             "The website is a single page application that is brought to life through micro animations and small but important details that are revealed while scrolling. It features lazy loading of images since the site has a lot of them and they are all of high quality. For some of the excerpts and cites there are also audio files that can be played by interested readers. The image sliders on the page have a distinct 3D feel to them and are meant to resemble an exhibition room where the viewer is standing in the center of the room and moves their head around.",
