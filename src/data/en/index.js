@@ -10,10 +10,10 @@ import pgaPlatform from "./pga-platform.json";
 export const en = [
   // paulschade,
   awareMagazine,
-  digitalExhibitionGuide,
   artisticFilters,
-  // solidiwise,
-  // codeJudge,
+  solidiwise,
+  codeJudge,
   // densenetClassifier,
+  digitalExhibitionGuide,
   pgaPlatform,
 ];

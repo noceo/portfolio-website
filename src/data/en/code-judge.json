@@ -5,10 +5,11 @@
   "description_long": "A small scale prototype for a coding exercise platform.",
   "responsibilities": "Scrum Master, Development",
   "project_goal": "Creating a platform that the university department can use to give out coding homeworks to students. Students should be able to solve coding problems and submit them.",
-  "accentColor": "rgba(40, 237, 234, 0.5)",
+  "accentColor": "rgba(255, 255, 0, 0.5)",
+  "url": "https://drive.google.com/file/d/17y27JgMmgybG8hcISZr3xka14Zunb69N/view?usp=sharing",
   "thumbnail": {
-    "src": "/images/aware-thumbnail.png",
-    "alt": "Multiple magazine articles stacked on top of each other"
+    "src": "/images/codejudge_thumbnail.jpg",
+    "alt": "A screenshot of the result page where users can have a look at how many testcases their code has passed"
   },
   "circleStyle": {
     "xs": {
@@ -30,32 +31,28 @@
       "children": [
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
+          "src": "/images/codejudge_problem_list.jpg",
+          "alt": "A screenshot of the admin overview page where all available coding problems are listed",
+          "caption": "A screenshot of the admin overview page where all available coding problems are listed"
         },
         {
           "type": "Text",
           "text": [
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus."
+            "LeetCode and other platforms that offer to run your code and check if the predefined test cases succeed are perfectly encapsulated exercise spaces for aspiring software engineers. The problem with these platforms is that they are usually run by bigger companies that usually have some financial interest."
           ],
           "classes": "col-lg-10 offset-lg-1"
         },
         {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
-        },
-        {
-          "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "type": "Quote",
+          "children": "The CSCE department needed a tool like this to be able to give manually created homework to students so that they can exercise programming on their own.",
           "classes": "col-lg-10 offset-lg-1"
         },
         {
-          "type": "Quote",
-          "children": "I wanted to create something unique and aestetically pleasing for future visitors.",
+          "type": "Text",
+          "text": [
+            "Students should be able to run their code solution against predefined test cases and see whether they passed all of the test cases or not.",
+            "The application has been developed using Ruby on Rails in a team of 3 people including me as the Scrum Master. Although the application is not in use today I think that it had a great impact on me as an engineer as well as my ability to work together with other team members in an previously unknown domain."
+          ],
           "classes": "col-lg-10 offset-lg-1"
         }
       ]
@@ -66,13 +63,13 @@
       "children": [
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "For each of the problems students have the ability to view their submission history. Each submission shows the time of submission as well as the status.",
           "classes": "col-xs-12 col-md-5 offset-md-1"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
+          "src": "/images/codejudge_attempt_history.jpg",
+          "alt": "A screenshot of the submission history for a specific coding problem",
           "classes": "col-xs-12 col-md-6 breakout-md-right"
         }
       ]
@@ -83,34 +80,14 @@
       "children": [
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "Each problem has its own detail view. This page features the problem statement, the test cases that your code has to pass and a selection of your favorite language. You can upload and submit your file at the bottom of the page.",
           "classes": "col-xs-12 col-md-6"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
+          "src": "/images/codejudge_problem_statement.jpg",
+          "alt": "A screenshot of the problem statement screen",
           "classes": "col-xs-12 col-md-6 breakout-md-left"
-        }
-      ]
-    },
-    {
-      "type": "SingleColumnLayout",
-      "children": [
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
         }
       ]
     }

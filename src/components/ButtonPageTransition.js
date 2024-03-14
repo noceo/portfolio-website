@@ -42,7 +42,6 @@ export default function ButtonPageTransition({
       await onBeforeTransition();
     }
     if (!animation.current.began) {
-      console.log("PLAY");
       animation.current.play();
       pageTransitionContext.setPageTransition({
         isRunning: true,

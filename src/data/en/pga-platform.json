@@ -5,7 +5,7 @@
   "description_long": "An experimental platform for the data-driven exploration of procedural generation algorithms.",
   "responsibilities": "Research, Planning, Development",
   "project_goal": "Building a system for developers that offers a user interface for the testing of generative algorithms.",
-  "accentColor": "rgba(255, 0, 0, 0.5)",
+  "accentColor": "rgba(18, 107, 0, 0.2)",
   "thumbnail": {
     "src": "/images/pga_tree_good.jpg",
     "alt": "A green generated tree structure"

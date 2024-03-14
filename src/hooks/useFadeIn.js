@@ -38,7 +38,6 @@ export default function useFadeIn(direction, onCompleteCallback) {
 
     const onComplete = () => {
       if (onCompleteCallback) {
-        console.log(onCompleteCallback.current);
         onCompleteCallback.current();
       }
       pageTransitionContext.setPageTransition({

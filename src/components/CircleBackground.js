@@ -40,7 +40,6 @@ export default function CircleBackground({ circleStyles }) {
       easing: "easeOutElastic(1, 0.4)",
       autoplay: false,
     });
-    console.log(toLocation, breakpoint);
 
     // add move animation
     animation.add(circleStyles[toLocation].animation[breakpoint]);
@@ -104,11 +103,6 @@ export default function CircleBackground({ circleStyles }) {
       pageTransitionContext.pageTransition.isRunning &&
       pathname === prevPathName
     ) {
-      console.log(
-        "1 CIRCLE RUNNING TO ",
-        pageTransitionContext.pageTransition.location
-      );
-      console.log("breakpoint", breakpoint);
       runAnimation(pageTransitionContext.pageTransition.location);
     }
     // if user intercepts transition via browser navigation
@@ -117,11 +111,6 @@ export default function CircleBackground({ circleStyles }) {
       prevPathName &&
       pathname !== prevPathName
     ) {
-      console.log(
-        "2 CIRCLE RUNNING TO ",
-        pageTransitionContext.pageTransition.location
-      );
-      console.log("breakpoint", breakpoint);
       runAnimation(pathname);
     }
     // if breakpoint changes

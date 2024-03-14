@@ -6,9 +6,10 @@
   "responsibilities": "Planning, Development, Deployment",
   "project_goal": "Having built a proof of concept using the Truffle Framework, Ganache (a local test chain that emulates the EVM), and React. Writing unit tests for the smart contracts using the Mocha Test Framework and Metamask. Finally presenting the app and its functionality.",
   "accentColor": "rgba(40, 237, 234, 0.5)",
+  "url": "https://drive.google.com/file/d/1KMTQBRV6Tjhnyqt7gwkfCLh2lGo2T8BS/view?usp=sharing",
   "thumbnail": {
-    "src": "/images/aware-thumbnail.png",
-    "alt": "Multiple magazine articles stacked on top of each other"
+    "src": "/images/solidiwise_add_expense.jpg",
+    "alt": "A screenshot of the UI used to add an expense to your expense list"
   },
   "circleStyle": {
     "xs": {
@@ -29,88 +30,38 @@
       "type": "SingleColumnLayout",
       "children": [
         {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
-        },
-        {
           "type": "Text",
           "text": [
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-            "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus."
+            "I have been using the expense tracking app Splitwise for a long time now. It makes it easy to track expenses in a group setting. If you spend money on behalf of someone you know, you can simply put all expenses in the app and it automatically tracks how much money other people owe you or vice versa. Taking a Blockchain Technologies class I wanted to build a clone of that app using the Ethereum blockchain. That way users do not have to register with any usernames and passwords but rather use their wallet address to become part of a group. The group allows to save, update, and delete expenses and also keeps track of the total amount each group member owes the other members. I wrote two smart contracts to achieve this behavior. Everyone with a valid wallet address can create a group and invite other people using their addresses."
           ],
           "classes": "col-lg-10 offset-lg-1"
         },
         {
           "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "caption": "The landing page of the project with a full-screen hero image."
+          "src": "/images/solidiwise_add_expense.jpg",
+          "alt": "A screenshot of the UI used to add an expense to your expense list",
+          "caption": "A screenshot of the UI used to add an expense to your expense list"
         },
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
+          "text": "Using the contracts comes at a cost though: Gas. On the Ethereum blockchain you pay a fee for every transation so that it can be validated by the validator nodes in the network. I developed and tested the contracts using the Goerli testnet. I gathered some GoerliETH from various faucets and saved it to my MetaMask wallet to test my contracts.",
           "classes": "col-lg-10 offset-lg-1"
+        },
+        {
+          "type": "Image",
+          "src": "/images/solidiwise_delete_expense.jpg",
+          "alt": "A screenshot of the UI used to delete an expense from your expense list",
+          "caption": "A screenshot of the UI used to delete an expense from your expense list"
         },
         {
           "type": "Quote",
-          "children": "I wanted to create something unique and aestetically pleasing for future visitors.",
+          "children": "It has been exciting to see how smart contracts on Ethereum work. Connecting the contracts with the frontend application felt really exciting.",
           "classes": "col-lg-10 offset-lg-1"
-        }
-      ]
-    },
-    {
-      "type": "Layout",
-      "classes": "breakout",
-      "children": [
+        },
         {
           "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-          "classes": "col-xs-12 col-md-5 offset-md-1"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "classes": "col-xs-12 col-md-6 breakout-md-right"
-        }
-      ]
-    },
-    {
-      "type": "Layout",
-      "classes": "reverse breakout",
-      "children": [
-        {
-          "type": "Text",
-          "text": "Yayoi Kusama is a world renowned artist famous for her Polkadot art.  Itatasin nonsequiae odis ari del ma cone solore iliquundit quam quidunt veles aspis eum faccaerum entorupit, ut aut occae voloribus pla int offic to ea volecte senimodi velluptamusa sequi im si tet laut harumquis non eum, simporeiur as re restionse volupta ssitatectat laute eati optam ra di omnitem porrovit omniet verumquunt quati beatende porerumque consero rporibus.",
-          "classes": "col-xs-12 col-md-6"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair",
-          "classes": "col-xs-12 col-md-6 breakout-md-left"
-        }
-      ]
-    },
-    {
-      "type": "SingleColumnLayout",
-      "children": [
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
-        },
-        {
-          "type": "Image",
-          "src": "/images/chair.jpeg",
-          "alt": "A chair"
+          "text": "To do some serious testing I wrote unit tests using the Mocha test framework. Then, there needed to be a way to show the user all the data that was stored in the contracts. I therefore built a simple React app that listens to events sent by the contracts and updates the UI accordingly.",
+          "classes": "col-lg-10 offset-lg-1"
         }
       ]
     }

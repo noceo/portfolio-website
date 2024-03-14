@@ -57,7 +57,11 @@ export default function About() {
               </Button> */}
               <h4 className="heading3">{t("contact.headline")}</h4>
               <p className="mb-3">{t("contact.text")}</p>
-              <Button className="mb-7" icon={<ArrowRight />}>
+              <Button
+                className="mb-7"
+                icon={<ArrowRight />}
+                href="mailto:paulschade98@gmail.com"
+              >
                 {t("contact.buttonText")}
               </Button>
             </div>

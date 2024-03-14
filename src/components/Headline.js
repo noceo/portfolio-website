@@ -80,7 +80,6 @@ export default function Headline({ copy1, copy2, rotate = true }) {
             newHeight !== headlineHeight.current
           ) {
             onResize();
-            console.log("RESIZE");
           }
         }
       });

@@ -43,7 +43,6 @@ export default function AudioCard({
     });
 
     audio.current.on("end", () => {
-      console.log("END");
       clearInterval(progressIntervalID.current);
       setPlaying(false);
       setProgress(0);
@@ -58,9 +57,9 @@ export default function AudioCard({
     }
   }, [currentTrackContext.currentTrack]);
 
-  useEffect(() => {
-    console.log(progress);
-  }, [progress]);
+  // useEffect(() => {
+  //   console.log(progress);
+  // }, [progress]);
 
   const calcProgress = () => {
     const currentPosition = audio.current.seek();

@@ -5,7 +5,7 @@
   "description_long": "A digital guide built for an art exhibition, featuring the famous Japanese artist Yayoi Kusama.",
   "responsibilities": "Development",
   "project_goal": "Building a digital guide for an art exhibition at Gropiusbau, Berlin. Due to COVID-19 it was an alternative to visiting the exhibition in person.",
-  "accentColor": "rgba(255,0,167,0.3)",
+  "accentColor": "rgba(255, 204, 0, 0.4)",
   "url": "https://kusama-digital-guide.gropiusbau.de/en",
   "thumbnail": {
     "src": "/images/deg_polkadot_room.jpg",
@@ -32,20 +32,14 @@
         {
           "type": "Image",
           "src": "/images/deg_landing_page.jpg",
-          "alt": "Screenshot of the Hero Image",
-          "caption": "Screenshot of the Hero Image"
+          "alt": "Screenshot of the landing page",
+          "caption": "Screenshot of the landing page"
         },
         {
           "type": "Text",
           "text": [
             "This project was about building the official guide to support the art exhibition named “Yayoi Kusama – A Retrospective. A Bouquet Of Love I Saw In The Universe”.",
-            "The guide delivers interesting insights in the life and work of Kusama. It sheds light on the artists herself and offers the opportunity to dive deeper into Infinity and the world of Polkadots. You will see how Kusama grew up and became the famous artist she is today."
-          ],
-          "classes": "col-lg-10 offset-lg-1"
-        },
-        {
-          "type": "Text",
-          "text": [
+            "The guide delivers interesting insights in the life and work of Kusama. It sheds light on the artists herself and offers the opportunity to dive deeper into Infinity and the world of Polkadots. You will see how Kusama grew up and became the famous artist she is today.",
             "The website is a single page application that is brought to life through micro animations and small but important details that are revealed while scrolling. It features lazy loading of images since the site has a lot of them and they are all of high quality. For some of the excerpts and cites there are also audio files that can be played by interested readers. The image sliders on the page have a distinct 3D feel to them and are meant to resemble an exhibition room where the viewer is standing in the center of the room and moves their head around.",
             "The development of the project was done by three people, one of them the lead designer from Berlin. It was built using Nuxt and component structures defined in JSON. Due to the Covid-19 pandemic the exhibition could only be visited in person with a special time slot booked. Because of the restrictions regarding close contact there was only a fixed number of people that were allowed to visit the exhibition. The guide therefore served two purposes: Being an additional source of information for the visitors allowed in person but also comforting the ones that had to stay at home."
           ],
