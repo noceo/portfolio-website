@@ -49,6 +49,9 @@ export default function Works({ works }) {
 
   function onClick(e) {
     onMouseLeave(e);
+    for (const listItem of projectListRef.current.children) {
+      listItem.style.pointerEvents = "none";
+    }
   }
 
   return (
