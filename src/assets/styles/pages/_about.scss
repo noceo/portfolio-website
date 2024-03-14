@@ -10,13 +10,18 @@
 
   .profile-picture {
     display: none;
-    position: absolute;
-    width: 100%;
-    top: -30px;
-    pointer-events: none;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(sm) {
       display: block;
+      pointer-events: none;
+      max-width: 200px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      top: 100px;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 300px;
     }
 
     img {

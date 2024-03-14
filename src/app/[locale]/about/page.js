@@ -25,9 +25,16 @@ export default function About() {
       <main>
         <div className="container">
           <div className="row anime fade-in">
-            <div className="col-xs-12 col-md-10 offset-md-1 col-lg-8 col-xl-6">
+            <div className="col-xs-12 col-sm-6 col-md-6 offset-md-1 col-lg-6 col-xl-6">
               <Headline copy1="de me." copy2={t("headline") + "."} />
-              <p className="heading3 mb-7">{t("subline")}</p>
+              <p className="heading3 subline">{t("subline")}</p>
+            </div>
+            <div className="col-sm-6 col-md-4 col-lg-5 col-xl-5">
+              <img
+                className="profile-picture anime fade-in"
+                src="/images/portrait.jpg"
+                alt="Profile Picture"
+              />
             </div>
           </div>
           <div className="row anime fade-in">
@@ -56,15 +63,6 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* <div className="profile-picture anime fade-in">
-          <div className="container">
-            <div className="row">
-              <figure className="col-xs-12 col-md-3 offset-md-9">
-                <img src="/images/profile.jpeg" alt="Profile Picture" />
-              </figure>
-            </div>
-          </div>
-        </div> */}
       </main>
       <div className="blur"></div>
     </div>
