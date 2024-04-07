@@ -31,7 +31,7 @@ export default function Contact() {
               </div>
               <h3 className="anime fade-in">{t("subline")}</h3>
               <div className="anime fade-in">
-                <p>Email: paulschade98@gmail.com</p>
+                <p>Email dev@paulscha.de</p>
                 <Button
                   asLink={true}
                   href="mailto:dev@paulscha.de"
