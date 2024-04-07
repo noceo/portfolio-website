@@ -34,7 +34,7 @@ export default function Contact() {
                 <p>Email: paulschade98@gmail.com</p>
                 <Button
                   asLink={true}
-                  href="mailto:paulschade98@gmail.com"
+                  href="mailto:dev@paulscha.de"
                   icon={<ArrowRightIcon />}
                 >
                   {tButton("contact")}

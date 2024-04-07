@@ -60,7 +60,7 @@ export default function About() {
               <Button
                 className="mb-7"
                 icon={<ArrowRight />}
-                href="mailto:paulschade98@gmail.com"
+                href="mailto:dev@paulscha.de"
               >
                 {t("contact.buttonText")}
               </Button>
