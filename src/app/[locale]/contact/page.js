@@ -7,6 +7,7 @@ import Headline from "@/components/Headline";
 import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
 import ArrowRightIcon from "@/../public/icons/arrow_right.svg";
 import { useTranslations } from "next-intl";
+import SocialIcons from "@/components/SocialIcons";
 
 export default function Contact() {
   const t = useTranslations("ContactPage");
@@ -25,7 +26,7 @@ export default function Contact() {
       <main>
         <div className="container">
           <div className="row">
-            <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
+            <div className="page-contact__content col-xs-12 col-md-8 offset-md-1 col-lg-8 col-xl-6">
               <div className="anime fade-in">
                 <Headline copy1="nuntia." copy2={t("headline") + "."} />
               </div>
@@ -40,6 +41,9 @@ export default function Contact() {
                   {tButton("contact")}
                 </Button>
               </div>
+            </div>
+            <div className="page-contact__social-icons anime fade-in col-xs-12 col-md-3 col-lg-3 col-xl-5">
+              <SocialIcons />
             </div>
           </div>
         </div>
