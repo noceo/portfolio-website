@@ -47,22 +47,32 @@ export default function Works({ works }) {
     circle.style.opacity = 1;
   }
 
-  function onClick(e) {
-    onMouseLeave(e);
+  function disableProjectList() {
     for (const listItem of projectListRef.current.children) {
       listItem.style.pointerEvents = "none";
     }
   }
 
+  function onClick(e) {
+    onMouseLeave(e);
+    disableProjectList();
+  }
+
+  function onBackButtonClick() {
+    disableProjectList();
+  }
+
   return (
     <div className="page-works">
-      <ButtonPageTransition
-        className="link-back anime fade-in"
-        location="/"
-        redirectBack={true}
-      >
-        <ArrowLeftIcon />
-      </ButtonPageTransition>
+      <div onClick={onBackButtonClick}>
+        <ButtonPageTransition
+          className="link-back anime fade-in"
+          location="/"
+          redirectBack={true}
+        >
+          <ArrowLeftIcon />
+        </ButtonPageTransition>
+      </div>
       <div className="project-list container">
         <div className="row">
           <ul ref={projectListRef} className="col-xs-12 col-sm-8 col-md-7">
