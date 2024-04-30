@@ -2,8 +2,7 @@ import { Howl, Howler } from "howler";
 import PlayIcon from "@/../public/icons/play.svg";
 import PauseIcon from "@/../public/icons/pause.svg";
 // import ProgressIcon from "";
-import { useContext, useEffect, useRef, useState } from "react";
-import { CurrentTrackContext } from "@/app/[locale]/music/music";
+import { useEffect, useRef, useState } from "react";
 
 const fadeOutTime = 4000;
 
@@ -13,17 +12,16 @@ export default function AudioCard({
   imgSrc,
   previewURL,
   externalURL,
+  currentTrack,
+  setCurrentTrack,
 }) {
   const [isPlaying, setPlaying] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [isFading, setFading] = useState(false);
 
   const audio = useRef();
   const progressIntervalID = useRef();
   const fadeOutTimeoutID = useRef();
-
-  const currentTrackContext = useContext(CurrentTrackContext);
 
   useEffect(() => {
     audio.current = new Howl({
@@ -32,7 +30,7 @@ export default function AudioCard({
     });
 
     audio.current.on("play", () => {
-      currentTrackContext.setCurrentTrack(previewURL);
+      setCurrentTrack(previewURL);
       fadeOutTimeoutID.current = setTimeout(() => {
         audio.current.fade(1, 0, fadeOutTime);
       }, (audio.current.duration() - audio.current.seek()) * 1000 - fadeOutTime);
@@ -47,19 +45,22 @@ export default function AudioCard({
       setPlaying(false);
       setProgress(0);
     });
+
+    return () => {
+      audio.current.pause();
+      clearInterval(progressIntervalID.current);
+      setPlaying(false);
+      setProgress(0);
+    };
   }, []);
 
   useEffect(() => {
-    if (currentTrackContext.currentTrack !== previewURL) {
+    if (currentTrack !== previewURL) {
       audio.current.pause();
       clearInterval(progressIntervalID.current);
       setPlaying(false);
     }
-  }, [currentTrackContext.currentTrack]);
-
-  // useEffect(() => {
-  //   console.log(progress);
-  // }, [progress]);
+  }, [currentTrack, previewURL]);
 
   const calcProgress = () => {
     const currentPosition = audio.current.seek();
