@@ -5,28 +5,70 @@ import useFadeIn from "@/hooks/useFadeIn";
 import Headline from "@/components/Headline";
 import ButtonPageTransition from "@/components/ButtonPageTransition";
 import ArrowLeftIcon from "@/../public/icons/arrow_left.svg";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AudioCard from "@/components/AudioCard";
-import { PageTransitionContext } from "@/components/PageWrapper";
 
 export const CurrentTrackContext = React.createContext();
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
+const spotifyPlaylistURIs = [
+  "spotify:playlist:37i9dQZF1DX9gPDOAK0Yqv",
+  "spotify:playlist:37i9dQZF1DXbITWG1ZJKYt",
+  // "https://open.spotify.com/embed/playlist/37i9dQZF1DX9gPDOAK0Yqv?utm_source=generator&theme=0",
+  // "https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt?utm_source=generator",
+];
+
 export default function Music() {
   const { data, error } = useSWR("/api/music", fetcher);
   const [currentTrack, setCurrentTrack] = useState();
-
-  // useEffect(() => {
-  //   return () => {
-  //     setCurrentTrack(null);
-  //   };
-  // }, []);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const iFrameControllers = useRef([]);
+  const currentTrackRef = useRef();
+  currentTrackRef.current = currentTrack;
+  const currentIFrameControllerRef = useRef(null);
 
   useEffect(() => {
-    console.log(error);
-    console.log(data);
-  }, [data, error]);
+    if (currentIFrameControllerRef.current !== null && currentTrack) {
+      iFrameControllers.current[currentIFrameControllerRef.current].pause();
+    }
+  }, [currentTrack]);
+
+  useEffect(() => {
+    const spotifyControllers = [];
+    window.onSpotifyIframeApiReady = (IFrameAPI) => {
+      const elements = document.getElementsByClassName("embed-iframe");
+      let i = 0;
+      while (elements.length) {
+        const options = {
+          uri: spotifyPlaylistURIs[i],
+        };
+        const callback = (controller) => {
+          spotifyControllers.push(controller);
+          controller.addListener("playback_update", (e) => {
+            // Stop current track playback if iframe starts to play
+            currentIFrameControllerRef.current = Array.prototype.indexOf.call(
+              controller.iframeElement.parentNode.children,
+              controller.iframeElement
+            );
+
+            if (currentTrackRef.current && !e.data.isPaused) {
+              setCurrentTrack(null);
+            }
+          });
+        };
+        IFrameAPI.createController(elements[0], options, callback);
+        i++;
+      }
+      iFrameControllers.current = spotifyControllers;
+    };
+
+    return () => {
+      spotifyControllers.forEach((controller) => {
+        controller.destroy();
+      });
+    };
+  }, []);
 
   useFadeIn("right");
 
@@ -71,26 +113,11 @@ export default function Music() {
             </section>
             <section className="col-md-10 offset-md-1 col-xl-6">
               <h3>Favourite Playlists</h3>
-              <iframe
-                style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9gPDOAK0Yqv?utm_source=generator&theme=0"
-                width="100%"
-                height="352"
-                frameBorder="0"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
-              <iframe
-                style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt?utm_source=generator"
-                width="100%"
-                height="352"
-                frameBorder="0"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+              <div>
+                {spotifyPlaylistURIs.map((url, i) => (
+                  <div key={url} data-id={i} className="embed-iframe" />
+                ))}
+              </div>
             </section>
           </div>
         </div>
