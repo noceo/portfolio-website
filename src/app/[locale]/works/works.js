@@ -20,7 +20,7 @@ export default function Works({ works }) {
     if (detectMobileAndTablet()) return;
     const elementIndex = Array.prototype.indexOf.call(
       projectListRef.current.children,
-      e.currentTarget
+      e.currentTarget.parentNode
     );
 
     projectImagesRef.current.children
@@ -35,7 +35,7 @@ export default function Works({ works }) {
   function onMouseLeave(e) {
     const elementIndex = Array.prototype.indexOf.call(
       projectListRef.current.children,
-      e.currentTarget
+      e.currentTarget.parentNode
     );
 
     projectImagesRef.current.children
@@ -68,17 +68,17 @@ export default function Works({ works }) {
           <ul ref={projectListRef} className="col-xs-12 col-sm-8 col-md-7">
             {works.map((project) => {
               return (
-                <li
-                  key={project.title}
-                  onClick={onClick}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                  className="anime fade-in"
-                >
-                  <ButtonPageTransition location={`/works/${project.slug}`}>
-                    <span>{project.title}</span>
-                    <span>– {project.description}</span>
-                  </ButtonPageTransition>
+                <li key={project.title} className="anime fade-in">
+                  <div
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    onClick={onClick}
+                  >
+                    <ButtonPageTransition location={`/works/${project.slug}`}>
+                      <span>{project.title}</span>
+                      <span>– {project.description}</span>
+                    </ButtonPageTransition>
+                  </div>
                 </li>
               );
             })}

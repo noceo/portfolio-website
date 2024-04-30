@@ -8,8 +8,12 @@
     }
 
     li {
-      display: inline-block;
+      display: block;
       margin-bottom: 70px;
+
+      > div {
+        display: inline-block;
+      }
 
       a {
         padding: 20px 0;
