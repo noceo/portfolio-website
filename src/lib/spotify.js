@@ -25,13 +25,13 @@ const getAccessToken = async () => {
 export const getTopTracks = async (
   limit = 10,
   offset = 0,
-  timerange = "long-term"
+  time_range = "long_term"
 ) => {
   const { access_token } = await getAccessToken();
   const params = new URLSearchParams({
     limit,
     offset,
-    timerange,
+    time_range,
   });
 
   const response = await fetch(`${TOP_TRACKS_ENDPOINT}?${params}`, {
