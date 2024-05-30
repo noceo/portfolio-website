@@ -22,11 +22,16 @@ const getAccessToken = async () => {
   return response.json();
 };
 
-export const getTopTracks = async (limit = 10, offset = 0) => {
+export const getTopTracks = async (
+  limit = 10,
+  offset = 0,
+  timerange = "long-term"
+) => {
   const { access_token } = await getAccessToken();
   const params = new URLSearchParams({
     limit,
     offset,
+    timerange,
   });
 
   const response = await fetch(`${TOP_TRACKS_ENDPOINT}?${params}`, {
