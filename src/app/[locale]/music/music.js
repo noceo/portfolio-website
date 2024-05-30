@@ -62,12 +62,6 @@ export default function Music() {
       }
       iFrameControllers.current = spotifyControllers;
     };
-
-    return () => {
-      spotifyControllers.forEach((controller) => {
-        controller.destroy();
-      });
-    };
   }, []);
 
   useFadeIn("right");
