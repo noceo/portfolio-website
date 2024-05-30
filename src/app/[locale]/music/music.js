@@ -83,12 +83,12 @@ export default function Music() {
       <main>
         <div className="container">
           <div className="row anime fade-in">
-            <div className="col-md-10 offset-md-1 col-lg-8 col-xl-6">
+            <div className="col-xs-12 col-md-10 offset-md-1 col-lg-8 col-xl-6">
               <Headline copy1="musica." copy2="music." />
             </div>
           </div>
           <div className="row anime fade-in">
-            <section className="col-md-7 offset-md-1 col-xl-6">
+            <section className="col-xs-12 col-md-7 offset-md-1 col-xl-6">
               <h3>Top Tracks</h3>
               <p>Curious what my all time favourites are? Have a look below.</p>
               {data &&
@@ -105,7 +105,7 @@ export default function Music() {
                   />
                 ))}
             </section>
-            <section className="col-md-10 offset-md-1 col-xl-6">
+            <section className="col-xs-12 col-md-10 offset-md-1 col-xl-6">
               <h3>Favourite Playlists</h3>
               <div>
                 {spotifyPlaylistURIs.map((url, i) => (
