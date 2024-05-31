@@ -6,6 +6,7 @@
   "responsibilities": "Research, Planning, Development",
   "project_goal": "Building a system for developers that offers a user interface for the testing of generative algorithms.",
   "accentColor": "rgba(18, 107, 0, 0.2)",
+  "url": "https://github.com/noceo/CS9040_Thesis_PGAPlatform",
   "thumbnail": {
     "src": "/images/pga_tree_good.jpg",
     "alt": "A green generated tree structure"
