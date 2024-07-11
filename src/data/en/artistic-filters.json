@@ -6,6 +6,7 @@
   "responsibilities": "Planning, Development",
   "project_goal": "Building proof of concept for multiple different image processing techniques.",
   "accentColor": "rgba(133, 0, 255, 0.2)",
+  "url": "https://github.com/noceo/art-image-filters",
   "thumbnail": {
     "src": "/images/artistic_filters_kuwahara.jpg",
     "alt": "A bird"
