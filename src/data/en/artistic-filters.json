@@ -32,7 +32,7 @@
         {
           "type": "Text",
           "text": [
-            "In spent the summer of 2022 in Vienna and visited the Albertina art gallery which featured a painting of Monet’s famous series The Waterlily Pond, as well as other impressionist and pointillist works of famous artists like Paul Signac, e.g. Venice, The Pink Cloud. I had the chance to explore different approaches to filter digital images taking a Computational Photography class during my Master’s. I wanted to implement techniques so that the images appear in a style comparable to the way previously mentioned artists painted their works. You can see the approaches that I considered implementing and the corresponding results below."
+            "I spent the summer of 2022 in Vienna and visited the Albertina art gallery which featured a painting of Monet’s famous series The Waterlily Pond, as well as other impressionist and pointillist works of famous artists like Paul Signac, e.g. Venice, The Pink Cloud. I had the chance to explore different approaches to filter digital images taking a Computational Photography class during my Master’s. I wanted to implement techniques so that the images appear in a style comparable to the way previously mentioned artists painted their works. You can see the approaches that I considered implementing and the corresponding results below."
           ],
           "classes": "col-lg-10 offset-lg-1"
         },
@@ -46,7 +46,7 @@
           "type": "Text",
           "headline": "Kuwahara Filtering",
           "text": [
-            "The basic Kuwahara filter is a non-linear edge-preserving filter that gives the image an drawn look. I applied the following algorithm:",
+            "The basic Kuwahara filter is a non-linear edge-preserving filter that gives the image a drawn look. I applied the following algorithm:",
             "<ol><li>For every pixel we define a n*n kernel that is split into four quadrants</li><li>Compute the standard deviation for each of the four kernel quadrants</li><li>Choose the quadrant that has the smallest standard deviation and compute the average color of this quadrant</li><li>Set this as the color of the center pixel</li><li>Repeat steps 1-4 for all pixels</li></ol>"
           ],
           "classes": "col-lg-10 offset-lg-1"
