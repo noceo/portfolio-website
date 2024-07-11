@@ -6,7 +6,7 @@
   "responsibilities": "Planning, Development, Deployment, Maintanance",
   "project_goal": "Building and deploying a new website for the <strong>aware</strong> magazine. Aligning the digital experience with the print version of the magazine.",
   "accentColor": "rgba(241, 93, 42, 0.5)",
-  "url": "http://aware-psymagazin.ch",
+  "url": "https://aware-psymagazin.ch",
   "thumbnail": {
     "src": "/images/aware_thumbnail.png",
     "alt": "Multiple magazine articles stacked on top of each other"
