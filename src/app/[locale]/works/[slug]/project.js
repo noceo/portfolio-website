@@ -67,7 +67,11 @@ export default function Project({ data }) {
             ) : (
               <>
                 <p className="heading3 mb-3">{t("projectLocked")}</p>
-                <Button href={data.url} icon={<ArrowRightIcon />}>
+                <Button
+                  asLink={true}
+                  href="mailto:dev@paulscha.de"
+                  icon={<ArrowRightIcon />}
+                >
                   {tButton("contact")}
                 </Button>
               </>
