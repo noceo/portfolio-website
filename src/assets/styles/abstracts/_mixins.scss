@@ -1,9 +1,9 @@
 @mixin font-text {
-  font-family: "montserrat", Helvetica, sans-serif;
+  font-family: var(--font-montserrat), Helvetica, sans-serif;
 }
 
 @mixin font-headline {
-  font-family: "neue-haas-grotesk-display", Arial, sans-serif;
+  font-family: var(--font-poppins), Arial, sans-serif;
 }
 
 @mixin heading1 {

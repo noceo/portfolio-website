@@ -8,6 +8,21 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import CursorTrailer from "@/components/CursorTrailer";
+import { Montserrat, Poppins } from 'next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 export const metadata = {
   title: {
@@ -99,10 +114,7 @@ export default async function MainLayout({ children, params }) {
   const messages = await getMessages(params.locale);
 
   return (
-    <html lang={params.locale}>
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/hke5bry.css" />
-      </head>
+    <html lang={params.locale} className={`${montserrat.variable} ${poppins.variable}`}>
       <body>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <NextTopLoader color="#000000" showSpinner={false} height={3} />
